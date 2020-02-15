@@ -29,7 +29,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Practica Deportes?:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='respuesta'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='respuesta'>
 					<option selected='--'>--</option>
 					<option value='1'>Si</option>
 					<option value='0'>No</option>
@@ -37,12 +37,12 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Descripción:</td>
-				<td><input type="text" name="descripcion"></td>
+				<td><input style="margin: 5px" type="text" name="descripcion"></td>
 			</tr>
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrardeporte" value="Registrar"><input class="btn btn-info" type="submit" name="mostrarpersonas" value="Mostrar todas las Personas"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input style="margin: 5px" class="btn btn-primary" type="submit" name="registrardeporte" value="Registrar"><input style="margin: 5px" class="btn btn-info" type="submit" name="mostrarpersonas" value="Mostrar todas las Personas"></td>
 			</tr>
 
 		</table>	

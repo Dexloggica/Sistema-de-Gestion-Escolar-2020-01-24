@@ -57,7 +57,7 @@ ob_start();
 			</tr>
 
 			<tr>
-				<td><input style="margin: 5px" class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='pagina_usuario.php'"></td>
+				<td><input style="margin: 5px"  class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='pagina_usuario.php'"></td>
 			</tr>
 
 		</table>

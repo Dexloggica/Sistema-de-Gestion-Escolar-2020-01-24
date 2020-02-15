@@ -27,7 +27,7 @@ ob_start();
 			<?php include("FormularioOtrosDatosPersonales.php");?>
 			<tr>
 				<td>*Situación del Padre:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='situaciondelpadre'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='situaciondelpadre'>
 					<option selected='--'>--</option>
 					<option value='Vive'>Vive</option>
 					<option value='NoVive'>No Vive</option>
@@ -36,7 +36,7 @@ ob_start();
 			</tr>
 			<tr>
 				<td>*Situación de la Madre:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='situaciondelamadre'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='situaciondelamadre'>
 					<option selected='--'>--</option>
 					<option value='Vive'>Vive</option>
 					<option value='NoVive'>No Vive</option>
@@ -45,7 +45,7 @@ ob_start();
 			</tr>
 			<tr>
 				<td></td>
-				<td><input  class="btn btn-primary" type="submit" name="guardardatospersonales" value="Guardar"><input  class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuDatosPersonales.php'"></td>
+				<td><input style="margin: 5px" class="btn btn-primary" type="submit" name="guardardatospersonales" value="Guardar"><input  class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuDatosPersonales.php'"></td>
 				<!-- <td><input type="submit" name="buscartodos" value="Mostrar Todos"></td> -->
 			</tr>
 		</table>	

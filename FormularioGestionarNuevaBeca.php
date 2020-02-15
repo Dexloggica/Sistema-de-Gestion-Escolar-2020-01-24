@@ -25,7 +25,7 @@ ob_start();
 		<table align="center">
 			<tr align="center">
 				<td>BecaDesc:</td>
-				<td><input type="text" name="becadesc"></td>
+				<td><input style="margin: 5px" type="text" name="becadesc"></td>
 			</tr>
 			<tr align="center">
 				<td>FechaInicio:</td>
@@ -38,7 +38,7 @@ ob_start();
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarbeca" value="Registrar"><input class="btn btn-info" type="submit" name="mostrarbecas" value="Mostrar todas las Becas"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarbeca" value="Registrar"><input style="margin: 5px" class="btn btn-info" type="submit" name="mostrarbecas" value="Mostrar todas las Becas"></td>
 			</tr>
 
 		</table>	

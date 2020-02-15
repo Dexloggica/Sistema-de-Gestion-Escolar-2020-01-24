@@ -26,35 +26,35 @@ ob_start();
 			<tr>
 				<td>IdUsuario:</td>
 				<td><?php include("SelectUsuario.php");?></td>
-				<td><input class="btn btn-info"  type="submit" name="buscarid" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-info"  type="submit" name="buscarid" value="buscar"></td>
 			</tr>
 			<tr>
 				<td>*Calle:</td>
-				<td><input type="text" name="calle"></td>
+				<td><input style="margin: 5px" type="text" name="calle"></td>
 			</tr>
 			<tr>
 				<td>*Numero:</td>
-				<td><input type="text" name="numero"></td>
+				<td><input style="margin: 5px" type="text" name="numero"></td>
 			</tr>
 			<tr>
 				<td>Piso:</td>
-				<td><input type="text" name="piso"></td>
+				<td><input style="margin: 5px" type="text" name="piso"></td>
 			</tr>
 			<tr>
 				<td>Departamento:</td>
-				<td><input type="text" name="departamento"></td>
+				<td><input style="margin: 5px" type="text" name="departamento"></td>
 			</tr>
 			<tr>
 				<td>Unidad:</td>
-				<td><input type="text" name="unidad"></td>
+				<td><input style="margin: 5px" type="text" name="unidad"></td>
 			</tr>
 			<tr>
 				<td>Barrio:</td>
-				<td><input type="text" name="barrio"></td>
+				<td><input style="margin: 5px" type="text" name="barrio"></td>
 			</tr>
 			<tr>
 				<td>*Tipo de Vivienda:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='tipovivienda'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='tipovivienda'>
 					<option selected='--'>--</option>
 					<option value='Casa'>Casa</option>
 					<option value='Departamento'>Departamento</option>
@@ -65,7 +65,7 @@ ob_start();
 			
 			<tr>
 				<td></td>
-				<td><input class="btn btn-primary" type="submit" name="guardardomicilio" value="Modificar"><input  class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuDatosPersonalesOtros.php'"></td>
+				<td><input style="margin: 5px" class="btn btn-primary" type="submit" name="guardardomicilio" value="Modificar"><input style="margin: 5px" class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuDatosPersonalesOtros.php'"></td>
 				<!-- <td><input type="submit" name="buscartodos" value="Mostrar Todos"></td> -->
 			</tr>
 		</table>	

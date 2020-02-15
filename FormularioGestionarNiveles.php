@@ -25,16 +25,16 @@ ob_start();
 		<table align="center">
 			<tr align="center">
 				<td>Grado/Curso:</td>
-				<td><input type="text" name="grado"></td>
+				<td><input style="margin: 5px" type="text" name="grado"></td>
 			</tr>
 			<tr align="center">
 				<td>Division:</td>
-				<td><input type="text" name="division"></td>
+				<td><input style="margin: 5px" type="text" name="division"></td>
 			</tr>
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarnivel" value="Registrar"><input class="btn btn-info" type="submit" name="mostrarniveles" value="Mostrar todos los Niveles"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarnivel" value="Registrar"><input style="margin: 5px" class="btn btn-info" type="submit" name="mostrarniveles" value="Mostrar todos los Niveles"></td>
 			</tr>
 
 		</table>	

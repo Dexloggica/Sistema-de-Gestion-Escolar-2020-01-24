@@ -26,11 +26,11 @@ ob_start();
 			<tr>
 				<td>idPersona:</td>
 				<td><?php require("SelectDocente.php");?></td>
-				<td><input class="btn btn-info" type="submit" name="buscarid" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscarid" value="buscar"></td>
 			</tr>
 			<tr>
 				<td>Licencia:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='licencia'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='licencia'>
 							<option selected='--'>--</option>
 							<option value='934'>Particular</option>
 							<option value='93'>Examen</option>
@@ -47,7 +47,7 @@ ob_start();
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default"  type="submit" name="volver" value="Volver"><input class="btn btn-primary"  type="submit" name="registrarlicencia" value="Registrar"><input class="btn btn-info" type="submit" name="mostrarlicencias" value="Mostrar todas las Licencias"></td>
+				<td><input style="margin: 5px" class="btn btn-default"  type="submit" name="volver" value="Volver"><input style="margin: 5px" class="btn btn-primary"  type="submit" name="registrarlicencia" value="Registrar"><input style="margin: 5px" class="btn btn-info" type="submit" name="mostrarlicencias" value="Mostrar todas las Licencias"></td>
 			</tr>
 
 		</table>	

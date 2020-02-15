@@ -29,7 +29,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Dia de Semana:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='diasemana'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='diasemana'>
 					<option selected='--'>--</option>
 					<option value='Lunes'>Lunes</option>
 					<option value='Martes'>Martes</option>
@@ -42,12 +42,12 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Horario/s:</td>
-				<td><input type="text" name="horarios"></td>
+				<td><input style="margin: 5px" type="text" name="horarios"></td>
 			</tr>
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarhorario" value="Registrar"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input style="margin: 5px" class="btn btn-primary" type="submit" name="registrarhorario" value="Registrar"></td>
 			</tr>
 
 		</table>	

@@ -26,22 +26,22 @@ ob_start();
 			<tr>
 				<td>idAlumno:</td>
 				<td><?php require("SelectAlumno2.php");?></td>
-				<td><input class="btn btn-info" type="submit" name="buscaridAlumno" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscaridAlumno" value="buscar"></td>
 			</tr>
 			<tr>
 				<td>idDocente:</td>
 				<td><?php require("SelectDocente.php");?></td>
-				<td><input class="btn btn-info" type="submit" name="buscaridDocente" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscaridDocente" value="buscar"></td>
 			</tr>
 			<tr>
 				<td>idAsignatura:</td>
 				<td><?php require("SelectAsignaturaNivel.php");?></td>
-				<td><input class="btn btn-info" type="submit" name="buscaridAsignatura" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscaridAsignatura" value="buscar"></td>
 			</tr>
 		</table>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"></td>
 			</tr>
 		</table>	
 

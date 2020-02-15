@@ -31,7 +31,7 @@ ob_start();
 			</tr>
 			<tr>
 				<td>*Tiene usted Computadora?:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='respuesta1'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='respuesta1'>
 					<option selected='--'>--</option>
 					<option value='1'>Si</option>
 					<option value='0'>No</option>
@@ -39,7 +39,7 @@ ob_start();
 			</tr>
 			<tr>
 				<td>*Tiene acceso a Internet?:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='respuesta2'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='respuesta2'>
 					<option selected='--'>--</option>
 					<option value='1'>Si</option>
 					<option value='0'>No</option>
@@ -48,7 +48,7 @@ ob_start();
 			
 			<tr>
 				<td></td>
-				<td><input class="btn btn-primary" type="submit" name="guardartecnologia" value="Modificar"><input class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuEditarDatosPersonalesAlumnoaCargo.php'"></td>
+				<td><input style="margin: 5px" class="btn btn-primary" type="submit" name="guardartecnologia" value="Modificar"><input style="margin: 5px" class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuEditarDatosPersonalesAlumnoaCargo.php'"></td>
 				<!-- <td><input type="submit" name="buscartodos" value="Mostrar Todos"></td> -->
 			</tr>
 		</table>	

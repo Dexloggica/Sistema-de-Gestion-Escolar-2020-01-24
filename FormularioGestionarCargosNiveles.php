@@ -26,7 +26,7 @@ ob_start();
 			<tr>
 				<td>idCargo:</td>
 				<td><?php require("SelectCargo.php");?></td>
-				<td><input class="btn btn-default" type="submit" name="buscaridCargo" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="buscaridCargo" value="buscar"></td>
 			</tr>
 			<tr>
 				<td>idNivel:</td>
@@ -35,11 +35,11 @@ ob_start();
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarnivelcargo" value="Registrar Vinculo Nivel/Cargo"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input style="margin: 5px" class="btn btn-primary" type="submit" name="registrarnivelcargo" value="Registrar Vinculo Nivel/Cargo"></td>
 
 			</tr>
 			<tr align="center">
-				<td><input class="btn btn-danger" type="submit" name="eliminarnivelcargo" value="Eliminar Vinculo Nivel/Cargo"></td>
+				<td><input style="margin: 5px" class="btn btn-danger" type="submit" name="eliminarnivelcargo" value="Eliminar Vinculo Nivel/Cargo"></td>
 			</tr>
 		</table>	
 

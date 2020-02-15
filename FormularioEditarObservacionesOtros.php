@@ -56,7 +56,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td></td>
-				<td><input class="btn btn-primary"  type="submit" name="guardarobservaciones" value="Guardar"><input  class="btn btn-info" type="submit" name="mostrarobservaciones" value="Mostrar todas las Observaciones"><input class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='pagina_usuario.php'"></td>
+				<td><input style="margin: 5px" class="btn btn-primary"  type="submit" name="guardarobservaciones" value="Guardar"><input style="margin: 5px"  class="btn btn-info" type="submit" name="mostrarobservaciones" value="Mostrar todas las Observaciones"><input style="margin: 5px" class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='pagina_usuario.php'"></td>
 				<!-- <td><input type="submit" name="buscartodos" value="Mostrar Todos"></td> -->
 			</tr>
 		</table>	

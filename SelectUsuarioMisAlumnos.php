@@ -26,7 +26,7 @@ $resultado= mysql_query($consulta,$link) or die (mysql_error());
 // //obtengo el idPersona del Docente
 // $consulta= "SELECT * FROM Persona WHERE idPersona='$idPersonaaCargo'"; 
 // $resultado= mysql_query($consulta,$link) or die (mysql_error());
-	echo"<td><select class='btn btn-default dropdown-toggle' name='idbuscado'>
+	echo"<td><select style='margin: 5px' class='btn btn-default dropdown-toggle' name='idbuscado'>
 								<option selected='--'>--</option>";
 	while ($row = mysql_fetch_row($resultado))
 	{

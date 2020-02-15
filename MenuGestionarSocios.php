@@ -24,12 +24,12 @@ ob_start();
 		<form name="formulariogestionarbiblioteca" method="post">
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="nuevosocio" value="Crear Nuevo Socio">
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="nuevosocio" value="Crear Nuevo Socio">
 			</tr>
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"></td>
 			</tr>
 
 		</table>	

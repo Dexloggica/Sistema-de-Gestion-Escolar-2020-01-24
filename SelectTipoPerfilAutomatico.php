@@ -6,7 +6,7 @@ $consulta= "SELECT * FROM TipoPerfil WHERE PerfilDesc='Alumno/a'";
 $resultado= mysql_query($consulta,$link) or die (mysql_error());
 
 
-	   echo"<select  class='btn btn-default dropdown-toggle' name='idTipoPerfil'>
+	   echo"<select style='margin: 5px'  class='btn btn-default dropdown-toggle' name='idTipoPerfil'>
 							";
 	while ($row = mysql_fetch_row($resultado))
 	{

@@ -35,7 +35,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>*Sexo:</td>
-				<td><select class='btn btn-default dropdown-toggle' name="sexo">
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name="sexo">
 						<option selected="--">--</option>
 						<option value="Femenino">Femenino</option>
 						<option value="Masculino">Masculino</option>
@@ -69,7 +69,7 @@ ob_start();
 
 			<tr align="center">
 				<td>Estado Civil:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='estadocivil'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='estadocivil'>
 					<option selected='--'>--</option>
 					<option value='Soltero'>Soltero</option>
 					<option value='Casado'>Casado</option>
@@ -86,7 +86,7 @@ ob_start();
 
 			<tr align="center">
 				<td>*Situación del Padre:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='situacionpadre'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='situacionpadre'>
 					<option selected='--'>--</option>
 					<option value='Vive'>Vive</option>
 					<option value='NoVive'>No Vive</option>
@@ -95,7 +95,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>*Situación de la Madre:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='situacionmadre'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='situacionmadre'>
 					<option selected='--'>--</option>
 					<option value='Vive'>Vive</option>
 					<option value='NoVive'>No Vive</option>
@@ -131,7 +131,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Tipo de Vivienda:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='tipovivienda'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='tipovivienda'>
 					<option selected='--'>--</option>
 					<option value='Casa'>Casa</option>
 					<option value='Departamento'>Departamento</option>
@@ -169,7 +169,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>*Nivel del Titulo:</td>
-				<td><select class='btn btn-default dropdown-toggle' name="nivel">
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name="nivel">
 						<option selected="--">--</option>
 						<option value="no tiene estudios">No tiene estudios</option>
 						<option value="Primario">Primario</option>
@@ -193,7 +193,7 @@ ob_start();
 
 			<tr align="center">
 				<td>*Tiene usted Computadora?:</td>
-				<td><select class="btn btn-default dropdown-toggle" name='respuesta1'>
+				<td><select style="margin: 5px" class="btn btn-default dropdown-toggle" name='respuesta1'>
 					<option selected='--'>--</option>
 					<option value='1'>Si</option>
 					<option value='0'>No</option>
@@ -201,7 +201,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>*Tiene acceso a Internet?:</td>
-				<td><select class="btn btn-default dropdown-toggle" name='respuesta2'>
+				<td><select style="margin: 5px" class="btn btn-default dropdown-toggle" name='respuesta2'>
 					<option selected='--'>--</option>
 					<option value='1'>Si</option>
 					<option value='0'>No</option>
@@ -211,7 +211,7 @@ ob_start();
 
 			<tr align="center">
 				<td>Practica Deportes?:</td>
-				<td><select class="btn btn-default dropdown-toggle" name='respuesta'>
+				<td><select style="margin: 5px" class="btn btn-default dropdown-toggle" name='respuesta'>
 					<option selected='--'>--</option>
 					<option value='1'>Si</option>
 					<option value='0'>No</option>
@@ -246,14 +246,14 @@ ob_start();
 			</tr>-->
 			<tr>
 				<td>*Escuela:</td>
-				<td><select class="btn btn-default dropdown-toggle" name='escuela'>
+				<td><select style="margin: 5px" class="btn btn-default dropdown-toggle" name='escuela'>
 							<option selected='--'>--</option>
 							<option value='Mariano Moreno'>Mariano Moreno</option>
 							</select></td>
 			</tr>
 			<tr>
 				<td>*Categoria:</td>
-				<td><select class="btn btn-default dropdown-toggle" name='categoria'>
+				<td><select style="margin: 5px" class="btn btn-default dropdown-toggle" name='categoria'>
 							<option selected='--'>--</option>
 							<option value='Primera'>Primera</option>
 							</select></td>

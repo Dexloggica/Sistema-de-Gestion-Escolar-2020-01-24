@@ -1,4 +1,4 @@
-<select  class="btn btn-default dropdown-toggle" name="dia3">
+<select style="margin: 5px"  class="btn btn-default dropdown-toggle" name="dia3">
         <?php
         
         for ($i=1; $i<=31; $i++) {
@@ -9,7 +9,7 @@
         }echo '<option value="--" selected>--</option>';
         ?>
 </select>
-<select  class="btn btn-default dropdown-toggle" name="mes3">
+<select style="margin: 5px"  class="btn btn-default dropdown-toggle" name="mes3">
         <?php
         for ($j=1; $j<=12; $j++) {
             if ($j == date('m'))
@@ -19,7 +19,7 @@
         }echo '<option value="--" selected>--</option>';
         ?>
 </select>
-<select  class="btn btn-default dropdown-toggle" name="anio3">
+<select style="margin: 5px"  class="btn btn-default dropdown-toggle" name="anio3">
         <?php
         for($k=date('Y'); $k>=1910; $k--){
             if ($k == date('Y'))

@@ -24,13 +24,13 @@ ob_start();
 		<form name="formulariogestionarhorarios" method="post">
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="horariocargo" value="Horario de Cargos">
-				<input class="btn btn-default" type="submit" name="horarionivel" value="Horario de Niveles"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="horariocargo" value="Horario de Cargos">
+				<input style="margin: 5px" class="btn btn-default" type="submit" name="horarionivel" value="Horario de Niveles"></td>
 			</tr>
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"></td>
 			</tr>
 
 		</table>	

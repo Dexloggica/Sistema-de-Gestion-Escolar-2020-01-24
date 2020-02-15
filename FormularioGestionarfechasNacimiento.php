@@ -26,7 +26,7 @@ ob_start();
 			<tr align="center">
 				<td>IdUsuario:</td>
 				<td><?php require("SelectUsuario.php");?></td>
-				<td><input class="btn btn-info" type="submit" name="buscarid" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscarid" value="buscar"></td>
 			</tr>
 			<tr align="center">
 				<td>Fecha Nacimiento:</td>
@@ -35,7 +35,7 @@ ob_start();
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarfechanacimiento" value="Registrar"><input class="btn btn-info" type="submit" name="mostrarpersonas" value="Mostrar todas las Personas"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input style="margin: 5px" class="btn btn-primary" type="submit" name="registrarfechanacimiento" value="Registrar"><input style="margin: 5px" class="btn btn-info" type="submit" name="mostrarpersonas" value="Mostrar todas las Personas"></td>
 			</tr>
 
 		</table>	

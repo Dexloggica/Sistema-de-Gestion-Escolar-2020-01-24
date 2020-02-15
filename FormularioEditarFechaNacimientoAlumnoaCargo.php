@@ -27,7 +27,7 @@ ob_start();
 			<tr align="center">
 				<td>IdPersona:</td>
 				<td> <?php include("SelectAlumnoaCargo.php");?></td>
-				<td><input class="btn btn-info"  type="submit" name="buscarid" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-info"  type="submit" name="buscarid" value="buscar"></td>
 			</tr>
 			<tr>
 				<td>*Fecha Nacimiento:</td>
@@ -35,7 +35,7 @@ ob_start();
 			</tr>
 			<tr>
 				<td></td>
-				<td><input class="btn btn-primary"  type="submit" name="editarfechanacimiento" value="Modificar"><input class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuEditarDatosPersonalesAlumnoaCargo.php'"></td>
+				<td><input style="margin: 5px" class="btn btn-primary"  type="submit" name="editarfechanacimiento" value="Modificar"><input style="margin: 5px" class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuEditarDatosPersonalesAlumnoaCargo.php'"></td>
 				<!-- <td><input type="submit" name="buscartodos" value="Mostrar Todos"></td> -->
 			</tr>
 		</table>	

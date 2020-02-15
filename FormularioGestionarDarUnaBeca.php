@@ -34,7 +34,7 @@ ob_start();
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarbecaasignada" value="Registrar"><input class="btn btn-info" type="submit" name="mostrarbecas" value="Mostrar todas las inscripciones"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input style="margin: 5px" class="btn btn-primary" type="submit" name="registrarbecaasignada" value="Registrar"><input style="margin: 5px" class="btn btn-info" type="submit" name="mostrarbecas" value="Mostrar todas las inscripciones"></td>
 			</tr>
 
 		</table>	

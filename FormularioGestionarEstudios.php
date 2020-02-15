@@ -30,11 +30,11 @@ ob_start();
 			
 			<tr align="center">
 				<td>Titulo:</td>
-				<td><input type="text" name="titulo"></td>
+				<td><input style="margin: 5px" type="text" name="titulo"></td>
 			</tr>
 			<tr align="center">
 				<td>Nivel:</td>
-				<td><select class='btn btn-default dropdown-toggle' name="nivel">
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name="nivel">
 						<option selected="--">--</option>
 						<option value="no tiene estudios">No tiene estudios</option>
 						<option value="Primario">Primario</option>
@@ -47,7 +47,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Institucion/Colegio/Universidad:</td>
-				<td><input type="text" name="institucion"></td>
+				<td><input style="margin: 5px" type="text" name="institucion"></td>
 			</tr>
 			<tr align="center">
 				<td>Fecha:</td>
@@ -56,7 +56,7 @@ ob_start();
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarestudio" value="Registrar"><input class="btn btn-info" type="submit" name="mostrarpersonas" value="Mostrar todas las Personas"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input style="margin: 5px" class="btn btn-primary" type="submit" name="registrarestudio" value="Registrar"><input style="margin: 5px" class="btn btn-info" type="submit" name="mostrarpersonas" value="Mostrar todas las Personas"></td>
 			</tr>
 
 		</table>	

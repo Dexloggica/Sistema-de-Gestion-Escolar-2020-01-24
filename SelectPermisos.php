@@ -14,7 +14,7 @@ $resultado= mysql_query($consulta,$link) or die (mysql_error());
 				<table align='center'>
 					<tr>
 						<td>idPermisos:</td>
-						<td><select class='btn btn-default dropdown-toggle' name='idpermisobuscado'>
+						<td><select style='margin: 5px' class='btn btn-default dropdown-toggle' name='idpermisobuscado'>
 							<option selected='--'>--</option>";
 	while ($row = mysql_fetch_row($resultado))
 	{
@@ -24,7 +24,7 @@ $resultado= mysql_query($consulta,$link) or die (mysql_error());
 						echo"</select></td>
 					<tr>	
 						 <td></td>
-						 <td><input class='btn btn-default'  type='submit' name='volver' value='Volver'><input class='btn btn-info' type='submit' name='EditarPermisos' value='Mostrar Formulario de Edición'></td>
+						 <td><input style='margin: 5px' class='btn btn-default'  type='submit' name='volver' value='Volver'><input class='btn btn-info' type='submit' name='EditarPermisos' value='Mostrar Formulario de Edición'></td>
 					</tr>
 				</table>
 			</form>";

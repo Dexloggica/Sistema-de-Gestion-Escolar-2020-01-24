@@ -27,28 +27,28 @@ ob_start();
 		<table align="center">
 			<tr>
 				<td>*Telefono1:</td>
-				<td><input type="text" name="telefono1"></td>
+				<td><input style="margin: 5px" type="text" name="telefono1"></td>
 			</tr>
 			<tr>
 				<td>Telefono2:</td>
-				<td><input type="text" name="telefono2"></td>
+				<td><input style="margin: 5px" type="text" name="telefono2"></td>
 			</tr>
 			<tr>
 				<td>Telefono3:</td>
-				<td><input type="text" name="telefono3"></td>
+				<td><input style="margin: 5px" type="text" name="telefono3"></td>
 			</tr>
 			<tr>
 				<td>Telefono4:</td>
-				<td><input type="text" name="telefono4"></td>
+				<td><input style="margin: 5px" type="text" name="telefono4"></td>
 			</tr>
 			<tr>
 				<td>Email:</td>
-				<td><input type="text" name="email"></td>
+				<td><input style="margin: 5px" type="text" name="email"></td>
 			</tr>
 			
 			<tr>
 				<td></td>
-				<td><input class="btn btn-primary" type="submit" name="guardardatoscontacto" value="Guardar"><input class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuDatosPersonales.php'"></td>
+				<td><input style="margin: 5px" class="btn btn-primary" type="submit" name="guardardatoscontacto" value="Guardar"><input style="margin: 5px" class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuDatosPersonales.php'"></td>
 				<!-- <td><input type="submit" name="buscartodos" value="Mostrar Todos"></td> -->
 			</tr>
 		</table>	

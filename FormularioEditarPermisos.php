@@ -137,47 +137,47 @@ echo"<center><form name='gestionarpermisos' action='' method='post'>";
 echo"<table>";
 echo"<tr>";
 	echo"<td>PermisoEditarSusDatosPersonales:</td>
-		 <td><button class='$class1' type='submit' name='1' value=$PermisoEditarSusDatosPersonales>$men1</button></td>";
+		 <td><button style='margin: 5px' class='$class1' type='submit' name='1' value=$PermisoEditarSusDatosPersonales>$men1</button></td>";
 echo"</tr>";
 echo"<tr>";
 	echo"<td>PermisoEditarDatosPersonalesOtros:</td>
-		 <td><button class='$class2' type='submit' name='2' value=$PermisoEditarDatosPersonalesOtros>$men2</button></td>";
+		 <td><button style='margin: 5px' class='$class2' type='submit' name='2' value=$PermisoEditarDatosPersonalesOtros>$men2</button></td>";
 echo"</tr>";
 echo"<tr>";
 	echo"<td>PermisoEditarObservacionesOtros:</td>
-		 <td><button class='$class3' type='submit' name='3' value=$PermisoEditarObservacionesOtros>$men3</button></td>";
+		 <td><button style='margin: 5px' class='$class3' type='submit' name='3' value=$PermisoEditarObservacionesOtros>$men3</button></td>";
 echo"</tr>";
 echo"<tr>";
 	echo"<td>PermisoEditarCalificacionesSusAlumnos:</td>
-		 <td><button class='$class5' type='submit' name='5' value=$PermisoEditarCalificacionesSusAlumnos>$men5</button></td>";
+		 <td><button style='margin: 5px' class='$class5' type='submit' name='5' value=$PermisoEditarCalificacionesSusAlumnos>$men5</button></td>";
 echo"</tr>";
 echo"<tr>";
 	echo"<td>PermisoEditarDatosPersonalesAlumnoaCargo:</td>
-	<td><button class='$class6' type='submit' name='6' value=$PermisoEditarDatosPersonalesAlumnoaCargo>$men6</button></td>";
+	<td><button style='margin: 5px' class='$class6' type='submit' name='6' value=$PermisoEditarDatosPersonalesAlumnoaCargo>$men6</button></td>";
 echo"</tr>";
 echo"<tr>";
 	echo"<td>PermisoVerCalificacionesAlumnoaCargo:</td>
-	<td><button class='$class7' type='submit' name='7' value=$PermisoVerCalificacionesAlumnoaCargo>$men7</button></td>";
+	<td><button style='margin: 5px' class='$class7' type='submit' name='7' value=$PermisoVerCalificacionesAlumnoaCargo>$men7</button></td>";
 echo"</tr>";
 echo"<tr>";
 	echo"<td>PermisoVerSusCalificaciones:</td>
-	<td><button class='$class8' type='submit' name='8' value=$PermisoVerSusCalificaciones>$men8</button></td>";
+	<td><button style='margin: 5px' class='$class8' type='submit' name='8' value=$PermisoVerSusCalificaciones>$men8</button></td>";
 echo"</tr>";
 echo"<tr>";
 	echo"<td>PermisoGestionarEscuela:</td>
-	<td><button class='$class9' type='submit' name='9' value=$PermisoGestionarEscuela>$men9</button></td>";
+	<td><button style='margin: 5px' class='$class9' type='submit' name='9' value=$PermisoGestionarEscuela>$men9</button></td>";
 echo"</tr>";
 echo"<tr>";
 	echo"<td>PermisoInscribirAlumno:</td>
-	<td><button class='$class10' type='submit' name='10' value=$PermisoInscribirAlumno>$men10</button></td>";
+	<td><button style='margin: 5px' class='$class10' type='submit' name='10' value=$PermisoInscribirAlumno>$men10</button></td>";
 echo"</tr>";
 echo"<tr>";
 	echo"<td>PermisoInscribirDocente:</td>
-	<td><button class='$class11' type='submit' name='11' value=$PermisoInscribirDocente>$men11</button></td>";
+	<td><button style='margin: 5px' class='$class11' type='submit' name='11' value=$PermisoInscribirDocente>$men11</button></td>";
 echo"</tr>";
 echo"<tr>";
 	echo"<td>PermisoGestionarBiblioteca:</td>
-	<td><button class='$class12' type='submit' name='12' value=$PermisoGestionarBiblioteca>$men12</button></td>";
+	<td><button style='margin: 5px' class='$class12' type='submit' name='12' value=$PermisoGestionarBiblioteca>$men12</button></td>";
 echo"</tr>";
 echo"</table>";
 echo"</form></center>";

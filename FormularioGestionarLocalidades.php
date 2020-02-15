@@ -25,24 +25,24 @@ ob_start();
 		<table align="center">
 			<tr align="center">
 				<td>Ciudad:</td>
-				<td><input type="text" name="ciudad"></td>
+				<td><input style="margin: 5px" type="text" name="ciudad"></td>
 			</tr>
 			<tr align="center">
 				<td>Provincia:</td>
-				<td><input type="text" name="provincia"></td>
+				<td><input style="margin: 5px" type="text" name="provincia"></td>
 			</tr>
 			<tr align="center">
 				<td>Pais:</td>
-				<td><input type="text" name="pais"></td>
+				<td><input style="margin: 5px" type="text" name="pais"></td>
 			</tr>
 			<tr align="center">
 				<td>Codigo Postal:</td>
-				<td><input type="text" name="codigopostal"></td>
+				<td><input style="margin: 5px" type="text" name="codigopostal"></td>
 			</tr>
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarlocalidad" value="Registrar"><input class="btn btn-info" type="submit" name="mostrarlocalidades" value="Mostrar todas las Localidades"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input style="margin: 5px" class="btn btn-primary" type="submit" name="registrarlocalidad" value="Registrar"><input style="margin: 5px" class="btn btn-info" type="submit" name="mostrarlocalidades" value="Mostrar todas las Localidades"></td>
 			</tr>
 
 		</table>	

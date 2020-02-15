@@ -53,7 +53,7 @@ echo"
 				<td><IMG SRC=".$LinkImagen." WIDTH=70 HEIGHT=100 ALT='Imagen'></td>
 			</tr>
 			<tr align='center'>
-				<td><input class='btn btn-primary' type='submit' name='registrardevolucion' value='Registrar Devolucion'></td>
+				<td><input style='margin: 5px' class='btn btn-primary' type='submit' name='registrardevolucion' value='Registrar Devolucion'></td>
 			</tr>
 
 		</table>	

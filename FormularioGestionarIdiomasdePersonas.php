@@ -29,7 +29,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Ingles:</td>
-				<td><select class='btn btn-default dropdown-toggle' name="ingles">
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name="ingles">
 						<option selected="--">--</option>
 						<option value="Basico">Basico</option>
 						<option value="Bueno">Bueno</option>
@@ -38,7 +38,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Alemán:</td>
-				<td><select class='btn btn-default dropdown-toggle' name="aleman">
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name="aleman">
 						<option selected="--">--</option>
 						<option value="Basico">Basico</option>
 						<option value="Bueno">Bueno</option>
@@ -47,7 +47,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Francés:</td>
-				<td><select class='btn btn-default dropdown-toggle' name="frances">
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name="frances">
 						<option selected="--">--</option>
 						<option value="Basico">Basico</option>
 						<option value="Bueno">Bueno</option>
@@ -56,7 +56,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Italiano:</td>
-				<td><select class='btn btn-default dropdown-toggle' name="italiano">
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name="italiano">
 						<option selected="--">--</option>
 						<option value="Basico">Basico</option>
 						<option value="Bueno">Bueno</option>
@@ -65,7 +65,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Portugués:</td>
-				<td><select class='btn btn-default dropdown-toggle' name="portugues">
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name="portugues">
 						<option selected="--">--</option>
 						<option value="Basico">Basico</option>
 						<option value="Bueno">Bueno</option>
@@ -74,7 +74,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Chino:</td>
-				<td><select class='btn btn-default dropdown-toggle' name="chino">
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name="chino">
 						<option selected="--">--</option>
 						<option value="Basico">Basico</option>
 						<option value="Bueno">Bueno</option>
@@ -83,12 +83,12 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Otros:</td>
-				<td><input type="text" name="otros"></td>
+				<td><input style="margin: 5px" type="text" name="otros"></td>
 			</tr>	
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registraridiomas" value="Registrar"><input class="btn btn-info" type="submit" name="mostrarpersonas" value="Mostrar todas las Personas"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registraridiomas" value="Registrar"><input style="margin: 5px" class="btn btn-info" type="submit" name="mostrarpersonas" value="Mostrar todas las Personas"></td>
 			</tr>
 
 		</table>	

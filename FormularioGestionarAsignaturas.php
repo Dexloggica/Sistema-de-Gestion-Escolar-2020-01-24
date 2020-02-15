@@ -39,7 +39,7 @@ ob_start();
 		
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-primary" type="submit" name="registrarasignatura" value="Registrar"><input class="btn btn-info" type="submit" name="mostrarasignaturas" value="Mostrar todas las Asignaturas"></td>
+				<td><input style="margin: 5px" class="btn btn-primary" type="submit" name="registrarasignatura" value="Registrar"><input style="margin: 5px" class="btn btn-info" type="submit" name="mostrarasignaturas" value="Mostrar todas las Asignaturas"></td>
 			</tr>
 
 		</table><br><br>
@@ -48,12 +48,12 @@ ob_start();
 			<tr align="center">
 				<td>idAsignatura:</td>
 				<td><?php include("SelectAsignaturaNivel.php");?></td>
-				<td><input class="btn btn-danger" type="submit" name="eliminarasignatura" value="Eliminar Asignatura"></td>
+				<td><input style="margin: 5px" class="btn btn-danger" type="submit" name="eliminarasignatura" value="Eliminar Asignatura"></td>
 			</tr>
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"></td>
 			</tr>
 
 		</table><br><br>

@@ -70,19 +70,19 @@ ob_start();
 		<table align="center">
 			<tr>
 				<td>IdUsuario:<?php include("SelectUsuarioMisAlumnos.php");?></td>
-				<td><input class="btn btn-info" type="submit" name="buscarid" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscarid" value="buscar"></td>
 			</tr>
 			<tr>
 				<td>1erTrimestre:</td>
-				<td><input type="text" name="1ertrimestre"></td>
+				<td><input style="margin: 5px" type="text" name="1ertrimestre"></td>
 			</tr>
 			<tr>
 				<td>2doTrimestre:</td>
-				<td><input type="text" name="2dotrimestre"></td>
+				<td><input style="margin: 5px" type="text" name="2dotrimestre"></td>
 			</tr>
 			<tr>
 				<td>3erTrimestre:</td>
-				<td><input type="text" name="3ertrimestre"></td>
+				<td><input style="margin: 5px" type="text" name="3ertrimestre"></td>
 			</tr>
 			<tr>
 				<td>Año:</td>
@@ -91,11 +91,11 @@ ob_start();
 			<tr>
 				<td>Asignatura:</td>
 				<?php  require("SelectMaterias.php"); ?>
-				<td><input class="btn btn-info"  type="submit" name="mostrarlista" value="Mostrar Lista Por Materia"></td>
+				<td><input style="margin: 5px" class="btn btn-info"  type="submit" name="mostrarlista" value="Mostrar Lista Por Materia"></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><input class="btn btn-primary" type="submit" name="guardarcalificaciones" value="Modificar"><input class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='pagina_usuario.php'"></td>
+				<td><input style="margin: 5px" class="btn btn-primary" type="submit" name="guardarcalificaciones" value="Modificar"><input style="margin: 5px" class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='pagina_usuario.php'"></td>
 				<!-- <td><input type="submit" name="buscartodos" value="Mostrar Todos"></td> -->
 			</tr>
 		</table>	

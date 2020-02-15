@@ -25,15 +25,15 @@ ob_start();
 		<table align="center">
 			<tr align="center">
 				<td>Nombre:</td>
-				<td><input type="text" name="nombre"></td>
+				<td><input style="margin: 5px" type="text" name="nombre"></td>
 			</tr>
 			<tr align="center">
 				<td>Apellido:</td>
-				<td><input type="text" name="apellido"></td>
+				<td><input style="margin: 5px" type="text" name="apellido"></td>
 			</tr>
 			<tr align="center">
 				<td>Sexo:</td>
-				<td><select class='btn btn-default dropdown-toggle' name="sexo">
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name="sexo">
 						<option selected="--">--</option>
 						<option value="Femenino">Femenino</option>
 						<option value="Masculino">Masculino</option>
@@ -41,11 +41,11 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Dni:</td>
-				<td><input type="text" name="dni"></td>
+				<td><input style="margin: 5px" type="text" name="dni"></td>
 			</tr>
 			<tr align="center">
 				<td>Cuil:</td>
-				<td><input type="text" name="cuil"></td>
+				<td><input style="margin: 5px" type="text" name="cuil"></td>
 			</tr>
 			<tr align="center">
 				<td>idUsuario:</td>
@@ -58,7 +58,7 @@ ob_start();
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarpersona" value="Registrar"><input class="btn btn-info" type="submit" name="mostrarpersonas" value="Mostrar todas las Personas"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input style="margin: 5px" class="btn btn-primary" type="submit" name="registrarpersona" value="Registrar"><input style="margin: 5px" class="btn btn-info" type="submit" name="mostrarpersonas" value="Mostrar todas las Personas"></td>
 			</tr>
 
 		</table>	

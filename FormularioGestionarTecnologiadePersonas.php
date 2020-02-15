@@ -29,7 +29,7 @@ ob_start();
 			</tr>
 			<tr>
 				<td>Tiene usted Computadora?:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='respuesta1'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='respuesta1'>
 					<option selected='--'>--</option>
 					<option value='1'>Si</option>
 					<option value='0'>No</option>
@@ -37,7 +37,7 @@ ob_start();
 			</tr>
 			<tr>
 				<td>Tiene acceso a Internet?:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='respuesta2'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='respuesta2'>
 					<option selected='--'>--</option>
 					<option value='1'>Si</option>
 					<option value='0'>No</option>
@@ -46,7 +46,7 @@ ob_start();
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrartecnologia" value="Registrar"><input class="btn btn-info" type="submit" name="mostrarpersonas" value="Mostrar todas las Personas"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input style="margin: 5px" class="btn btn-primary" type="submit" name="registrartecnologia" value="Registrar"><input style="margin: 5px" class="btn btn-info" type="submit" name="mostrarpersonas" value="Mostrar todas las Personas"></td>
 			</tr>
 
 		</table>	

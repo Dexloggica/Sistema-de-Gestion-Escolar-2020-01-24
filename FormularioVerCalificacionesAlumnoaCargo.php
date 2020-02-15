@@ -26,12 +26,12 @@ ob_start();
 			<tr>
 				<td>IdPersona:</td>
 				<td><?php include("SelectAlumnoaCargo.php");?></td>
-				<td><input class="btn btn-info"  type="submit" name="mostrarCalificacionesAlumnoaCargo" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-info"  type="submit" name="mostrarCalificacionesAlumnoaCargo" value="buscar"></td>
 			</tr>
 
 			<tr>
 				<td></td>
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"></td>
 				<!-- <td><input type="submit" name="buscartodos" value="Mostrar Todos"></td> -->
 			</tr>
 		</table>	

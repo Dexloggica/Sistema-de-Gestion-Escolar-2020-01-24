@@ -28,19 +28,19 @@ ob_start();
 			<tr>
 				<td>IdUsuario:</td>
 				<td><?php include("SelectUsuario.php");?></td>
-				<td><input class="btn btn-info"  type="submit" name="buscarid" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-info"  type="submit" name="buscarid" value="buscar"></td>
 			</tr>
 			<tr>
 				<td>Nombre:</td>
-				<td><input type="text" name="nombre"></td>
+				<td><input style="margin: 5px" type="text" name="nombre"></td>
 			</tr>
 			<tr>
 				<td>Apellido:</td>
-				<td><input type="text" name="apellido"></td>
+				<td><input style="margin: 5px" type="text" name="apellido"></td>
 			</tr>
 			<tr>
 				<td>Sexo:</td>
-				<td><select class="btn btn-default dropdown-toggle" name="sexo">
+				<td><select style="margin: 5px" class="btn btn-default dropdown-toggle" name="sexo">
 						<option selected="--">--</option>
 						<option value="Femenino">Femenino</option>
 						<option value="Masculino">Masculino</option>
@@ -48,15 +48,15 @@ ob_start();
 			</tr>
 			<tr>
 				<td>Dni:</td>
-				<td><input type="text" name="dni"></td>
+				<td><input style="margin: 5px" type="text" name="dni"></td>
 			</tr>
 			<tr>
 				<td>Cuil:</td>
-				<td><input type="text" name="cuil"></td>
+				<td><input style="margin: 5px" type="text" name="cuil"></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><input  class="btn btn-primary" type="submit" name="guardardatospersonalesotro" value="Modificar"><input  class="btn btn-default"  type="button" name="volver" value="Volver" onclick="location.href='pagina_usuario.php'"></td>
+				<td><input style="margin: 5px"  class="btn btn-primary" type="submit" name="guardardatospersonalesotro" value="Modificar"><input style="margin: 5px"  class="btn btn-default"  type="button" name="volver" value="Volver" onclick="location.href='pagina_usuario.php'"></td>
 				<!-- <td><input type="submit" name="buscartodos" value="Mostrar Todos"></td> -->
 			</tr>
 		</table><br>

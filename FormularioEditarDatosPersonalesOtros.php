@@ -26,11 +26,11 @@ ob_start();
 			<tr>
 				<td>IdUsuario:</td>
 				<td><?php include("SelectUsuario.php");?></td>
-				<td><input class="btn btn-info" type="submit" name="buscarid" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscarid" value="buscar"></td>
 			</tr>
 			<tr>
 				<td>Estado Civil:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='estadocivil'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='estadocivil'>
 					<option selected='--'>--</option>
 					<option value='Casado'>Casado</option>
 					<option value='Divorciado'>Divorciado</option>
@@ -41,11 +41,11 @@ ob_start();
 			</tr>
 			<tr>
 				<td>Cantidad de Hijos:</td>
-				<td><input type="text" name="cantidadhijos"></td>
+				<td><input style="margin: 5px" type="text" name="cantidadhijos"></td>
 			</tr>
 			<tr>
 				<td>*Situación del Padre:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='situaciondelpadre'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='situaciondelpadre'>
 					<option selected='--'>--</option>
 					<option value='Vive'>Vive</option>
 					<option value='NoVive'>No Vive</option>
@@ -54,7 +54,7 @@ ob_start();
 			</tr>
 			<tr>
 				<td>*Situación de la Madre:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='situaciondelamadre'>
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name='situaciondelamadre'>
 					<option selected='--'>--</option>
 					<option value='Vive'>Vive</option>
 					<option value='NoVive'>No Vive</option>
@@ -63,7 +63,7 @@ ob_start();
 			</tr>
 			<tr>
 				<td></td>
-				<td><input class="btn btn-primary" type="submit" name="editardatospersonales" value="Modificar"><input class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuDatosPersonalesOtros.php'"></td>
+				<td><input style="margin: 5px" class="btn btn-primary" type="submit" name="editardatospersonales" value="Modificar"><input style="margin: 5px" class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuDatosPersonalesOtros.php'"></td>
 				<!-- <td><input type="submit" name="buscartodos" value="Mostrar Todos"></td> -->
 			</tr>
 		</table>	

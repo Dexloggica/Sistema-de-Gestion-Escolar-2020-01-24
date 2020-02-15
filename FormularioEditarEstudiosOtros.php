@@ -26,11 +26,11 @@ ob_start();
 			<tr>
 				<td>IdUsuario:</td>
 				<td><?php include("SelectUsuario.php");?></td>
-				<td><input class="btn btn-info" type="submit" name="buscarid" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscarid" value="buscar"></td>
 			</tr>
 			<tr>
 				<td>*Nivel:</td>
-				<td><select class='btn btn-default dropdown-toggle' name="nivel">
+				<td><select style="margin: 5px" class='btn btn-default dropdown-toggle' name="nivel">
 						<option selected="--">--</option>
 						<option value="no tiene estudios">No tiene estudios</option>
 						<option value="Primario">Primario</option>
@@ -43,11 +43,11 @@ ob_start();
 			</tr>
 			<tr>
 				<td>Institucion/Colegio/Universidad:</td>
-				<td><input type="text" name="institucion"></td>
+				<td><input style="margin: 5px" type="text" name="institucion"></td>
 			</tr>
 			<tr>
 				<td>Titulo:</td>
-				<td><input type="text" name="titulo"></td>
+				<td><input style="margin: 5px" type="text" name="titulo"></td>
 			</tr>
 			<tr>
 				<td>Fecha:</td>
@@ -56,7 +56,7 @@ ob_start();
 			
 			<tr>
 				<td></td>
-				<td><input class="btn btn-primary" type="submit" name="guardarestudios" value="Modificar"><input class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuDatosPersonalesOtros.php'"></td>
+				<td><input style="margin: 5px" class="btn btn-primary" type="submit" name="guardarestudios" value="Modificar"><input style="margin: 5px" class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuDatosPersonalesOtros.php'"></td>
 				<!-- <td><input type="submit" name="buscartodos" value="Mostrar Todos"></td> -->
 			</tr>
 		</table>

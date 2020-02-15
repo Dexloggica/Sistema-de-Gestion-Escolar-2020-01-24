@@ -30,7 +30,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>*Dni Alumno:</td>
-				<td><input style="margin: 5px" type="text" name="dnialumno" id="dniAlumno"></td>
+				<td><input style="margin: 5px" style="margin: 5px" type="text" name="dnialumno" id="dniAlumno"></td>
 			</tr>
 		</table><br><br>
 		<table align="center">

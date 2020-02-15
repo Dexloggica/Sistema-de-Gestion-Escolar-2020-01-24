@@ -26,7 +26,7 @@ ob_start();
 			<tr>
 				<td>idPersona:</td>
 				<td><?php require("SelectDocente.php");?></td>
-				<td><input class="btn btn-default" type="submit" name="buscarid" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="buscarid" value="buscar"></td>
 			</tr>
 			<tr>
 				<td>Fecha:</td>
@@ -34,13 +34,13 @@ ob_start();
 			</tr>
 			<tr>
 				<td>Calificacion:</td>
-				<td><input type="text" name="calificacion"></td>
+				<td><input style="margin: 5px" type="text" name="calificacion"></td>
 			</tr>
 			
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarcedula" value="Registrar"><input  class="btn btn-info" type="submit" name="mostrarcedulas" value="Mostrar todas las Personas"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarcedula" value="Registrar"><input style="margin: 5px"  class="btn btn-info" type="submit" name="mostrarcedulas" value="Mostrar todas las Personas"></td>
 			</tr>
 
 		</table>	

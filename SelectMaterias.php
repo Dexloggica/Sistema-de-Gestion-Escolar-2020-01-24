@@ -21,7 +21,7 @@ $idCargo=$fila['idCargo'];
 //obtengo el idAsignatura del Docente
 $consulta= "SELECT * FROM Asignatura WHERE Cargo_idCargo='$idCargo'"; 
 $resultado= mysql_query($consulta,$link) or die (mysql_error());
-	echo"<td><select class='btn btn-default dropdown-toggle' name='materiabuscada'>
+	echo"<td><select style='margin: 5px' class='btn btn-default dropdown-toggle' name='materiabuscada'>
 								<option selected='--'>--</option>";
 	while ($row = mysql_fetch_row($resultado))
 	{

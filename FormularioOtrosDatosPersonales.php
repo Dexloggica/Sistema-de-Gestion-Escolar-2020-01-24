@@ -4,7 +4,7 @@ $TipodePerfil=$_SESSION['TipoPerfil'];
 if($TipodePerfil!=(1 or 10)){
 	echo"<tr>
 				<td>Estado Civil:</td>
-				<td><select class='btn btn-default dropdown-toggle' name='estadocivil'>
+				<td><select style='margin: 5px' class='btn btn-default dropdown-toggle' name='estadocivil'>
 					<option selected='--'>--</option>
 					<option value='Casado'>Casado</option>
 					<option value='Divorciado'>Divorciado</option>

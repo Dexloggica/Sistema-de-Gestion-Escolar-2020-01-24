@@ -42,7 +42,7 @@ ob_start();
 				<td>Localidad:<?php require("SelectLocalidad.php");?></td>
 			</tr>
 			<tr align="center">
-				<td><input class="btn btn-primary" type="submit" name="guardarlocalidad" value="Modificar"><input class="btn btn-default"  type="button" name="volver" value="Volver" onclick="location.href='MenuDatosPersonalesOtros.php'"></td>
+				<td><input style="margin: 5px" class="btn btn-primary" type="submit" name="guardarlocalidad" value="Modificar"><input style="margin: 5px" class="btn btn-default"  type="button" name="volver" value="Volver" onclick="location.href='MenuDatosPersonalesOtros.php'"></td>
 				<!-- <td><input type="submit" name="buscartodos" value="Mostrar Todos"></td> -->
 			</tr>
 		</table>	

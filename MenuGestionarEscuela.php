@@ -23,9 +23,9 @@ ob_start();
 		<form name="formulariogestionarescuela" method="post">
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionarpermisos" value="Permisos">
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionarpermisos" value="Permisos">
 				<!--<input type="submit" name="gestionartipodeperfiles" value="Tipo de Perfiles">
-				--><input class="btn btn-default" type="submit" name="gestionausuarios" value="Usuarios"></td>
+				--><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionausuarios" value="Usuarios"></td>
 
 			</tr>
 			<tr align="center">

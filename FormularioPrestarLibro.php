@@ -24,7 +24,7 @@ echo"
 		</table><br>
 		<table align='center'>
 			<tr align='center'>
-				<td><input class='btn btn-primary' type='submit' name='registrarprestamo' value='Registrar Prestamo'></td>
+				<td><input style='margin: 5px' class='btn btn-primary' type='submit' name='registrarprestamo' value='Registrar Prestamo'></td>
 			</tr>
 
 		</table>	

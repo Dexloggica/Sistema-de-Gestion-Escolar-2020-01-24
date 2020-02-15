@@ -53,7 +53,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td></td>
-				<td><input class="btn btn-primary"  type="submit" name="guardardiscapacidad" value="Modificar"><input class="btn btn-default"  type="button" name="volver" value="Volver" onclick="location.href='MenuEditarDatosPersonalesAlumnoaCargo.php'"></td>
+				<td><input style="margin: 5px" class="btn btn-primary"  type="submit" name="guardardiscapacidad" value="Modificar"><input style="margin: 5px" class="btn btn-default"  type="button" name="volver" value="Volver" onclick="location.href='MenuEditarDatosPersonalesAlumnoaCargo.php'"></td>
 				<td></td>
 			</tr>
 		</table>	
