@@ -26,17 +26,17 @@ ob_start();
 		<table align="center">
 			<tr align="center">
 				<td>*Dni Tutor:</td>
-				<td><input type="text" name="dnitutor" id="dniTutor"></td>
+				<td><input style="margin: 5px" type="text" name="dnitutor" id="dniTutor"></td>
 			</tr>
 			<tr align="center">
 				<td>*Dni Alumno:</td>
-				<td><input type="text" name="dnialumno" id="dniAlumno"></td>
+				<td><input style="margin: 5px" type="text" name="dnialumno" id="dniAlumno"></td>
 			</tr>
 		</table><br><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="button" name="volver" value="Volver" onclick='location.href="pagina_usuario.php"'></td>
-				<td><input class="btn btn-info" type="submit" name="buscardni" value="buscar"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="button" name="volver" value="Volver" onclick='location.href="pagina_usuario.php"'></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscardni" value="buscar"></td>
 			</tr>
 		</table><br><br>
 	</form>

@@ -26,38 +26,38 @@ ob_start();
 	<form name="editarmisdatospersonales" method="post">
 		<table align="center">
 			<tr>
-				<td><input class="btn btn-default" type="submit" name="editarfechanacimiento" value="Fechas de Nacimientos"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="editarfechanacimiento" value="Fechas de Nacimientos"></td>
 			</tr>
 			<tr>
-				<td><input class="btn btn-default" type="submit" name="editardatospersonales" value="Datos Personales"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="editardatospersonales" value="Datos Personales"></td>
 			</tr>
 			<tr>
-				<td><input class="btn btn-default" type="submit" name="editardomicilio" value="Domicilio"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="editardomicilio" value="Domicilio"></td>
 			</tr>
 			<tr>
-				<td><input class="btn btn-default" type="submit" name="editardatoscontacto" value="Datos de Contacto"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="editardatoscontacto" value="Datos de Contacto"></td>
 			</tr>
 			<tr>
-				<td><input class="btn btn-default" type="submit" name="editarestudios" value="Estudios"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="editarestudios" value="Estudios"></td>
 			</tr>
 			<tr>
-				<td><input class="btn btn-default" type="submit" name="editartecnologia" value="Tecnologia"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="editartecnologia" value="Tecnologia"></td>
 			</tr>
 			<tr>
-				<td><input class="btn btn-default" type="submit" name="editardeportes" value="Deportes"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="editardeportes" value="Deportes"></td>
 			</tr>
 			<tr>
-				<td><input class="btn btn-default" type="submit" name="editaridiomas" value="Idiomas"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="editaridiomas" value="Idiomas"></td>
 			</tr>
 			<tr>
-				<td><input class="btn btn-default" type="submit" name="editardiscapacidad" value="Discapacidad"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="editardiscapacidad" value="Discapacidad"></td>
 			</tr>
 			<tr>
-				<td><input class="btn btn-default" type="submit" name="editarlocalidad" value="Localidad"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="editarlocalidad" value="Localidad"></td>
 			</tr>
 
 			<tr>
-				<td><input class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='pagina_usuario.php'"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='pagina_usuario.php'"></td>
 			</tr>
 
 		</table>

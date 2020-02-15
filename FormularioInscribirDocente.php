@@ -27,11 +27,11 @@ ob_start();
 		<table align="center">
 			<tr align="center">
 				<td>*Nombre:</td>
-				<td><input type="text" name="nombre" id="nombredesc"></td>
+				<td><input style="margin: 5px" type="text" name="nombre" id="nombredesc"></td>
 			</tr>
 			<tr align="center">
 				<td>*Apellido:</td>
-				<td><input type="text" name="apellido" id="apellidodesc"></td>
+				<td><input style="margin: 5px" type="text" name="apellido" id="apellidodesc"></td>
 			</tr>
 			<tr align="center">
 				<td>*Sexo:</td>
@@ -43,11 +43,11 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>*Dni:</td>
-				<td><input type="text" name="dni" id="dnidesc"></td>
+				<td><input style="margin: 5px" type="text" name="dni" id="dnidesc"></td>
 			</tr>
 			<tr align="center">
 				<td>*Cuil:</td>
-				<td><input type="text" name="cuil" id="cuildesc"></td>
+				<td><input style="margin: 5px" type="text" name="cuil" id="cuildesc"></td>
 			</tr>
 			<tr align="center">
 				<td>*idTipoPerfil:</td>
@@ -81,7 +81,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Cantidad de Hijos:</td>
-				<td><input type="text" name="cantidadhijos"></td>
+				<td><input style="margin: 5px" type="text" name="cantidadhijos"></td>
 			</tr>
 
 			<tr align="center">
@@ -107,27 +107,27 @@ ob_start();
 
 			<tr align="center">
 				<td>*Calle:</td>
-				<td><input type="text" name="calle"></td>
+				<td><input style="margin: 5px" type="text" name="calle"></td>
 			</tr>
 			<tr align="center">
 				<td>*Numero:</td>
-				<td><input type="text" name="numero"></td>
+				<td><input style="margin: 5px" type="text" name="numero"></td>
 			</tr>
 			<tr align="center">
 				<td>Piso:</td>
-				<td><input type="text" name="piso"></td>
+				<td><input style="margin: 5px" type="text" name="piso"></td>
 			</tr>
 			<tr align="center">
 				<td>Departamento:</td>
-				<td><input type="text" name="departamento"></td>
+				<td><input style="margin: 5px" type="text" name="departamento"></td>
 			</tr>
 			<tr align="center">
 				<td>Unidad:</td>
-				<td><input type="text" name="unidad"></td>
+				<td><input style="margin: 5px" type="text" name="unidad"></td>
 			</tr>
 			<tr align="center">
 				<td>Barrio:</td>
-				<td><input type="text" name="barrio"></td>
+				<td><input style="margin: 5px" type="text" name="barrio"></td>
 			</tr>
 			<tr align="center">
 				<td>Tipo de Vivienda:</td>
@@ -143,15 +143,15 @@ ob_start();
 
 			<tr align="center">
 				<td>*Telefono1:</td>
-				<td><input type="text" name="telefono1"></td>
+				<td><input style="margin: 5px" type="text" name="telefono1"></td>
 			</tr>
 			<tr align="center">
 				<td>Telefono2:</td>
-				<td><input type="text" name="telefono2"></td>
+				<td><input style="margin: 5px" type="text" name="telefono2"></td>
 			</tr>
 			<tr align="center">
 				<td>Telefono3:</td>
-				<td><input type="text" name="telefono3"></td>
+				<td><input style="margin: 5px" type="text" name="telefono3"></td>
 			</tr>
 			<tr align="center">
 				<td>Telefono4:</td>
@@ -159,13 +159,13 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Email:</td>
-				<td><input type="text" name="email"></td>
+				<td><input style="margin: 5px" type="text" name="email"></td>
 			</tr>
 
 
 			<tr align="center">
 				<td>*Titulo:</td>
-				<td><input type="text" name="titulo"></td>
+				<td><input style="margin: 5px" type="text" name="titulo"></td>
 			</tr>
 			<tr align="center">
 				<td>*Nivel del Titulo:</td>
@@ -182,7 +182,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Institucion/Colegio/Universidad:</td>
-				<td><input type="text" name="institucion"></td>
+				<td><input style="margin: 5px" type="text" name="institucion"></td>
 			</tr>
 			<tr align="center">
 				<td>Fecha de Egreso:</td>
@@ -219,7 +219,7 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>Descripción:</td>
-				<td><input type="text" name="descripcion"></td>
+				<td><input style="margin: 5px" type="text" name="descripcion"></td>
 			</tr>
 
 			
@@ -268,11 +268,11 @@ ob_start();
 			</tr>
 			<tr>
 				<td>Decreto Designacion:</td>
-				<td><input type="text" name="decreto"></td>
+				<td><input style="margin: 5px" type="text" name="decreto"></td>
 			</tr>
 			<tr>
 				<td>*Situacion de Revista:</td>
-				<td><select class="btn btn-default dropdown-toggle" name='situacionrevista'>
+				<td><select style="margin: 5px" class="btn btn-default dropdown-toggle" name='situacionrevista'>
 							<option selected='--'>--</option>
 							<option value='Suplente'>Suplente</option>
 							<option value='Interino'>Interino</option>
@@ -284,7 +284,7 @@ ob_start();
 
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default"  type="button" name="volver" value="Volver" onclick="location.href='pagina_usuario.php'"><input class="btn btn-primary"  type="submit" name="registraralumno" value="Registrar"></td>
+				<td><input style="margin: 5px" class="btn btn-default"  type="button" name="volver" value="Volver" onclick="location.href='pagina_usuario.php'"><input style="margin: 5px" class="btn btn-primary"  type="submit" name="registraralumno" value="Registrar"></td>
 			</tr>
 
 		</table><br><br>

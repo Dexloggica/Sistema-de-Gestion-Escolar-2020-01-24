@@ -29,51 +29,51 @@ ob_start();
 
 			</tr>
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionapersonas" value="Personas">
-				<input class="btn btn-default" type="submit" name="gestionafechasnacimiento" value="Fechas Nacimiento">
-				<input class="btn btn-default" type="submit" name="gestionadatospersonales" value="Datos Personales">
-				<input class="btn btn-default" type="submit" name="gestionadomicilios" value="Domicilios">
-				<input class="btn btn-default" type="submit" name="gestionadatosdecontacto" value="Datos de Contacto">
-				<input class="btn btn-default" type="submit" name="gestionaestudios" value="Estudios">
-				<input class="btn btn-default" type="submit" name="gestionatecnologiadepersonas" value="Tecnologia">
-				<input class="btn btn-default" type="submit" name="gestionadeportesdepersonas" value="Deportes">
-				<input class="btn btn-default" type="submit" name="gestionaidiomasdepersonas" value="Idiomas">
-				<input class="btn btn-default" type="submit" name="gestionadiscapacidadesdepersonas" value="Discapacidades"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionapersonas" value="Personas">
+				<input style="margin: 5px" class="btn btn-default" type="submit" name="gestionafechasnacimiento" value="Fechas Nacimiento">
+				<input style="margin: 5px" class="btn btn-default" type="submit" name="gestionadatospersonales" value="Datos Personales">
+				<input style="margin: 5px" class="btn btn-default" type="submit" name="gestionadomicilios" value="Domicilios">
+				<input style="margin: 5px" class="btn btn-default" type="submit" name="gestionadatosdecontacto" value="Datos de Contacto">
+				<input style="margin: 5px" class="btn btn-default" type="submit" name="gestionaestudios" value="Estudios">
+				<input style="margin: 5px" class="btn btn-default" type="submit" name="gestionatecnologiadepersonas" value="Tecnologia">
+				<input style="margin: 5px" class="btn btn-default" type="submit" name="gestionadeportesdepersonas" value="Deportes">
+				<input style="margin: 5px" style="margin: 5px" class="btn btn-default" type="submit" name="gestionaidiomasdepersonas" value="Idiomas">
+				<input style="margin: 5px" class="btn btn-default" type="submit" name="gestionadiscapacidadesdepersonas" value="Discapacidades"></td>
 			</tr>
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionalocalidades" value="Localidades"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionalocalidades" value="Localidades"></td>
 			</tr>
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionaobservaciones" value="Observaciones"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionaobservaciones" value="Observaciones"></td>
 			</tr>
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionabecas" value="Becas"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionabecas" value="Becas"></td>
 			</tr>
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionainscripciones" value="Inscripciones"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionainscripciones" value="Inscripciones"></td>
 			</tr align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionacargos" value="Cargos">
-				<input class="btn btn-default" type="submit" name="gestionacedulasdocentes" value="Cedulas Docentes">
-				<input class="btn btn-default" type="submit" name="gestionalicenciasdocentes" value="Licencias Docentes"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionacargos" value="Cargos">
+				<input style="margin: 5px" class="btn btn-default" type="submit" name="gestionacedulasdocentes" value="Cedulas Docentes">
+				<input style="margin: 5px" class="btn btn-default" type="submit" name="gestionalicenciasdocentes" value="Licencias Docentes"></td>
 			</tr>
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionaasignaturas" value="Asignaturas"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionaasignaturas" value="Asignaturas"></td>
 			</tr>
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionahorarios" value="Horarios">
-					<input class="btn btn-default" type="submit" name="gestionaniveles" value="Niveles"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionahorarios" value="Horarios">
+					<input style="margin: 5px" class="btn btn-default" type="submit" name="gestionaniveles" value="Niveles"></td>
 			</tr>
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionacalificaciones" value="Calificaciones">
-				<input class="btn btn-default" type="submit" name="gestionarecuperaciones" value="Recuperaciones">
-				<input class="btn btn-default" type="submit" name="gestionartipoderecuperaciones" value="Tipo de Recuperaciones"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionacalificaciones" value="Calificaciones">
+				<input style="margin: 5px" class="btn btn-default" type="submit" name="gestionarecuperaciones" value="Recuperaciones">
+				<input style="margin: 5px" class="btn btn-default" type="submit" name="gestionartipoderecuperaciones" value="Tipo de Recuperaciones"></td>
 			</tr>
 			
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"></td>
 			</tr>
 
 		</table>	

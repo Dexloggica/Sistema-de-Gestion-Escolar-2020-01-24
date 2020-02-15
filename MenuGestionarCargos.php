@@ -24,15 +24,15 @@ ob_start();
 		<form name="formulariogestionarcargos" method="post">
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionarcargosdocente" value="Crear Cargo para un Docente">
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionarcargosdocente" value="Crear Cargo para un Docente">
 			</tr>
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionarcargosniveles" value="Vincular Cargo con un Nivel">
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionarcargosniveles" value="Vincular Cargo con un Nivel">
 			</tr>
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"></td>
 			</tr>
 
 		</table>	
