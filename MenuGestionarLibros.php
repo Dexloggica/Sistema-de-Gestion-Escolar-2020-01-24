@@ -25,17 +25,17 @@ ob_start();
 		<table align="center">
 			<tr align="center">
 				<td>*Titulo:</td>
-				<td><input type="text" name="titulo"></td>
-				<td><input class="btn btn-info" type="submit" name="buscartitulo" value="buscar"/></td>
+				<td><input style="margin: 5px" type="text" name="titulo"></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscartitulo" value="buscar"/></td>
 			</tr>
 			<tr align="center">
 				<td>Numero de Tomo:</td>
-				<td><input type="text" name="numero"></td>
+				<td><input style="margin: 5px" type="text" name="numero"></td>
 				<td></td>
 			</tr>
 			<tr align="center">
 				<td>*Cantidad de Paginas:</td>
-				<td><input type="text" name="paginas"></td>
+				<td><input style="margin: 5px" type="text" name="paginas"></td>
 				<td></td>
 			</tr>
 			<tr align="center">
@@ -45,48 +45,48 @@ ob_start();
 			</tr>
 			<tr align="center">
 				<td>*Generos:</td>
-				<td><input type="text" name="generos"></td>
+				<td><input style="margin: 5px" type="text" name="generos"></td>
 				<td><?php include("SelectGenero.php");?></td>
-				<td><input class="btn btn-info" type="submit" name="buscargenero" value="buscar"/></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscargenero" value="buscar"/></td>
 			</tr>
 			<tr align="center">
 				<td>Pais:</td>
-				<td><input type="text" name="pais"></td>
+				<td><input style="margin: 5px" type="text" name="pais"></td>
 				<td><?php include("SelectPais.php");?></td>
-				<td><input class="btn btn-info" type="submit" name="buscarpais" value="buscar"/></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscarpais" value="buscar"/></td>
 			</tr>
 			<tr align="center">
 				<td>*Editorial:</td>
-				<td><input type="text" name="editorial"></td>
+				<td><input style="margin: 5px" type="text" name="editorial"></td>
 				<td><?php include("SelectEditorial.php");?></td>
-				<td><input class="btn btn-info" type="submit" name="buscareditorial" value="buscar"/></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscareditorial" value="buscar"/></td>
 			</tr>
 			<tr align="center">
 				<td>*Autores:</td>
-				<td><input type="text" name="autores"></td>
+				<td><input style="margin: 5px" type="text" name="autores"></td>
 				<td><?php include("SelectAutores.php");?></td>
-				<td><input class="btn btn-info" type="submit" name="buscarautor" value="buscar"/></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscarautor" value="buscar"/></td>
 			</tr>
 			<tr align="center">
 				<td>ISBN:</td>
-				<td><input type="text" name="isbn"></td>
-				<td><input class="btn btn-info" type="submit" name="buscarisbn" value="buscar"/></td>
+				<td><input style="margin: 5px" type="text" name="isbn"></td>
+				<td><input style="margin: 5px" class="btn btn-info" type="submit" name="buscarisbn" value="buscar"/></td>
 			</tr>
 			<tr align="center">
 				<td>Link de Imagen del Libro:</td>
-				<td><input type="text" name="linkimagen"></td>
+				<td><input style="margin: 5px" type="text" name="linkimagen"></td>
 				<td></td>
 			</tr>
 			<tr align="center">
 				<td>Link de descarga del libro:</td>
-				<td><input type="text" name="linkdescarga"></td>
+				<td><input style="margin: 5px" type="text" name="linkdescarga"></td>
 				<td></td>
 			</tr>
 			
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"><input class="btn btn-primary" type="submit" name="registrarlibro" value="Registrar"><input class="btn btn-info" type="submit" name="mostrarlibros" value="Mostrar todos los libros"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"><input style="margin: 5px" class="btn btn-primary" type="submit" name="registrarlibro" value="Registrar"><input style="margin: 5px" class="btn btn-info" type="submit" name="mostrarlibros" value="Mostrar todos los libros"></td>
 			</tr>
 
 		</table>	

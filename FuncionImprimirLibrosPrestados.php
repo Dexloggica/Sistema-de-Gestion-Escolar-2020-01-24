@@ -169,7 +169,7 @@ $resultado= mysql_query($query,$link) or die (mysql_error());
 				echo "</table></form>";
 				if($bandera==0)
 				{
-					echo"Pago no encontrado";
+					echo"Libro no encontrado";
 				}	
 				echo"<br>Total de libros encontrados=".$cantidad;
 				$_SESSION['cantidad'] = $cantidad;

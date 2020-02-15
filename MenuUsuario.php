@@ -78,58 +78,58 @@ $_SESSION['PermisoGestionarBiblioteca'] = $PermisoGestionarBiblioteca;
     echo "<form form action='' method='post' name='formulario_usuario'>
           <table align=center>
               <tr>
-                <td><h2 >$PerfilDescripcion de la Esc. Mariano Moreno</h2></td>
+                <td><h2 >$PerfilDescripcion del Instituto Loggica</h2></td>
               </tr>";
                 //si tiene permido de editar sus datos personales se muestra esta opcion
                 if($PermisoEditarSusDatosPersonales==1)
                 {echo"
                   <tr>
-                  <td><input class='btn btn-default' type='submit' name=EditarMisDatosPersonales value='Editar Mis Datos Personales'></td>
+                  <td><input style='margin: 5px' class='btn btn-default' type='submit' name=EditarMisDatosPersonales value='Editar Mis Datos Personales'></td>
                   </tr>";
                 }
                 if($PermisoEditarDatosPersonalesOtros==1)
                 {echo"
                   <tr>
-                  <td><input class='btn btn-default' type='submit' name='EditarDatosPersonalesOtros' value='Editar Datos Personales Otros'></td>
+                  <td><input style='margin: 5px' class='btn btn-default' type='submit' name='EditarDatosPersonalesOtros' value='Editar Datos Personales Otros'></td>
                   </tr>";
                 }
                
                 if($PermisoEditarObservacionesOtros==1)
                 {echo"
                   <tr>
-                  <td><input class='btn btn-default' type='submit' name='EditarObservacionesOtros' value='Observaciones'></td>
+                  <td><input style='margin: 5px' class='btn btn-default' type='submit' name='EditarObservacionesOtros' value='Observaciones'></td>
                   </tr>";
                 }
                
                 if($PermisoEditarCalificacionesSusAlumnos==1)
                 {echo"
                   <tr>
-                  <td><input class='btn btn-default' type='submit' name='EditarCalificacionesSusAlumnos' value='Editar Calificaciones Mis Alumnos'></td>
+                  <td><input style='margin: 5px' class='btn btn-default' type='submit' name='EditarCalificacionesSusAlumnos' value='Editar Calificaciones Mis Alumnos'></td>
                   </tr>";
                 }
                 if($PermisoEditarDatosPersonalesAlumnoaCargo==1)
                 {echo"
                   <tr>
-                  <td><input class='btn btn-default' type='submit' name='EditarDatosPersonalesAlumnoaCargo' value='Editar Datos Personales Alumno a Cargo'></td>
+                  <td><input style='margin: 5px' class='btn btn-default' type='submit' name='EditarDatosPersonalesAlumnoaCargo' value='Editar Datos Personales Alumno a Cargo'></td>
                   </tr>";
                 }
                 if($PermisoVerCalificacionesAlumnoaCargo==1)
                 {echo"
                   <tr>
-                  <td><input class='btn btn-default' type='submit' name='VerCalificacionesAlumnoaCargo' value='Ver Calificaciones Alumno a Cargo'></td>
+                  <td><input style='margin: 5px' class='btn btn-default' type='submit' name='VerCalificacionesAlumnoaCargo' value='Ver Calificaciones Alumno a Cargo'></td>
                   </tr>";
                 }
                 if($PermisoVerSusCalificaciones==1)
                 {echo"
                   <tr>
-                  <td><input class='btn btn-info' type='submit' name='VerSusCalificaciones' value='Ver Mis Calificaciones'></td>
+                  <td><input style='margin: 5px' class='btn btn-info' type='submit' name='VerSusCalificaciones' value='Ver Mis Calificaciones'></td>
                   </tr>";
                 }
                 if($PermisoGestionarEscuela==1)
                 {
                   echo"
                   <tr>
-                  <td><input class='btn btn-default' type='submit' name='GestionarEscuela' value='Gestionar Escuela'></td>
+                  <td><input style='margin: 5px' class='btn btn-default' type='submit' name='GestionarEscuela' value='Gestionar Escuela'></td>
                   </tr>";
                   
                 }
@@ -140,7 +140,7 @@ $_SESSION['PermisoGestionarBiblioteca'] = $PermisoGestionarBiblioteca;
                 {
                   echo"
                   <tr>
-                  <td><input class='btn btn-default' type='submit' name='InscribirAlumno' value='Inscribir un Alumno'></td>
+                  <td><input style='margin: 5px' class='btn btn-default' type='submit' name='InscribirAlumno' value='Inscribir un Alumno'></td>
                   </tr>";
                   
                 }
@@ -148,7 +148,7 @@ $_SESSION['PermisoGestionarBiblioteca'] = $PermisoGestionarBiblioteca;
                 {
                   echo"
                   <tr>
-                  <td><input class='btn btn-default' type='submit' name='InscribirDocente' value='Inscribir un Docente'></td>
+                  <td><input style='margin: 5px' class='btn btn-default' type='submit' name='InscribirDocente' value='Inscribir un Docente'></td>
                   </tr>";
                   
                 }
@@ -156,7 +156,7 @@ $_SESSION['PermisoGestionarBiblioteca'] = $PermisoGestionarBiblioteca;
                 {
                   echo"
                   <tr>
-                  <td><input class='btn btn-default' type='submit' name='GestionarBiblioteca' value='Gestionar Biblioteca'></td>
+                  <td><input style='margin: 5px' class='btn btn-default' type='submit' name='GestionarBiblioteca' value='Gestionar Biblioteca'></td>
                   </tr>";
                 }
 //////////////////////////////////////////////////////

@@ -24,10 +24,10 @@ ob_start();
 		<form name="formulariogestionarbiblioteca" method="post">
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionarsocios" value="Socios">
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionarsocios" value="Socios">
 			</tr>
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="gestionarlibros" value="Libros">
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="gestionarlibros" value="Libros">
 			</tr>
 			<!-- <tr align="center">
 				<td><input class="btn btn-default" type="submit" name="gestionarprestamos" value="Prestamos">
@@ -35,7 +35,7 @@ ob_start();
 		</table><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="submit" name="volver" value="Volver"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="submit" name="volver" value="Volver"></td>
 			</tr>
 
 		</table>	

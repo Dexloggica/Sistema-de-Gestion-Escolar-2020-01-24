@@ -91,7 +91,7 @@ ob_start();
 			</tr><br>
 		<table align="center">
 			<tr align="center">
-				<td><input class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuGestionarSocios.php'"><input class="btn btn-primary" type="submit" name="registrarsocio" value="Registrar"><input  class="btn btn-info"  type="submit" name="mostrarsocios" value="Mostrar todos los Socios"></td>
+				<td><input style="margin: 5px" class="btn btn-default" type="button" name="volver" value="Volver" onclick="location.href='MenuGestionarSocios.php'"><input style="margin: 5px" class="btn btn-primary" type="submit" name="registrarsocio" value="Registrar"><input style="margin: 5px"  class="btn btn-info"  type="submit" name="mostrarsocios" value="Mostrar todos los Socios"></td>
 			</tr>
 
 		</table>	
