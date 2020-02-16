@@ -26,7 +26,7 @@ $idDocente=$_POST['idDocente'];
 				// mysql_select_db("0612_version5",$conex) or die("ERROR con la base de datos");
 				//require("FuncionConexionBasedeDatos.php");
 				$query="SELECT * FROM Persona,Cargo,TipoPerfil,Licencia WHERE Persona.idPersona=Cargo.Persona_idPersona and Cargo.TipoCargo=TipoPerfil.idTipoPerfil and Licencia.Persona_idPersona=Persona.idPersona and Persona.idPersona='$idPersona'";
-				$resultado=mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				//echo"puede editar este perfil";
 				////////////////
 				$bandera=0;

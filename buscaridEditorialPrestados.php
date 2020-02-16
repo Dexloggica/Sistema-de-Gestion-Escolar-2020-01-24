@@ -9,7 +9,7 @@ $consulta= "SELECT * FROM Editorial WHERE idEditorial='$idEditorial'";
 	$idEditorial=$fila['idEditorial'];
 
 $query="SELECT * FROM Libro,Editorial WHERE Libro.Editorial_idEditorial=Editorial.idEditorial and Editorial.idEditorial='$idEditorial'";
-				$resultado=mysqli_query($query);	
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));	
 ////////////////
 				$bandera=0;
 				$cantidad=0;

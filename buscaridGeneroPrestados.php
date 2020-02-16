@@ -9,7 +9,7 @@ $consulta= "SELECT * FROM Genero WHERE idGenero='$idGenero'";
 	$idGenero=$fila['idGenero'];
 
 $query="SELECT * FROM Libro,Libro_has_Genero,Genero WHERE Libro.idLibro=Libro_has_Genero.Libro_idLibro and Genero.idGenero=Libro_has_Genero.Genero_idGenero and Libro_has_Genero.Genero_idGenero='$idGenero'";
-				$resultado=mysqli_query($query);	
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));	
 ////////////////
 				$bandera=0;
 				$cantidad=0;

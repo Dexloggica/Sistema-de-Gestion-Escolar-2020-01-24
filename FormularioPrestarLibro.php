@@ -2,8 +2,8 @@
 require("FuncionConexionBasedeDatos.php");
 $idLibro=$_SESSION['idLibro'.$i];
 $query="SELECT * FROM Libro WHERE idLibro='$idLibro'";
-$resultado= mysql_query($query,$link) or die (mysql_error());
-$fila=mysql_fetch_array($resultado);
+$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+$fila=mysqli_fetch_array($resultado);
 $Titulo=$fila['Titulo'];
 $LinkImagen=$fila['LinkImagen'];
 

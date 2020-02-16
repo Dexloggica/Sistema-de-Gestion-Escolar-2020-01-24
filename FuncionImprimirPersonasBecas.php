@@ -3,7 +3,7 @@
 require("FuncionConexionBasedeDatos.php");
 
 $consulta= "SELECT * FROM Persona,Persona_has_TipoBeca,TipoBeca WHERE Persona.idPersona=Persona_has_TipoBeca.Persona_idPersona and Persona_has_TipoBeca.TipoBeca_idTipoBeca=TipoBeca.idTipoBeca"; 
-$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 			$bandera=0;
 			$cantidad=0;
 			echo"<center><table class='table table-striped' border>

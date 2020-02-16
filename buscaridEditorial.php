@@ -26,7 +26,7 @@ $idEditorial=$_POST['idEditorial'];
 				// mysql_select_db("0612_version5",$conex) or die("ERROR con la base de datos");
 				//require("FuncionConexionBasedeDatos.php");
 				$query="SELECT * FROM Libro,Editorial WHERE Libro.Editorial_idEditorial=Editorial.idEditorial and Editorial.idEditorial='$idEditorial'";
-				$resultado=mysqli_query($query);	
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));	
 				//echo"puede editar este perfil";
 				////////////////
 				$bandera=0;

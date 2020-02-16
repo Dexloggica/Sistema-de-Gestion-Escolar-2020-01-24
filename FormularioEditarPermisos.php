@@ -4,15 +4,15 @@ $_SESSION["idpermisobuscado"] = $idpermisobuscado;
 require("FuncionConexionBasedeDatos.php");
 
 $consulta= "SELECT * FROM TipoPerfil WHERE idTipoPerfil='$idpermisobuscado'"; 
-$resultado= mysql_query($consulta,$link) or die (mysql_error());
-$fila=mysql_fetch_array($resultado);
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+$fila=mysqli_fetch_array($resultado);
 $Perfil=$fila['PerfilDesc'];
 echo"<center>Este formulario te permitirá editar los Permisos del <b>$Perfil</b>	";
 
 $consulta= "SELECT * FROM Permisos WHERE idPermisos='$idpermisobuscado'"; 
-$resultado= mysql_query($consulta,$link) or die (mysql_error());
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 
-$fila=mysql_fetch_array($resultado);
+$fila=mysqli_fetch_array($resultado);
 $idPermisos=$fila['idPermisos'];
 echo"idPermisos: $idPermisos</center><br>";
 $PermisoEditarSusDatosPersonales=$fila['PermisoEditarSusDatosPersonales'];

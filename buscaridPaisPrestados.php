@@ -9,7 +9,7 @@ $consulta= "SELECT * FROM Pais WHERE idPais='$idPais'";
 	$idPais=$fila['idPais'];
 
 $query="SELECT * FROM Libro,Pais WHERE Libro.Pais_idPais=Pais.idPais and Pais.idPais='$idPais'";
-				$resultado=mysqli_query($query);	
+$resultado= mysqli_query($link, $query) or die (mysqli_error($link));	
 ////////////////
 				$bandera=0;
 				$cantidad=0;

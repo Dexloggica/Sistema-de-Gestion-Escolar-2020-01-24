@@ -4,7 +4,7 @@
 require("FuncionConexionBasedeDatos.php");
 
 $query="SELECT * FROM TipoBeca";
-$resultado = mysqli_query($query);
+$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 
 ////////////////
 				$bandera=0;

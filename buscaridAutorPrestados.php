@@ -10,7 +10,7 @@ $fila=mysqli_fetch_array($resultado);
 $idAutor=$fila['idAutor'];
 
 $query="SELECT * FROM Libro,Libro_has_Autor,Autor WHERE Libro.idLibro=Libro_has_Autor.Libro_idLibro and Autor.idAutor=Libro_has_Autor.Autor_idAutor and Libro_has_Autor.Autor_idAutor='$idAutor'";
-				$resultado=mysqli_query($query);	
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));	
 ////////////////
 				$bandera=0;
 				$cantidad=0;
