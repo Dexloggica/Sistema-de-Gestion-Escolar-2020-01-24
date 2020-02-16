@@ -2,7 +2,7 @@
 	require("FuncionConexionBasedeDatos.php");
 	
 				$query="SELECT * FROM Persona,Tecnologia WHERE Persona.idPersona=Tecnologia.Persona_idPersona";
-				$resultado=mysql_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				//echo"puede editar este perfil";
 				////////////////
 				$bandera=0;
@@ -19,7 +19,7 @@
 									<td class=encabezado>AccesoInternet</td>
 								<tr>";
 				// while($fila=mysql_fetch_array($resultados))
-				while ($row = mysql_fetch_row($resultado))
+				while ($row = mysqli_fetch_row($resultado))
 				{
 					
 						if($row[9]==1){
@@ -53,8 +53,8 @@
 				}	
 				//echo"<br>Total de idPersonas encontradas=".$cantidad;
 				//////////////////
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			
 	
 

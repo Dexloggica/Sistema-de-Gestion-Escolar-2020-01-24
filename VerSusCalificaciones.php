@@ -16,15 +16,15 @@ require("FuncionConexionBasedeDatos.php");
 echo"<b>Mis calificiones</b><br>";
 //obtengo el idPersona del Alumno
 $consulta= "SELECT * FROM Persona WHERE Usuario_idUsuario='$idusuario'"; 
-$resultado= mysql_query($consulta,$link) or die (mysql_error());
-$fila=mysql_fetch_array($resultado);
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+$fila=mysqli_fetch_array($resultado);
 $idPersonaAlumno=$fila['idPersona'];
 
 
 
 $consulta= "SELECT * FROM Persona,Calificaciones,Asignatura WHERE Persona.idPersona='$idPersonaAlumno' and Calificaciones.idAlumno='$idPersonaAlumno' and Asignatura.idAsignatura=Calificaciones.idAsignatura"; 
 
-$resultado= mysql_query($consulta,$link) or die (mysql_error());
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 			$bandera=0;
 			$cantidad=0;
 			echo"<table class='table table-striped' border>
@@ -40,7 +40,7 @@ $resultado= mysql_query($consulta,$link) or die (mysql_error());
 								<td>Asignatura</td>
 							<tr>";
 			// while($fila=mysql_fetch_array($resultados))
-			while ($row = mysql_fetch_row($resultado))
+			while ($row = mysqli_fetch_row($resultado))
 			{
 				
 				// $result=strpos("$fila[Asignatura_idAsignatura]",$idAsignaturaCargo);

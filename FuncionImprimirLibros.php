@@ -4,7 +4,7 @@
 require("FuncionConexionBasedeDatos.php");
 echo"<center>";
 $query="SELECT * FROM Libro";
-$resultado= mysql_query($query,$link) or die (mysql_error());
+$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 
 ////////////////
 				$bandera=0;
@@ -28,7 +28,7 @@ $resultado= mysql_query($query,$link) or die (mysql_error());
 									<td class=encabezado>Cantidad de Veces</td>
 							<tr>";
 				// while($fila=mysql_fetch_array($resultados))
-				while ($row = mysql_fetch_row($resultado))
+				while ($row = mysqli_fetch_row($resultado))
 				{
 						echo utf8_encode("<tr valign=top>
 								<td>$row[0]</td>
@@ -59,6 +59,6 @@ $resultado= mysql_query($query,$link) or die (mysql_error());
 				echo"<br>Total de Libros encontrados=".$cantidad."</center>";
 				//////////////////
 echo"</center>";
-@mysql_free_result($resultado);
-@mysql_close($link);
+@mysqli_free_result($resultado);
+@mysqli_close($link);
 ?>

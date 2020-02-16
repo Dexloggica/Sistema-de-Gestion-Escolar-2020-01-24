@@ -5,8 +5,8 @@ if (!$_SESSION){
 }
 $idusuario= $_SESSION['idusuario'];
 $consulta="SELECT * FROM Persona WHERE Usuario_idUsuario='$idusuario'";
-$resultado=mysql_query($consulta,$link) or die(mysql_error());
-$resultado_obtenido=mysql_fetch_array($resultado);
+$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+$resultado_obtenido=mysqli_fetch_array($resultado);
 $nombre= $resultado_obtenido['Nombre'];
 $apellido= $resultado_obtenido['Apellido'];
 $sexo= $resultado_obtenido['Sexo'];
@@ -29,5 +29,5 @@ echo utf8_encode("<form name='imprimirdatospersonales' method='post'>
 		</table>	
 
 	</form>");
-@mysql_close($link);
+@mysqli_close($link);
 ?>

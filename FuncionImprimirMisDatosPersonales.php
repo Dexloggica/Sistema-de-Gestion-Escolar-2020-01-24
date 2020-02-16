@@ -13,7 +13,7 @@ $anioactual=date("Y");
 //echo"dia=".$diaactual." mes=".$mesactual." año=".$anioactual;
 
 $query="SELECT * FROM Persona,DatosPersonales WHERE Persona.idPersona=DatosPersonales.Persona_idPersona and Persona.Usuario_idUsuario='$idusuario'";
-$resultado = mysql_query($query);
+$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 
 ////////////////
 				$bandera=0;
@@ -36,7 +36,7 @@ $resultado = mysql_query($query);
 
 								<tr>");
 				// while($fila=mysql_fetch_array($resultados))
-				while ($row = mysql_fetch_row($resultado))
+				while ($row = mysqli_fetch_row($resultado))
 				{
 					
 						echo utf8_encode("<tr>
@@ -67,6 +67,6 @@ $resultado = mysql_query($query);
 				//echo"<br>Total de Observaciones encontradas=".$cantidad;
 				//////////////////
 echo"</center>";
-@mysql_free_result($resultado);
-@mysql_close($link);	
+@mysqli_free_result($resultado);
+@mysqli_close($link);	
 ?>

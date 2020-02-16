@@ -3,7 +3,7 @@
 require("FuncionConexionBasedeDatos.php");
 $idCargo=$_POST['idCargo'];
 $consulta= "SELECT * FROM Cargo,Cargo_has_Nivel,Nivel WHERE Cargo.idCargo=Cargo_has_Nivel.Cargo_idCargo and Nivel.idNivel=Cargo_has_Nivel.Nivel_idNivel and Cargo.idCargo='$idCargo'"; 
-$resultado= mysql_query($consulta,$link) or die (mysql_error());
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 			$bandera=0;
 			$cantidad=0;
 			echo"<center><table class='table table-striped' border>
@@ -16,7 +16,7 @@ $resultado= mysql_query($consulta,$link) or die (mysql_error());
 								<td>Division</td>
 							<tr>";
 			// while($fila=mysql_fetch_array($resultados))
-			while ($row = mysql_fetch_row($resultado))
+			while ($row = mysqli_fetch_row($resultado))
 			{	
 					echo utf8_encode("<tr>
 							<td>$row[0]</td>

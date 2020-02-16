@@ -5,7 +5,7 @@ require("FuncionConexionBasedeDatos.php");
 
 //falta colocar docente cambio funciones o ver si lo toma, de momento no lo consideraremos
 $consulta= "SELECT * FROM TipoPerfil WHERE PerfilDesc='Docente'"; 
-$resultado= mysql_query($consulta,$link) or die (mysql_error());
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 // $fila=mysql_fetch_array($resultado);
 // $idPersonaaCargo=$fila['idPersonaaCargo'];
 	
@@ -14,7 +14,7 @@ $resultado= mysql_query($consulta,$link) or die (mysql_error());
 // $resultado= mysql_query($consulta,$link) or die (mysql_error());
 	   echo"<select style='margin: 5px'  class='btn btn-default dropdown-toggle' name='idTipoPerfil'>
 							<option selected='--'>--</option>";
-	while ($row = mysql_fetch_row($resultado))
+	while ($row = mysqli_fetch_row($resultado))
 	{
 		//solamente agrego las excepciones, las demas son las mismas que estan cargadas en el tipo de perfil
 		if($row[0]!=1 and $row[0]!=9 and $row[0]!=10and $row[0]!=11)

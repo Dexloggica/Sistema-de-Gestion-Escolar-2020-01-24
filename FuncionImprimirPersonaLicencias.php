@@ -15,7 +15,7 @@
 				// mysql_select_db("0612_version5",$conex) or die("ERROR con la base de datos");
 				//require("FuncionConexionBasedeDatos.php");
 				$query="SELECT * FROM Persona,Cargo,TipoPerfil,Licencia WHERE Persona.idPersona=Cargo.Persona_idPersona and TipoPerfil.idTipoPerfil=Cargo.TipoCargo and Persona.idPersona=Licencia.Persona_idPersona";
-				$resultado=mysql_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				//echo"puede editar este perfil";
 				////////////////
 				$bandera=0;
@@ -40,7 +40,7 @@
 									
 								<tr>";
 				// while($fila=mysql_fetch_array($resultados))
-				while ($row = mysql_fetch_row($resultado))
+				while ($row = mysqli_fetch_row($resultado))
 				{
 					
 					
@@ -76,8 +76,8 @@
 				}	
 				echo"<br>Total de Cargos encontrados=".$cantidad;
 				//////////////////
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				echo"</center>";
 	
 

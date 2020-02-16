@@ -10,27 +10,27 @@ require("FuncionConexionBasedeDatos.php");
 echo"<b>Lista de Alumnos</b><br>";
 //obtengo el idPersona del Docente
 $consulta= "SELECT * FROM Persona WHERE Usuario_idUsuario='$idusuario'"; 
-$resultado= mysql_query($consulta,$link) or die (mysql_error());
-$fila=mysql_fetch_array($resultado);
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+$fila=mysqli_fetch_array($resultado);
 $idPersonaDocente=$fila['idPersona'];
 
 
 //obtengo el idCargo del Docente
 $consulta= "SELECT * FROM Cargo WHERE Persona_idPersona='$idPersonaDocente'"; 
-$resultado= mysql_query($consulta,$link) or die (mysql_error());
-$fila=mysql_fetch_array($resultado);
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+$fila=mysqli_fetch_array($resultado);
 $idCargo=$fila['idCargo'];
 
 //obtengo el idAsignatura del Docente
 $consulta= "SELECT * FROM Asignatura WHERE Cargo_idCargo='$idCargo'"; 
-$resultado= mysql_query($consulta,$link) or die (mysql_error());
-$fila=mysql_fetch_array($resultado);
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+$fila=mysqli_fetch_array($resultado);
 $idAsignaturaCargo=$fila['idAsignatura'];
 
 
 //obtengo Calificaciones del Docente
 $consulta= "SELECT * FROM Persona,Calificaciones,Asignatura WHERE Asignatura.idAsignatura=Calificaciones.idAsignatura and Persona.idPersona=Calificaciones.idAlumno and Calificaciones.idDocenteResponsable='$idCargo' and Calificaciones.idAsignatura='$materiabuscada'"; 
-$resultado= mysql_query($consulta,$link) or die (mysql_error());
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 			$bandera=0;
 			$cantidad=0;
 			echo utf8_encode("<table class='table table-striped' border>
@@ -46,7 +46,7 @@ $resultado= mysql_query($consulta,$link) or die (mysql_error());
 								<td>Asignatura</td>
 							<tr>");
 			// while($fila=mysql_fetch_array($resultados))
-			while ($row = mysql_fetch_row($resultado))
+			while ($row = mysqli_fetch_row($resultado))
 			{
 				
 				// $result=strpos("$fila[Asignatura_idAsignatura]",$idAsignaturaCargo);

@@ -13,7 +13,7 @@ $consulta= "SELECT * FROM Genero";
 // $resultado= mysql_query($consulta,$link) or die (mysql_error());
 	   echo"<select style='margin: 5px'  class='btn btn-default dropdown-toggle' name='idGenero'>
 							<option selected='--'>--</option>";
-	while ($row = mysql_fetch_row($resultado))
+	while ($row = mysqli_fetch_row($resultado))
 	{
 						echo"<option value='$row[0]'>$row[0],$row[1]</option>";
 						

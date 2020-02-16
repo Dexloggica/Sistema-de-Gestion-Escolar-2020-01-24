@@ -3,7 +3,7 @@
 require("FuncionConexionBasedeDatos.php");
 
 $consulta= "SELECT * FROM Persona,Persona_has_TipoBeca,TipoBeca WHERE Persona.idPersona=Persona_has_TipoBeca.Persona_idPersona and Persona_has_TipoBeca.TipoBeca_idTipoBeca=TipoBeca.idTipoBeca"; 
-$resultado= mysql_query($consulta,$link) or die (mysql_error());
+$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			$bandera=0;
 			$cantidad=0;
 			echo"<center><table class='table table-striped' border>
@@ -21,7 +21,7 @@ $resultado= mysql_query($consulta,$link) or die (mysql_error());
 								<td>FechaFin</td>
 							<tr>";
 			// while($fila=mysql_fetch_array($resultados))
-			while ($row = mysql_fetch_row($resultado))
+			while ($row = mysqli_fetch_row($resultado))
 			{	
 					echo utf8_encode("<tr>
 							<td>$row[0]</td>
