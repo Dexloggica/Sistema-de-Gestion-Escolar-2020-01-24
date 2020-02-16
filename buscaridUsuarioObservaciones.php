@@ -16,7 +16,8 @@ $idbuscado=$_POST['idusuario'];
 	require("FuncionConexionBasedeDatos.php");
 	//
 	$consulta= "SELECT * FROM Usuario WHERE idUsuario='$idbuscado'"; 
-	@$resultado= mysqli_query($consulta,$link) or die (mysqli_error());
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 	$fila=mysqli_fetch_array($resultado);
 	@mysqli_free_result($resultado);
 	mysqli_close($link);

@@ -18,8 +18,9 @@ $idbuscado=$_POST['idusuario'];
 	require("FuncionConexionBasedeDatos.php");
 	//
 	$consulta= "SELECT * FROM Usuario WHERE idUsuario='$idbuscado'"; 
-	$resultado= mysql_query($consulta,$link) or die (mysql_error());
-	$fila=mysql_fetch_array($resultado);
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila=mysqli_fetch_array($resultado);
 	
 	//obtengo el tipo de perfil que tiene el usuario buscado a EDITAR
 	$tipodeperfilbuscado=$fila['TipoPerfil_idTipoPerfil'];
@@ -28,8 +29,8 @@ $idbuscado=$_POST['idusuario'];
 	//obtendo el tipo de perfil del usuario
 	$tipoperfil=$_SESSION['tipoperfil'];
 	//echo"tipo perfil usuario=$tipoperfil<br>";
-	@mysql_free_result($resultado);
-	@mysql_close($link);
+	@mysqli_free_result($resultado);
+	@mysqli_close($link);
 	
 	//OPCIÓN 1: Si el usuario NO existe o los datos son INCORRRECTOS
 	if (!$fila['idUsuario'])

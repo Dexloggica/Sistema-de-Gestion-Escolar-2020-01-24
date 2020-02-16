@@ -20,14 +20,14 @@ $calificacion=$_POST['calificacion'];
 			require("FuncionConexionBasedeDatos.php");
 			//una vez conectada a la base de datos
 				$query = "INSERT INTO CedulaDocente (Fecha,Calificacion,Persona_idPersona)VALUES('$fecha','$calificacion','$idDocente')";
-				$resultado = mysql_query($query);
+				$resultado = mysqli_query($query);
 				echo "Se ha cargado el cargo docente con exito...(INSERT INTO)";
 										//CONTROL
 										$NombreTablaEditada="CedulaDocente";
 										require("CodigoRegistrarControl.php");
 										//					
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 	}
 	else{
 		echo "Por favor rellene todos los campos";

@@ -14,63 +14,63 @@ echo"<center>";
 /////////////////////////////////////////////busco el dni del tutor
 	require("FuncionConexionBasedeDatos.php");
 	$consulta= "SELECT * FROM Persona WHERE dni='$dnitutor'"; 
-	@$resultado= mysql_query($consulta,$link) or die (mysql_error());
-	$fila=mysql_fetch_array($resultado);
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila=mysqli_fetch_array($resultado);
 	//$dnitutorencontrado=$fila['dni'];
 	$idtutor=$fila['Usuario_idUsuario'];
 	//echo"dni del tutor encontrado en personas:".$dnitutorencontrado."<br>";
 	//echo"idusuario del tutor encontrado en personas:".$idtutor;
-	@mysql_free_result($resultado);
-	@mysql_close($link);
+	@mysqli_free_result($resultado);
+	@mysqli_close($link);
 /////////////////////////////////////////////busco el dni del alumno
 	require("FuncionConexionBasedeDatos.php");
 	$consulta= "SELECT * FROM Persona WHERE dni='$dnialumno'"; 
-	@$resultado= mysql_query($consulta,$link) or die (mysql_error());
-	$fila2=mysql_fetch_array($resultado);
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila2=mysqli_fetch_array($resultado);
 	//$dnialumnoencontrado=$fila2['dni'];
 	$idalumno=$fila2['Usuario_idUsuario'];
 	//echo"dni del alumno encontrado en personas:".$dnialumnoencontrado."<br>";
 	//echo"idusuario del alumno encontrado en personas:".$idalumno;
-	@mysql_free_result($resultado);
-	@mysql_close($link);
+	@mysqli_free_result($resultado);
+	@mysqli_close($link);
 /////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////busco el tipo de perfil del tutor, para comprobar que sea tutor
 	require("FuncionConexionBasedeDatos.php");
 	$consulta= "SELECT * FROM Usuario WHERE idUsuario='$idtutor'"; 
-	@$resultado= mysql_query($consulta,$link) or die (mysql_error());
-	$fila3=mysql_fetch_array($resultado);
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila3=mysqli_fetch_array($resultado);
 	$TipoPerfilTutor=$fila3['TipoPerfil_idTipoPerfil'];
 	//echo"tipo de perfil del tutor encontrado en usuario es:".$TipoPerfilTutor."<br>";
-	@mysql_free_result($resultado);
-	@mysql_close($link);
+	@mysqli_free_result($resultado);
+	@mysqli_close($link);
 /////////////////////////////////////////////busco el tipo de perfil del alumno, para comprobar que sea alumno
 	require("FuncionConexionBasedeDatos.php");
 	$consulta= "SELECT * FROM Usuario WHERE idUsuario='$idalumno'"; 
-	@$resultado= mysql_query($consulta,$link) or die (mysql_error());
-	$fila4=mysql_fetch_array($resultado);
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila4=mysqli_fetch_array($resultado);
 	$TipoPerfilAlumno=$fila4['TipoPerfil_idTipoPerfil'];
 	//echo"tipo de perfil del alumno encontrado en usuario es:".$TipoPerfilAlumno."<br>";
-	@mysql_free_result($resultado);
-	@mysql_close($link);
+	@mysqli_free_result($resultado);
+	@mysqli_close($link);
 ////////////////////////////////////////////////////////////////////////////////////obtengo la descripcion del perfil tutor
 	require("FuncionConexionBasedeDatos.php");
 	$consulta= "SELECT * FROM TipoPerfil WHERE idTipoPerfil='$TipoPerfilTutor'"; 
-	@$resultado= mysql_query($consulta,$link) or die (mysql_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 	$fila5=mysql_fetch_array($resultado);
 	$PerfilDescTutor=$fila5['PerfilDesc'];
 	//echo"descripcion de perfil del tutor encontrado es:".$PerfilDescTutor."<br>";
-	@mysql_free_result($resultado);
-	@mysql_close($link);
+	@mysqli_free_result($resultado);
+	@mysqli_close($link);
 
 ////////////////////////////////////////////////////////////////////////////////////obtengo la descripcion del perfil alumno
 	require("FuncionConexionBasedeDatos.php");
 	$consulta= "SELECT * FROM TipoPerfil WHERE idTipoPerfil='$TipoPerfilAlumno'"; 
-	@$resultado= mysql_query($consulta,$link) or die (mysql_error());
-	$fila6=mysql_fetch_array($resultado);
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila6=mysqli_fetch_array($resultado);
 	$PerfilDescAlumno=$fila6['PerfilDesc'];
 	//echo"descripcion de perfil del alumno encontrado es:".$PerfilDescAlumno."<br>";
-	@mysql_free_result($resultado);
-	@mysql_close($link);	
+	@mysqli_free_result($resultado);
+	@mysqli_close($link);	
 
 ///////////////////////////////////////////////////////establezco las reglas de comparacion para adaptar el formulario
 if($dnitutor!=$dnialumno){

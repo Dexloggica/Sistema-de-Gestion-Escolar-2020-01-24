@@ -25,26 +25,26 @@ $idresponsable= $_SESSION['idusuario'];
 				// // $resultado=mysql_query($query);
 				$query = "UPDATE Prestamo SET FechaEntrega='$fechaentrega' WHERE idLibro='$idLibro'";
 				// $query = "INSERT INTO Prestamo (FechaPrestamo,FechaDevolucion,idFichaSocioBiblioteca,idDocenteResponsable,idLibro)VALUES('$fechaprestamo','$fechadevolucion','$idFichaSocio','$idresponsable','$idLibro')";
-				 $resultado= mysql_query($query,$link) or die (mysql_error());
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				// echo "<center>Se ha registrado la devolucion con exito(INSERT)</center>";
 										//CONTROL
 										// $NombreTablaEditada="Observaciones";
 										// require("CodigoRegistrarControl.php");
 										//				
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				
 				require("FuncionConexionBasedeDatos.php");
 				$query = "UPDATE Libro SET Estado=1 WHERE idLibro='$idLibro'";
-				$resultado = mysql_query($query) or die (mysql_error());
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				// echo "<center>Se ha registrado la devolucion con exito(UPDATE)</center>";
 								
 										//CONTROL
 										// $NombreTablaEditada="Tecnologia";
 										// require("CodigoRegistrarControl.php");
 										//
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 
 
 ?>

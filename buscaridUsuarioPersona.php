@@ -10,7 +10,8 @@ $idbuscado=$_POST['idusuario'];
 	
 		
 	$consulta= "SELECT * FROM Persona WHERE Usuario_idUsuario='$idbuscado'"; 
-	@$resultado= mysqli_query($consulta,$link) or die (mysqli_error());
+		//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 	$fila=mysqli_fetch_array($resultado);
 	$idPersona=$fila['idPersona'];
 	// echo"$tipodeperfilbuscado<br>";

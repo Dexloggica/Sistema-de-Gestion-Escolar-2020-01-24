@@ -12,14 +12,14 @@ if($reqlen>0 and $idCargo!="--" and $diasemana!="--")
 {
 	require("FuncionConexionBasedeDatos.php");
 	$query ="SELECT * FROM Cargo WHERE idCargo='$idCargo'";
-	$resultado= mysql_query($query,$link) or die (mysql_error());
-	$fila=mysql_fetch_array($resultado);
+$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+$fila=mysqli_fetch_array($resultado);
 	$idPersona=$fila['Persona_idPersona'];
 
 
 	$query ="SELECT * FROM HorarioActividadDocente WHERE Persona_idPersona='$idPersona' and DiaSemana='$diasemana'";
-	$resultado= mysql_query($query,$link) or die (mysql_error());
-	$fila=mysql_fetch_array($resultado);
+	$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+$fila=mysqli_fetch_array($resultado);
 	if(!$fila)
 	{
 		require("FuncionConexionBasedeDatos.php");
@@ -37,39 +37,39 @@ if($reqlen>0 and $idCargo!="--" and $diasemana!="--")
 					
 				require("FuncionConexionBasedeDatos.php");
 				@$query = "INSERT INTO HorarioActividadDocente (DiaSemana,HorarioInicio,Persona_idPersona)VALUES('$diasemana','$element','$idPersona')";
-				$resultado = mysql_query($query);
-				$idHorario=mysql_insert_id();
+				$resultado = mysqli_query($query);
+				$idHorario=mysqli_insert_id();
 										//CONTROL
 										$NombreTablaEditada="HorarioActividadDocente";
 										require("CodigoRegistrarControl.php");
 										//					
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$contadorhorario=0;
 				echo"El dia ".$diasemana." tiene el Horario Inicio: ".$element." ";
 				
 				//vinculo el horario creado al cargo
 				require("FuncionConexionBasedeDatos.php");
 				@$query="INSERT INTO Cargo_has_HorarioActividad(Cargo_idCargo,HorarioActividad_idHorarioActividad)VALUES('$idCargo','$idHorario')";
-				$resultado = mysql_query($query);
+				$resultado = mysqli_query($query);
 										//CONTROL
 										$NombreTablaEditada="Cargo_has_HorarioActividad";
 										require("CodigoRegistrarControl.php");
 										//						
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				
 				//////////////////////////////////
 			}else{
 				require("FuncionConexionBasedeDatos.php");
 				$query = "UPDATE HorarioActividadDocente SET HorarioFin='$element' WHERE  idHorarioActividadDocente='$idHorario'";
-				$resultado = mysql_query($query);
+				$resultado = mysqli_query($query);
 										//CONTROL
 										$NombreTablaEditada="HorarioActividadDocente";
 										require("CodigoRegistrarControl.php");
 										//				
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$contadorhorario=1;
 				echo"Horario Fin: ".$element."<br>";
 			}
@@ -82,19 +82,19 @@ if($reqlen>0 and $idCargo!="--" and $diasemana!="--")
 		require("FuncionConexionBasedeDatos.php");
 		//obtengo los id del dia que quiero eliminar
 		$query ="SELECT * FROM HorarioActividadDocente WHERE Persona_idPersona='$idPersona' and DiaSemana='$diasemana'";
-		$resultado= mysql_query($query,$link) or die (mysql_error());
-		while ($row = mysql_fetch_row($resultado))
+		$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+		while ($row = mysqli_fetch_row($resultado))
 		{
 			//elimino la vinculacion con el registro para luego eliminar el registro
 			//$idHorarioActividadDocente=$row[0];
 			$query2 ="DELETE  FROM Cargo_has_HorarioActividad WHERE HorarioActividad_idHorarioActividad='$row[0]'";
-			$resultado2= mysql_query($query2,$link) or die (mysql_error());
+			$resultado2= mysqli_query($link, $query2) or die (mysqli_error($link));
 										//CONTROL
 										$NombreTablaEditada="Cargo_has_HorarioActividad";
 										require("CodigoRegistrarControl.php");
 										//
 			$query3 ="DELETE  FROM HorarioActividadDocente WHERE idHorarioActividadDocente='$row[0]'";
-			$resultado3= mysql_query($query3,$link) or die (mysql_error());
+			$resultado3= mysqli_query($link, $query3) or die (mysqli_error($link));
 										//CONTROL
 										$NombreTablaEditada="HorarioActividadDocente";
 										require("CodigoRegistrarControl.php");
@@ -116,39 +116,39 @@ if($reqlen>0 and $idCargo!="--" and $diasemana!="--")
 					
 				require("FuncionConexionBasedeDatos.php");
 				@$query = "INSERT INTO HorarioActividadDocente (DiaSemana,HorarioInicio,Persona_idPersona)VALUES('$diasemana','$element','$idPersona')";
-				$resultado = mysql_query($query);
-				$idHorario=mysql_insert_id();
+				$resultado = mysqli_query($query);
+				$idHorario=mysqli_insert_id();
 										//CONTROL
 										$NombreTablaEditada="HorarioActividadDocente";
 										require("CodigoRegistrarControl.php");
 										//				
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$contadorhorario=0;
 				echo"El dia ".$diasemana." tiene el Horario Inicio: ".$element." ";
 				
 				//vinculo el horario creado al cargo
 				require("FuncionConexionBasedeDatos.php");
 				@$query="INSERT INTO Cargo_has_HorarioActividad(Cargo_idCargo,HorarioActividad_idHorarioActividad)VALUES('$idCargo','$idHorario')";
-				$resultado = mysql_query($query);
+				$resultado = mysqli_query($query);
 										//CONTROL
 										$NombreTablaEditada="Cargo_has_HorarioActividad";
 										require("CodigoRegistrarControl.php");
 										//				
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				
 				//////////////////////////////////
 			}else{
 				require("FuncionConexionBasedeDatos.php");
 				$query = "UPDATE HorarioActividadDocente SET HorarioFin='$element' WHERE  idHorarioActividadDocente='$idHorario'";
-				$resultado = mysql_query($query);
+				$resultado = mysqli_query($query);
 										//CONTROL
 										$NombreTablaEditada="HorarioActividadDocente";
 										require("CodigoRegistrarControl.php");
 										//					
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$contadorhorario=1;
 				echo"Horario Fin: ".$element."<br>";
 			}

@@ -11,20 +11,20 @@ if($reqlen>0 and $idCargo!="--" and $idNivel!="--")
 		//
 		//obtengo los id del dia que quiero eliminar
 		$query ="SELECT * FROM Cargo_has_Nivel WHERE Cargo_idCargo='$idCargo' and Nivel_idNivel='$idNivel'";
-		$resultado= mysql_query($query,$link) or die (mysql_error());
+		$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 		while ($row = mysql_fetch_row($resultado))
 		{
 			
 			$query2 ="DELETE  FROM Cargo_has_Nivel WHERE Cargo_idCargo='$idCargo' and Nivel_idNivel='$idNivel'";
-			$resultado2= mysql_query($query2,$link) or die (mysql_error());
+			$resultado2= mysqli_query($link, $query2) or die (mysqli_error($link));
 			
 										//CONTROL
 										$NombreTablaEditada="Cargo_has_Nivel";
 										require("CodigoRegistrarControl.php");
 										//
 		}
-		@mysql_free_result($resultado);
-		@mysql_close($link);
+		@mysqli_free_result($resultado);
+		@mysqli_close($link);
 }else{
 	echo "Por favor rellene todos los campos";
 }			

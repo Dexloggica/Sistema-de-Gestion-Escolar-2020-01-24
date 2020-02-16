@@ -17,8 +17,8 @@ echo"id buscado=$idbuscado<br>";
 	require("FuncionConexionBasedeDatos.php");
 	//
 	$consulta= "SELECT * FROM Usuario WHERE idUsuario='$idbuscado'"; 
-	$resultado= mysql_query($consulta,$link) or die (mysql_error());
-	$fila=mysql_fetch_array($resultado);
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila=mysqli_fetch_array($resultado);
 	
 	//obtengo el tipo de perfil que tiene el usuario buscado a EDITAR
 	$tipodeperfilbuscado=$fila['TipoPerfil_idTipoPerfil'];
@@ -27,8 +27,8 @@ echo"id buscado=$idbuscado<br>";
 	//obtendo el tipo de perfil del usuario
 	$tipoperfil=$_SESSION['tipoperfil'];
 	echo"tipo perfil usuario=$tipoperfil<br>";
-	mysql_free_result($resultado);
-	mysql_close($link);
+	mysqli_free_result($resultado);
+	mysqli_close($link);
 	
 				require("FuncionConexionBasedeDatos.php");
 				//una vez conectada a la base de datos
@@ -36,14 +36,14 @@ echo"id buscado=$idbuscado<br>";
 				// $query="SELECT * FROM Persona WHERE Usuario_idUsuario='$idbuscado'";
 				// $resultado=mysql_query($query);
 				$query = "INSERT INTO Observaciones (Fecha,Hora,ObservacionDesc,Persona_idPersona)VALUES('$fecha','$hora','$observaciones','$idbuscado')";
-				   $resultado = mysql_query($query);
+				   $resultado = mysqli_query($query);
 				echo "Se han modificado los datos exitosamente";
 										//CONTROL
 										$NombreTablaEditada="Observaciones";
 										require("CodigoRegistrarControl.php");
 										//				
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 					
 	
 

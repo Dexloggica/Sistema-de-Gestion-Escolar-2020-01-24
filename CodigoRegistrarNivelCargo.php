@@ -8,14 +8,14 @@ $reqlen=strlen($idCargo)*strlen($idNivel);
 if($reqlen>0 and $idCargo!="--" and $idNivel!="--")
 {
 	$query = "INSERT INTO Cargo_has_Nivel (Cargo_idCargo,Nivel_idNivel)VALUES('$idCargo','$idNivel')";
-	$resultado = mysql_query($query);
+	$resultado = mysqli_query($query);
 	echo "<center>Se ha vinculado el idCargo: ".$idCargo." con el idNivel: ".$idNivel." exitosamente</center>";
 										//CONTROL
 										$NombreTablaEditada="Cargo_has_Nivel";
 										require("CodigoRegistrarControl.php");
 										//		
-	@mysql_free_result($resultado);
-	@mysql_close($link);
+	@mysqli_free_result($resultado);
+	@mysqli_close($link);
 	
 }else{
 	echo "<center>Por favor rellene todos los campos</center>";

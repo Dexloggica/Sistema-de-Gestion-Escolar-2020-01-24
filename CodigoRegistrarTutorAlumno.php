@@ -73,88 +73,88 @@ if($reqlen>0)
 			require("FuncionConexionBasedeDatos.php");
 			//una vez conectada a la base de datos
 			$query ="SELECT * FROM  Usuario WHERE username='$username'";
-			$resultado= mysql_query($query,$link) or die (mysql_error());
-			$fila=mysql_fetch_array($resultado);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+			$fila=mysqli_fetch_array($resultado);
 			if(!$fila)
 			{
 				$query = "INSERT INTO Usuario (username,password,TipoPerfil_idTipoPerfil)VALUES('$username','$password','$idTipoPerfil')";
 				//guardo en una variable el ultimo id ingresado
-				$resultado = mysql_query($query);
-				$idusuario=mysql_insert_id();
+				$resultado = mysqli_query($query);
+				$idusuario=mysqli_insert_id();
 				echo "Se ha creado un Nuevo Usuario: ".$username."<br>password: ".$password."<br>idUsuario: ".$idusuario;
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				//////////////////////////////////REGISTRO DE PERSONA
 			require("FuncionConexionBasedeDatos.php");
 			//$query = "INSERT INTO Usuario (idUsuario,username,password,TipoPerfil_idTipoPerfil)VALUES('$idUsuario','$username','$password','$TipoPerfil_idTipoPerfil')";
 			$query = "INSERT INTO Persona (Nombre,Apellido,Sexo,dni,cuil,Usuario_idUsuario	,Localidad_idLocalidad)VALUES('$nombre','$apellido','$sexo','$dni','$cuil','$idusuario','$idlocalidad')";
-			$resultado = mysql_query($query);
-			$idPersona=mysql_insert_id();
+			$resultado = mysqli_query($query);
+			$idPersona=mysqli_insert_id();
 			echo "<br>Se ha creado una Nueva Persona<br>Nombre: ".$nombre."<br>Apellido: ".$apellido."<br>Sexo: ".$sexo."<br>Dni: ".$dni."<br>Cuil: ".$cuil."<br>idLocalidad: ".$idlocalidad."<br>idPersona: ".$idPersona."<br>";
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			//////////////////////////////////
 			//////////////////////////////////REGISTRO DE FECHA DE NACIMIENTO
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO FechaNacimiento (FechaNacimiento,Persona_idPersona)VALUES('$fechanacimiento','$idPersona')";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			echo "Fecha de Nacimiento: ".$fechanacimiento."<br>";
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			//////////////////////////////////
 			//////////////////////////////////REGISTRO DE DATOS PERSONALES
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO DatosPersonales (SituacionPadre,SituacionMadre,Persona_idPersona)VALUES('$situacionpadre','$situacionmadre','$idPersona')";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			echo "Se han cargado los datos personales<br>";
 			echo "Situacion del Padre: ".$situacionpadre."<br>Situacion de la Madre: ".$situacionmadre."<br>";
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			//////////////////////////////////
 			//////////////////////////////////REGISTRO DE DOMICILIO
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO Domicilio (Calle,Numero,Piso,Departamento,Unidad,Barrio,TipodeVivienda,Persona_idPersona)VALUES('$calle','$numero','$piso','$departamento','$unidad','$barrio','$tipovivienda','$idPersona')";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			echo "Se ha el domicilio exitosamente";
 			echo "<br>Calle: ".$calle."<br>Numero: ".$numero."<br>Piso: ".$piso."<br>Departamento: ".$departamento."<br>Unidad: ".$unidad."<br>Barrio: ".$barrio."<br>Tipo de Vivienda: ".$tipovivienda."<br>";
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			//////////////////////////////////
 			//////////////////////////////////REGISTRO DE DATOS DE CONTACTO
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO DatosContacto (telefono1,telefono2,telefono3,telefono4,email,Persona_idPersona)VALUES('$telefono1','$telefono2','$telefono3','$telefono4','$email','$idPersona')";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			echo "Se han cargado los datos de contacto exitosamente";
 			echo "<br>Telefono1: ".$telefono1."<br>Telefono2: ".$telefono2."<br>Telefono3: ".$telefono3."<br>Telefono4: ".$telefono4."<br>Email: ".$email."<br>";					
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			//////////////////////////////////
 			//////////////////////////////////REGISTRO DE TECNOLOGIA
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO Tecnologia (DisponePc,AccesoInternet,Persona_idPersona)VALUES('$respuesta1','$respuesta2','$idPersona')";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			echo "Se han cargado los datos de tecnologia exitosamente";
 			echo "<br>Tiene usted Computadora?: ".$respuesta1."<br>Tiene acceso a Internet?: ".$respuesta2."<br>";
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			//////////////////////////////////
 			//////////////////////////////////REGISTRO DE DEPORTES
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO Deportes (PracticaDeportesSiNo,DeporteDescripcion,Persona_idPersona)VALUES('$respuesta','$descripcion','$idPersona')";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			echo "Se han cargado los datos de deportes exitosamente";
 			echo "<br>Practica Deportes?: ".$respuesta."<br>Descripción: ".$descripcion."<br>";
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			//////////////////////////////////
 			//////////////////////////////////REGISTRO DE DISCAPACIDAD
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO Discapacidad (DiscapacidadDesc,Persona_idPersona)VALUES('$discapacidaddesc','$idPersona')";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			echo "Se han cargado los datos de discapacidad exitosamente";
 			echo "<br>Tiene alguna discapacidad?: ".$discapacidaddesc."<br>";			
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			//////////////////////////////////
 
 			//////////////////////////////////REGISTRO DEL TUTOR
@@ -162,8 +162,8 @@ if($reqlen>0)
 				require("FuncionConexionBasedeDatos.php");
 				//una vez conectada a la base de datos
 				$query ="SELECT * FROM  Persona WHERE dni='$dnitutor'";
-				$resultado= mysql_query($query,$link) or die (mysql_error());
-				$fila=mysql_fetch_array($resultado);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+				$fila=mysqli_fetch_array($resultado);
 				if(!$fila)
 				{
 					//CREA EL TUTOR USUARIO Y PERSONA
@@ -171,64 +171,64 @@ if($reqlen>0)
 					$passwordtutor=$dnitutor;
 					$query = "INSERT INTO Usuario (username,password,TipoPerfil_idTipoPerfil)VALUES('$dnitutor','$passwordtutor','$idTipoPerfil2')";
 					//guardo en una variable el ultimo id ingresado
-					$resultado = mysql_query($query);
-					$idusuariotutor=mysql_insert_id();	
+					$resultado = mysqli_query($query);
+					$idusuariotutor=mysqli_insert_id();	
 					echo "Se ha creado un Nuevo Usuario para el tutor: ".$dnitutor."<br>password: ".$passwordtutor."<br>idUsuario: ".$idusuariotutor;
 					//creo la persona
 					$query = "INSERT INTO Persona (Nombre,Apellido,Sexo,dni,cuil,Usuario_idUsuario,Localidad_idLocalidad)VALUES('$nombretutor','$apellidotutor','$sexotutor','$dnitutor','$cuiltutor','$idusuariotutor','$idlocalidad2')";
-					$resultado = mysql_query($query);
-					$idPersonaTutor=mysql_insert_id();
+					$resultado = mysqli_query($query);
+					$idPersonaTutor=mysqli_insert_id();
 					echo "<br>Se ha creado una Nueva Persona para Tutor<br>Nombre: ".$nombretutor."<br>Apellido: ".$apellidotutor."<br>Sexo: ".$sexotutor."<br>Dni: ".$dnitutor."<br>Cuil: ".$cuiltutor."<br>idLocalidad: ".$idlocalidad2."<br>idPersona: ".$idPersonaTutor."<br>";
-					@mysql_free_result($resultado);
-					@mysql_close($link);
+					@mysqli_free_result($resultado);
+					@mysqli_close($link);
 					//cargo PERSONA A CARGO
 					require("FuncionConexionBasedeDatos.php");
 					$query = "INSERT INTO FichaTutorAlumno (idTutor,idAlumno,RelacionDesc)VALUES('$idPersonaTutor','$idPersona','$relaciondesc')";
-					$resultado = mysql_query($query);
-					@mysql_free_result($resultado);
-					@mysql_close($link);
+					$resultado = mysqli_query($query);
+					@mysqli_free_result($resultado);
+					@mysqli_close($link);
 				}else{
 						//OBTIENE LOS IDUSUARIO E IDPERSONA DEL TUTOR
 						$query ="SELECT * FROM  Persona WHERE dni='$dnitutor'";
-						$resultado= mysql_query($query,$link) or die (mysql_error());
-						$fila=mysql_fetch_array($resultado);
+						$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+						$fila=mysqli_fetch_array($resultado);
 						$idPersonaTutor=$fila['idPersona'];
 						$idusuariotutor=$fila['Usuario_idUsuario'];
 						echo "Este persona ya existe, no hace falta crearla...<br>";
 						echo "idPersona del Tutor es: ".$idPersonaTutor."<br>";
 						echo "idUsuario del Tutor es: ".$idusuariotutor."<br>";
-						@mysql_free_result($resultado);
-						mysql_close($link);
+						@mysqli_free_result($resultado);
+						mysqli_close($link);
 						//cargo PERSONA A CARGO
 						require("FuncionConexionBasedeDatos.php");
 						$query = "INSERT INTO FichaTutorAlumno (idTutor,idAlumno,RelacionDesc)VALUES('$idPersonaTutor','$idPersona','$relaciondesc')";
-						$resultado = mysql_query($query);
-						@mysql_free_result($resultado);
-						@mysql_close($link);
+						$resultado = mysqli_query($query);
+						@mysqli_free_result($resultado);
+						@mysqli_close($link);
 					}
 			//////////////////////////////////
 			//////////////////////////////////REGISTRO DE LA INSCRIPCION DEL ALUMNO
 				require("FuncionConexionBasedeDatos.php");
 				$query = "INSERT INTO Inscripcion (InscripcionFecha,Nivel_idNivel,Persona_idPersona)VALUES('$fechainscripcion','$idNivel','$idPersona')";
-				$resultado = mysql_query($query);
+				$resultado = mysqli_query($query);
 				$query ="SELECT * FROM  Nivel WHERE idNivel='$idNivel'";
-				$resultado= mysql_query($query,$link) or die (mysql_error());
-				$fila=mysql_fetch_array($resultado);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+				$fila=mysqli_fetch_array($resultado);
 				$GradoCurso=$fila['GradoCurso'];
 				$Division=$fila['Division'];
 				
 				echo "Se ha registrado el nivel del alumno en ".$GradoCurso."Grado ".$Division."<br>";
 				
 
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 
 
 				//imprimo el horario del nivel
 				////////////////
 				require("FuncionConexionBasedeDatos.php");
 				$query="SELECT * FROM HorarioActividadNivel WHERE Nivel_idNivel='$idNivel'";
-				$resultado= mysql_query($query,$link) or die (mysql_error());
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 							$bandera=0;
 							$cantidad=0;
 							echo"<table class='table table-striped' border>
@@ -239,7 +239,7 @@ if($reqlen>0)
 												<td class=encabezado>HorarioFin</td>
 										<tr>";
 							// while($fila=mysql_fetch_array($resultados))
-							while ($row = mysql_fetch_row($resultado))
+							while ($row = mysqli_fetch_row($resultado))
 							{
 									echo"<tr valign=top>
 											<td>$row[0]</td>
@@ -259,14 +259,14 @@ if($reqlen>0)
 							}	
 							echo"<br>Total de Horarios encontrados=".$cantidad."</center>";*/
 							////////////////////
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			//////////////////////////////////
 			}else{
 				
 				echo "Este usuario ya existe, intente con otro nombre de usuario...<br>";
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			}
 			//////////////////////////////////
 			

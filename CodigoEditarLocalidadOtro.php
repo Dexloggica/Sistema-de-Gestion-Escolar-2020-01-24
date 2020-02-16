@@ -15,8 +15,9 @@ $idbuscado=$_POST['idusuario'];
 	require("FuncionConexionBasedeDatos.php");
 	//
 	$consulta= "SELECT * FROM Usuario WHERE idUsuario='$idbuscado'"; 
-	$resultado= mysql_query($consulta,$link) or die (mysql_error());
-	$fila=mysql_fetch_array($resultado);
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila=mysqli_fetch_array($resultado);
 	
 	//obtengo el tipo de perfil que tiene el usuario buscado a EDITAR
 	$tipodeperfilbuscado=$fila['TipoPerfil_idTipoPerfil'];
@@ -25,8 +26,8 @@ $idbuscado=$_POST['idusuario'];
 	//obtendo el tipo de perfil del usuario
 	$tipoperfil=$_SESSION['tipoperfil'];
 	//echo"tipo perfil usuario=$tipoperfil<br>";
-	@mysql_free_result($resultado);
-	@mysql_close($link);
+	@mysqli_free_result($resultado);
+	@mysqli_close($link);
 	
 	//OPCIÓN 1: Si el usuario NO existe o los datos son INCORRRECTOS
 	if (!$fila['idUsuario'])
@@ -47,8 +48,9 @@ $idbuscado=$_POST['idusuario'];
 				require("FuncionConexionBasedeDatos.php");
 				//obtengo el idPersona del Alumno
 				$consulta= "SELECT * FROM Persona WHERE Usuario_idUsuario='$idbuscado'"; 
-				$resultado= mysql_query($consulta,$link) or die (mysql_error());
-				$fila=mysql_fetch_array($resultado);
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila=mysqli_fetch_array($resultado);
 				$idPersona=$fila['idPersona'];
 
 
@@ -60,18 +62,19 @@ $idbuscado=$_POST['idusuario'];
 							require("FuncionConexionBasedeDatos.php");
 							//una vez conectada a la base de datos
 							$query ="SELECT * FROM Persona WHERE idPersona='$idPersona'";
-							$resultado= mysql_query($query,$link) or die (mysql_error());
-							$fila=mysql_fetch_array($resultado);
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila=mysqli_fetch_array($resultado);
 							$query = "UPDATE Persona SET Localidad_idLocalidad='$idlocalidad' WHERE idPersona='$idPersona'";
-								$resultado = mysql_query($query);
+								$resultado = mysqli_query($query);
 								// echo "<center>Se han modificado los datos exitosamente...(UPDATE)</center>";
 								echo "<center>Se han modificado los datos exitosamente</center>";
 										//CONTROL
 										// $NombreTablaEditada="Localidad_idLocalidad";
 										// require("CodigoRegistrarControl.php");
 										//
-								@mysql_free_result($resultado);
-								@mysql_close($link);
+								@mysqli_free_result($resultado);
+								@mysqli_close($link);
 			}else
 			{
 				echo"<center>Usted no puede editar este perfil.</center>";

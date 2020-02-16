@@ -15,6 +15,7 @@ if(isset($username))
 	
 	//Consultar si los datos son están guardados en la base de datos
 	$consulta= "SELECT * FROM Usuario WHERE username='$username' AND password='$password'"; 
+		//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
 	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 	$fila=mysqli_fetch_array($resultado);
 	

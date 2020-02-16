@@ -10,25 +10,25 @@ $idTipoPerfil=$_POST['idTipoPerfil'];
 	require("FuncionConexionBasedeDatos.php");
 			//una vez conectada a la base de datos
 			$query ="SELECT * FROM  Usuario WHERE username='$username'";
-			$resultado= mysql_query($query,$link) or die (mysql_error());
-			$fila=mysql_fetch_array($resultado);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+			$fila=mysqli_fetch_array($resultado);
 			if(!$fila)
 			{
 				$query = "INSERT INTO Usuario (username,password,TipoPerfil_idTipoPerfil)VALUES('$username','$password','$idTipoPerfil')";
-				$resultado = mysql_query($query);
+				$resultado = mysqli_query($query);
 				echo "<center>Se ha creado un Nuevo Usuario</center>";
 										//CONTROL
 										$NombreTablaEditada="Usuario";
 										require("CodigoRegistrarControl.php");
 										//					
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			}else{
 				
 				echo "Este usuario ya existe, intente con otro nombre de usuario...";
 				
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			}
 	///
 

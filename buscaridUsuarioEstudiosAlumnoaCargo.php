@@ -11,12 +11,14 @@ $idbuscado=$_POST['idusuario'];
 require("FuncionConexionBasedeDatos.php");
 //
 $consulta= "SELECT * FROM Persona WHERE idPersona='$idbuscado'"; 
-	$resultado= mysqli_query($consulta,$link) or die (mysqli_error());
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 	$fila=mysqli_fetch_array($resultado);
 	$idbuscado2=$fila['Usuario_idUsuario'];
 
 $consulta= "SELECT * FROM Usuario WHERE idUsuario='$idbuscado2'"; 
-@$resultado= mysqli_query($consulta,$link) or die (mysqli_error());
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 $fila=mysqli_fetch_array($resultado);
 // @mysql_free_result($resultado);
 // mysql_close($link);
@@ -35,7 +37,8 @@ $fila=mysqli_fetch_array($resultado);
 		}else{
 			
 		$consulta= "SELECT * FROM Persona WHERE Usuario_idUsuario='$idbuscado2'"; 
-		@$resultado= mysqli_query($consulta,$link) or die (mysqli_error());
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 		$fila=mysqli_fetch_array($resultado);
 		$idPersona=$fila['idPersona'];
 		//@mysql_free_result($resultado);

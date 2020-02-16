@@ -11,11 +11,11 @@ $dnialumno=$_POST['dnialumno'];
 				require("FuncionConexionBasedeDatos.php");
 				//una vez conectada a la base de datos
 				$query ="SELECT * FROM  Persona WHERE dni='$dnialumno'";
-				$resultado= mysql_query($query,$link) or die (mysql_error());
-				$fila=mysql_fetch_array($resultado);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+				$fila=mysqli_fetch_array($resultado);
 				$idPersonaAlumno=$fila['idPersona'];
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 echo"dni del alumno $dnialumno<br>";
 //DATOS PARA EL REGISTRO DEL TUTOR
 $nombretutor=$_POST['nombretutor'];
@@ -32,11 +32,11 @@ $relaciondesc=$_POST['relaciondesc'];
 				require("FuncionConexionBasedeDatos.php");
 				//una vez conectada a la base de datos
 				$query ="SELECT * FROM  Persona WHERE dni='$dnitutor'";
-				$resultado= mysql_query($query,$link) or die (mysql_error());
-				$fila2=mysql_fetch_array($resultado);
+$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+				$fila2=mysqli_fetch_array($resultado);
 				$idPersonaTutor=$fila2['idPersona'];
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 echo"dni del tutor $dnitutor<br>";
 $relaciondesc=$_POST['relaciondesc'];
 echo"El/la alumno/a es $relaciondesc del tutor<br>";
@@ -48,37 +48,37 @@ echo"El/la alumno/a es $relaciondesc del tutor<br>";
 		require("FuncionConexionBasedeDatos.php");
 		$query = "INSERT INTO Usuario (username,password,TipoPerfil_idTipoPerfil)VALUES('$dnitutor','$dnitutor','$idTipoPerfil2')";
 		//guardo en una variable el ultimo id ingresado
-		$resultado = mysql_query($query);
-		$idusuariotutor=mysql_insert_id();
+		$resultado = mysqli_query($query);
+		$idusuariotutor=mysqli_insert_id();
 		echo "Se ha creado un Nuevo Usuario: ".$dnitutor."<br>password: ".$dnitutor."<br>idUsuario: ".$idusuariotutor;
-		@mysql_free_result($resultado);
-		@mysql_close($link);
+		@mysqli_free_result($resultado);
+		@mysqli_close($link);
 		////////////////////////////////REGISTRO LA PERSONA del tutor
 		require("FuncionConexionBasedeDatos.php");
 		$query = "INSERT INTO Persona (Nombre,Apellido,Sexo,dni,cuil,Usuario_idUsuario	,Localidad_idLocalidad)VALUES('$nombretutor','$apellidotutor','$sexotutor','$dnitutor','$cuiltutor','$idusuariotutor','$idlocalidad2')";
-		$resultado = mysql_query($query);
-		$idPersonaTutor=mysql_insert_id();
+		$resultado = mysqli_query($query);
+		$idPersonaTutor=mysqli_insert_id();
 		echo "<br>Se ha creado una Nueva Persona<br>Nombre: ".$nombretutor."<br>Apellido: ".$apellidotutor."<br>Sexo: ".$sexotutor."<br>Dni: ".$dnitutor."<br>Cuil: ".$cuiltutor."<br>idLocalidad: ".$idlocalidad2."<br>idPersona: ".$idPersonaTutor."<br>";
-		@mysql_free_result($resultado);
-		@mysql_close($link);
+		@mysqli_free_result($resultado);
+		@mysqli_close($link);
 		///////////////////////////////registro ficha de inscripcion
 		require("FuncionConexionBasedeDatos.php");
 		$query = "INSERT INTO Inscripcion (InscripcionFecha,Nivel_idNivel,Persona_idPersona)VALUES('$fechainscripcion','$idNivel','$idPersonaAlumno')";
-		$resultado = mysql_query($query);
+		$resultado = mysqli_query($query);
 		$query ="SELECT * FROM  Nivel WHERE idNivel='$idNivel'";
-		$resultado= mysql_query($query,$link) or die (mysql_error());
-		$fila=mysql_fetch_array($resultado);
+		$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+		$fila=mysqli_fetch_array($resultado);
 		$GradoCurso=$fila['GradoCurso'];
 		$Division=$fila['Division'];
 		echo "Se ha registrado el nivel del alumno en ".$GradoCurso."Grado ".$Division."<br>";
-		@mysql_free_result($resultado);
-		@mysql_close($link);
+		@mysqli_free_result($resultado);
+		@mysqli_close($link);
 		////////////////////////////////REGISTRO LA FICHA TUTOR/ALUMNO
 		require("FuncionConexionBasedeDatos.php");
 		$query = "INSERT INTO FichaTutorAlumno (idTutor,idAlumno,RelacionDesc)VALUES('$idPersonaTutor','$idPersonaAlumno','$relaciondesc')";
-		$resultado = mysql_query($query);
-		@mysql_free_result($resultado);
-		@mysql_close($link);
+		$resultado = mysqli_query($query);
+		@mysqli_free_result($resultado);
+		@mysqli_close($link);
 	}else{
 		echo "Por favor rellene todos los campos obligatorios (*) <br>";
 	}

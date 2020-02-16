@@ -14,14 +14,14 @@ $division=$_POST['division'];
 			//$query = "INSERT INTO Usuario (idUsuario,username,password,TipoPerfil_idTipoPerfil)VALUES('$idUsuario','$username','$password','$TipoPerfil_idTipoPerfil')";
 			$query = "INSERT INTO Nivel (GradoCurso,Division)VALUES('$grado','$division')";
 			
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			echo "<center>Se ha creado un Nuevo Nivel</center>";
 										//CONTROL
 										$NombreTablaEditada="Nivel";
 										require("CodigoRegistrarControl.php");
 										//				
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 	}
 	else{
 		echo "<center>Por favor rellene todos los campos</center>";

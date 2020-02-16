@@ -7,7 +7,8 @@ echo"<center>";
 		if($reqlen>0)
 		{
 			$query="SELECT * FROM Libro";
-			$resultados=mysqli_query($query) or die (mysqli_error());
+			//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+			$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 			$bandera=0;
 			$cantidad=0;
 			echo"<table class='table table-striped' border>

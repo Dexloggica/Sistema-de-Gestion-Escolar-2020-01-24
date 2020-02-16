@@ -34,14 +34,14 @@ $situacionrevista=$_POST['situacionrevista'];
 			require("FuncionConexionBasedeDatos.php");
 			//una vez conectada a la base de datos
 				$query = "INSERT INTO Cargo (TipoCargo,Escuela,Categoria,FechaInicio,FechaFin,DecretoDesignacion,SituaciondeRevistaDesc,Persona_idPersona)VALUES('$tipocargo','$escuela','$categoria','$fechainicio','$fechafin','$decreto','$situacionrevista','$idPersona')";
-				$resultado = mysql_query($query);
+				$resultado = mysqli_query($query);
 				echo "<center>Se ha cargado el cargo docente con exito...(INSERT INTO)</center>";
 										//CONTROL
 										$NombreTablaEditada="Cargo";
 										require("CodigoRegistrarControl.php");
 										//						
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 	}
 	else{
 		echo "<center>Por favor rellene todos los campos</center>";

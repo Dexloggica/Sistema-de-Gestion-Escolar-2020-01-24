@@ -5,7 +5,8 @@ $isbn=$_POST['isbn'];
 require("FuncionConexionBasedeDatos.php");
 echo"<center>";
 $query="SELECT * FROM Libro";
-$resultado= mysql_query($query,$link) or die (mysql_error());
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 
 ////////////////
 				$bandera=0;
@@ -24,7 +25,7 @@ $resultado= mysql_query($query,$link) or die (mysql_error());
 				$CantidadVecesPedidas=array();
 				$Estado=array();
 
-				while ($row = mysql_fetch_array($resultado))
+				while ($row = mysqli_fetch_array($resultado))
 				{
 					
 						
@@ -178,8 +179,8 @@ $resultado= mysql_query($query,$link) or die (mysql_error());
 				echo"<br>Total de libros encontrados=".$cantidad;
 				$_SESSION['cantidad'] = $cantidad;
 				//////////////////
-				@mysql_free_result($resultado);
-				mysql_close($link);
+				@mysqli_free_result($resultado);
+				mysqli_close($link);
 				echo"</center>";
 			
 	

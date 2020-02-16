@@ -18,14 +18,14 @@ $idusuario=$_POST['idusuario'];
 			//$query = "INSERT INTO Usuario (idUsuario,username,password,TipoPerfil_idTipoPerfil)VALUES('$idUsuario','$username','$password','$TipoPerfil_idTipoPerfil')";
 			$query = "INSERT INTO Persona (Nombre,Apellido,Sexo,dni,cuil,Usuario_idUsuario	,Localidad_idLocalidad)VALUES('$nombre','$apellido','$sexo','$dni','$cuil','$idusuario','$idlocalidad')";
 			
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			echo "<center>Se ha creado una Nueva Persona</center>";
 										//CONTROL
 										$NombreTablaEditada="Persona";
 										require("CodigoRegistrarControl.php");
 										//				
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 	}
 	else{
 		echo "Por favor rellene todos los campos";

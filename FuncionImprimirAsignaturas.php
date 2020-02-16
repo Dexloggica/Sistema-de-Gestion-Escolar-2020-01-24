@@ -4,7 +4,7 @@
 require("FuncionConexionBasedeDatos.php");
 
 $query="SELECT * FROM Cargo,Asignatura,Persona WHERE Asignatura.Cargo_idCargo=Cargo.idCargo and Cargo.Persona_idPersona=Persona.idPersona";
-$resultado = mysql_query($query);
+$resultado = mysqli_query($query);
 
 ////////////////
 				$bandera=0;
@@ -21,7 +21,7 @@ $resultado = mysql_query($query);
 									<td class=encabezado>Apellido</td>
 								<tr>";
 				// while($fila=mysql_fetch_array($resultados))
-				while ($row = mysql_fetch_row($resultado))
+				while ($row = mysqli_fetch_row($resultado))
 				{
 						echo utf8_encode("<tr>
 								<td><b>$row[0]</b></td>
@@ -46,6 +46,6 @@ $resultado = mysql_query($query);
 				echo"<br>Total de Asignaturas encontradas=".$cantidad."</center>";
 				//////////////////
 
-@mysql_free_result($resultado);
-@mysql_close($link);
+@mysqli_free_result($resultado);
+@mysqli_close($link);
 ?>

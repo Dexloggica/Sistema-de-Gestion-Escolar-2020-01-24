@@ -26,14 +26,14 @@ $fechafin=$anio2."-".$mes2."-".$dia2;
 			require("FuncionConexionBasedeDatos.php");
 			//una vez conectada a la base de datos
 				$query = "INSERT INTO Licencia (LicenciaDesc,FechaInicio,FechaFin,Persona_idPersona)VALUES('$licencia','$fechainicio','$fechafin','$idPersona')";
-				$resultado = mysql_query($query);
+				$resultado = mysqli_query($query);
 				echo "Se ha cargado el cargo docente con exito...(INSERT INTO)";
 										//CONTROL
 										$NombreTablaEditada="Licencia";
 										require("CodigoRegistrarControl.php");
 										//				
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 	}
 	else{
 		echo "Por favor rellene todos los campos";

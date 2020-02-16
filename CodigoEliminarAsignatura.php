@@ -12,13 +12,14 @@ echo"<center>";
 			//obtengo los id del dia que quiero eliminar
 			require("FuncionConexionBasedeDatos.php");
 			$query ="SELECT * FROM Nivel_has_Asignatura WHERE Asignatura_idAsignatura='$idAsignatura'";
-			$resultado= mysql_query($query,$link) or die (mysql_error());
-			while ($row = mysql_fetch_row($resultado))
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+			while ($row = mysqli_fetch_row($resultado))
 			{
 				//elimino la vinculacion con el registro para luego eliminar el registro
 				
 				$query2 ="DELETE  FROM Nivel_has_Asignatura WHERE Asignatura_idAsignatura='$idAsignatura'";
-				$resultado2= mysql_query($query2,$link) or die (mysql_error());
+				$resultado2= mysqli_query($link, $query2) or die (mysqli_error($link));
 				echo"eliminando vinculos antiguos<br>";
 										//CONTROL
 										//$NombreTablaEditada="Nivel_has_Asignatura";
@@ -28,18 +29,18 @@ echo"<center>";
 				//@mysql_close($link);
 
 			}
-			@mysql_free_result($resultado2);
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado2);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			
 			require("FuncionConexionBasedeDatos.php");
 			$query ="SELECT * FROM Asignatura WHERE idAsignatura='$idAsignatura'";
-			$resultado= mysql_query($query,$link) or die (mysql_error());
-			while ($row = mysql_fetch_row($resultado))
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+			while ($row = mysqli_fetch_row($resultado))
 			{
 				
 				$query3 ="DELETE  FROM Asignatura WHERE idAsignatura='$idAsignatura'";
-				$resultado3= mysql_query($query3,$link) or die (mysql_error());
+				$resultado3= mysqli_query($link, $query3) or die (mysqli_error($link));
 				echo"eliminando asignatura<br>";
 										//CONTROL
 										//$NombreTablaEditada="Asignatura";
@@ -47,9 +48,9 @@ echo"<center>";
 										//
 				
 			}
-			@mysql_free_result($resultado3);
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado3);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			
 
 	}

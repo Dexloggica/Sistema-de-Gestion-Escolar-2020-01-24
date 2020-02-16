@@ -20,12 +20,12 @@ $idpermisobuscado=$_SESSION["idpermisobuscado"];
 if($primerboton==1 and $posicion==1)
 {
 	$query = "UPDATE Permisos SET PermisoEditarSusDatosPersonales='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 
-			@mysql_free_result($resultado);
-			mysql_close($link);
+			@mysqli_free_result($resultado);
+			mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -34,12 +34,12 @@ if($primerboton==1 and $posicion==1)
 
 }if($primerboton==0 and $posicion==1){
 	$query = "UPDATE Permisos SET PermisoEditarSusDatosPersonales='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -50,12 +50,12 @@ if($primerboton==1 and $posicion==1)
 if($segundoboton==1 and $posicion==2)
 {
 	$query = "UPDATE Permisos SET PermisoEditarDatosPersonalesOtros='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -64,12 +64,12 @@ if($segundoboton==1 and $posicion==2)
 
 }if($segundoboton==0 and $posicion==2){
 	$query = "UPDATE Permisos SET PermisoEditarDatosPersonalesOtros='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -80,12 +80,12 @@ if($segundoboton==1 and $posicion==2)
 if($tercerboton==1 and $posicion==3)
 {
 	$query = "UPDATE Permisos SET PermisoEditarObservacionesOtros='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -94,12 +94,12 @@ if($tercerboton==1 and $posicion==3)
 
 }if($tercerboton==0 and $posicion==3){
 	$query = "UPDATE Permisos SET PermisoEditarObservacionesOtros='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -110,12 +110,12 @@ if($tercerboton==1 and $posicion==3)
 if($cuartoboton==1 and $posicion==4)
 {
 	$query = "UPDATE Permisos SET PermisoVerObservacionesOtros='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -124,12 +124,12 @@ if($cuartoboton==1 and $posicion==4)
 
 }if($cuartoboton==0 and $posicion==4){
 	$query = "UPDATE Permisos SET PermisoVerObservacionesOtros='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -140,12 +140,12 @@ if($cuartoboton==1 and $posicion==4)
 if($quintoboton==1 and $posicion==5)
 {
 	$query = "UPDATE Permisos SET PermisoEditarCalificacionesSusAlumnos='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -154,12 +154,12 @@ if($quintoboton==1 and $posicion==5)
 
 }if($quintoboton==0 and $posicion==5){
 	$query = "UPDATE Permisos SET PermisoEditarCalificacionesSusAlumnos='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -170,12 +170,12 @@ if($quintoboton==1 and $posicion==5)
 if($sextoboton==1 and $posicion==6)
 {
 	$query = "UPDATE Permisos SET PermisoEditarDatosPersonalesAlumnoaCargo='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -184,12 +184,12 @@ if($sextoboton==1 and $posicion==6)
 
 }if($sextoboton==0 and $posicion==6){
 	$query = "UPDATE Permisos SET PermisoEditarDatosPersonalesAlumnoaCargo='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -200,12 +200,12 @@ if($sextoboton==1 and $posicion==6)
 if($septimoboton==1 and $posicion==7)
 {
 	$query = "UPDATE Permisos SET PermisoVerCalificacionesAlumnoaCargo='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -214,12 +214,12 @@ if($septimoboton==1 and $posicion==7)
 
 }if($septimoboton==0 and $posicion==7){
 	$query = "UPDATE Permisos SET PermisoVerCalificacionesAlumnoaCargo='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 	
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -230,12 +230,12 @@ if($septimoboton==1 and $posicion==7)
 if($octavoboton==1 and $posicion==8)
 {
 	$query = "UPDATE Permisos SET PermisoVerSusCalificaciones='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -244,12 +244,12 @@ if($octavoboton==1 and $posicion==8)
 
 }if($octavoboton==0 and $posicion==8){
 	$query = "UPDATE Permisos SET PermisoVerSusCalificaciones='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -260,12 +260,12 @@ if($octavoboton==1 and $posicion==8)
 if($novenoboton==1 and $posicion==9)
 {
 	$query = "UPDATE Permisos SET PermisoGestionarEscuela='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -274,12 +274,12 @@ if($novenoboton==1 and $posicion==9)
 
 }if($novenoboton==0 and $posicion==9){
 	$query = "UPDATE Permisos SET PermisoGestionarEscuela='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 	
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -290,12 +290,12 @@ if($novenoboton==1 and $posicion==9)
 if($decimoboton==1 and $posicion==10)
 {
 	$query = "UPDATE Permisos SET PermisoInscribirAlumno='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 	
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -304,12 +304,12 @@ if($decimoboton==1 and $posicion==10)
 
 }if($decimoboton==0 and $posicion==10){
 	$query = "UPDATE Permisos SET PermisoInscribirAlumno='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -320,11 +320,11 @@ if($decimoboton==1 and $posicion==10)
 if($decimoprimerboton==1 and $posicion==11)
 {
 	$query = "UPDATE Permisos SET PermisoInscribirDocente='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -333,11 +333,11 @@ if($decimoprimerboton==1 and $posicion==11)
 
 }if($decimoprimerboton==0 and $posicion==11){
 	$query = "UPDATE Permisos SET PermisoInscribirDocente='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -348,11 +348,11 @@ if($decimoprimerboton==1 and $posicion==11)
 if($decimosegundoboton==1 and $posicion==12)
 {
 	$query = "UPDATE Permisos SET PermisoGestionarBiblioteca='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";
@@ -361,11 +361,11 @@ if($decimosegundoboton==1 and $posicion==12)
 
 }if($decimosegundoboton==0 and $posicion==12){
 	$query = "UPDATE Permisos SET PermisoGestionarBiblioteca='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";

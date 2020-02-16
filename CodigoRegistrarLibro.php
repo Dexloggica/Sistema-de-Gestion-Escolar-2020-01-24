@@ -39,14 +39,14 @@ if($reqlen>0)
 				require("FuncionConexionBasedeDatos.php");
 				//obtengo el idGenero
 				$query ="SELECT * FROM Genero WHERE GeneroDesc='$element'";
-				$resultado= mysql_query($query,$link) or die (mysql_error());
-				$fila=mysql_fetch_array($resultado);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+				$fila=mysqli_fetch_array($resultado);
 				
 				if(!$fila)
 				{
 					$query = "INSERT INTO Genero (GeneroDesc)VALUES('$element')";
-					$resultado = mysql_query($query);
-					$idGenero=mysql_insert_id();
+					$resultado = mysqli_query($query);
+					$idGenero=mysqli_insert_id();
 					echo "Se ha creado un nuevo Genero ".$element."...(INSERT INTO) con el idGenero ".$idGenero."<br>";
 										//CONTROL
 										$NombreTablaEditada="Genero";
@@ -55,8 +55,8 @@ if($reqlen>0)
 					
 					//le agrego al final el ultimo idGenero
 					array_push($idesGeneros,$idGenero);
-					@mysql_free_result($resultado);
-					@mysql_close($link);
+					@mysqli_free_result($resultado);
+					@mysqli_close($link);
 				}else{
 					$idGenero=$fila['idGenero'];
 					echo "El genero ".$element." ya existe, no hace falta crearlo<br>";
@@ -64,8 +64,8 @@ if($reqlen>0)
 					
 					//le agrego al final el ultimo idGenero
 					array_push($idesGeneros,$idGenero);
-					@mysql_free_result($resultado);
-					@mysql_close($link);
+					@mysqli_free_result($resultado);
+					@mysqli_close($link);
 				}
 			}
 			//////////////////////////FIN REGISTRO DE GENEROS
@@ -85,14 +85,14 @@ if($reqlen>0)
 				require("FuncionConexionBasedeDatos.php");
 				//obtengo el idPersona del Alumno
 				$query ="SELECT * FROM Autor WHERE AutorDesc='$element'";
-				$resultado= mysql_query($query,$link) or die (mysql_error());
-				$fila=mysql_fetch_array($resultado);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+				$fila=mysqli_fetch_array($resultado);
 
 				if(!$fila)
 				{
 					$query = "INSERT INTO Autor (AutorDesc)VALUES('$element')";
-					$resultado = mysql_query($query);
-					$idAutor=mysql_insert_id();
+					$resultado = mysqli_query($query);
+					$idAutor=mysqli_insert_id();
 					echo "Se ha creado un nuevo Autor ".$element."...(INSERT INTO) con el idAutor ".$idAutor."<br>";
 										//CONTROL
 										$NombreTablaEditada="Autor";
@@ -101,8 +101,8 @@ if($reqlen>0)
 					
 					//le agrego al final el ultimo idGenero
 					array_push($idesAutores,$idAutor);
-					@mysql_free_result($resultado);
-					@mysql_close($link);
+					@mysqli_free_result($resultado);
+					@mysqli_close($link);
 				}else{
 					$idAutor=$fila['idAutor'];
 					echo "El genero ".$element." ya existe, no hace falta crearlo<br>";
@@ -110,8 +110,8 @@ if($reqlen>0)
 				
 					//le agrego al final el ultimo idGenero
 					array_push($idesAutores,$idAutor);
-					@mysql_free_result($resultado);
-					@mysql_close($link);
+					@mysqli_free_result($resultado);
+					@mysqli_close($link);
 				}
 			}
 			//////////////////////////FIN REGISTRO DE AUTORES
@@ -124,23 +124,23 @@ if($reqlen>0)
 			require("FuncionConexionBasedeDatos.php");
 			//obtengo el idPersona del Alumno
 			$query ="SELECT * FROM Pais WHERE PaisDesc='$pais'";
-			$resultado= mysql_query($query,$link) or die (mysql_error());
-			$fila=mysql_fetch_array($resultado);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+			$fila=mysqli_fetch_array($resultado);
 			if(!$fila)
 			{
 				$query = "INSERT INTO Pais (PaisDesc)VALUES('$pais')";
-				$resultado = mysql_query($query);
+				$resultado = mysqli_query($query);
 				echo "Se ha creado un nuevo Pais ".$pais."...(INSERT INTO)<br>";
 										//CONTROL
 										$NombreTablaEditada="Pais";
 										require("CodigoRegistrarControl.php");
 										//					
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			}else{
 				echo "El pais ".$pais." ya existe, no hace falta crearlo<br>";
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			}	
 			//////////////////////////FIN REGISTRO DE PAIS
 			//////////////////////////REGISTRO DE EDITORIAL
@@ -152,49 +152,49 @@ if($reqlen>0)
 			require("FuncionConexionBasedeDatos.php");
 			
 			$query ="SELECT * FROM Editorial WHERE EditorialDesc='$editorial'";
-			$resultado= mysql_query($query,$link) or die (mysql_error());
-			$fila=mysql_fetch_array($resultado);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+			$fila=mysqli_fetch_array($resultado);
 			if(!$fila)
 			{
 				$query = "INSERT INTO Editorial (EditorialDesc)VALUES('$editorial')";
-				$resultado = mysql_query($query);
+				$resultado = mysqli_query($query);
 				echo "Se ha creado una nueva Editorial ".$editorial."...(INSERT INTO)<br>";
 										//CONTROL
 										$NombreTablaEditada="Editorial";
 										require("CodigoRegistrarControl.php");
 										//				
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			}else{
 				echo "La Editorial ".$editorial." ya existe, no hace falta crearla<br>";
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			}	
 			//////////////////////////FIN REGISTRO DE PAISES
 			//////////////////////////REGISTRO DE LIBRO
 			require("FuncionConexionBasedeDatos.php");
 			//obtengo el idPais ya creado
 			$consulta= "SELECT * FROM Pais WHERE PaisDesc='$pais'"; 
-			$resultado= mysql_query($consulta,$link) or die (mysql_error());
-			$fila=mysql_fetch_array($resultado);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+			$fila=mysqli_fetch_array($resultado);
 			$idPais=$fila['idPais'];
 			//obtengo el idEditorial ya creado
 			$consulta= "SELECT * FROM Editorial WHERE EditorialDesc='$editorial'"; 
-			$resultado= mysql_query($consulta,$link) or die (mysql_error());
-			$fila=mysql_fetch_array($resultado);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+			$fila=mysqli_fetch_array($resultado);
 			$idEditorial=$fila['idEditorial'];
 
 			$query = "INSERT INTO Libro (Titulo,Numero,Paginas,FechaPublicacion,ISBN,LinkImagen,LinkDescarga,Pais_idPais,Editorial_idEditorial,CantidadVecesPedidas,Estado)VALUES('$titulo','$numero','$paginas','$fechapublicacion','$isbn','$linkimagen','$linkdescarga','$idPais','$idEditorial',0,1)";
 			
-			$resultado = mysql_query($query);
-			$idLibro=mysql_insert_id();
+			$resultado = mysqli_query($query);
+			$idLibro=mysqli_insert_id();
 			echo "Se ha creado un Nuevo Libro con el siguiente idLibro ".$idLibro."<br>";
 										//CONTROL
 										$NombreTablaEditada="Libro";
 										require("CodigoRegistrarControl.php");
 										//			
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			//////////////////////////FIN REGISTRO DE LIBRO
 			//////////////////////////REGISTRO GENERO DEL LIBRO
 			$cont = 0;
@@ -204,14 +204,14 @@ if($reqlen>0)
 				$idGeneroAux=$idesGeneros[$cont];
 				require("FuncionConexionBasedeDatos.php");
 				$query = "INSERT INTO Libro_has_Genero (Libro_idLibro,Genero_idGenero)VALUES('$idLibro','$idGeneroAux')";
-				$resultado = mysql_query($query);
+				$resultado = mysqli_query($query);
 				echo "Se ha registrado el genero del libro exitosamente ".$idGeneroAux."<br>";
 										//CONTROL
 										$NombreTablaEditada="Libro_has_Genero";
 										require("CodigoRegistrarControl.php");
 										//					
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$cont++;
 			}
 			//////////////////////////FIN REGISTRO GENERO DEL LIBRO
@@ -224,14 +224,14 @@ if($reqlen>0)
 				
 				require("FuncionConexionBasedeDatos.php");
 				$query = "INSERT INTO Libro_has_Autor(Libro_idLibro,Autor_idAutor)VALUES('$idLibro','$idAutorAux')";
-				$resultado = mysql_query($query);
+				$resultado = mysqli_query($query);
 				echo "Se ha registrado el autor del libro exitosamente ".$idAutorAux."<br>";
 										//CONTROL
 										$NombreTablaEditada="Libro_has_Autor";
 										require("CodigoRegistrarControl.php");
 										//				
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$cont++;
 			}
 			//////////////////////////FIN REGISTRO AUTOR DEL LIBRO

@@ -11,7 +11,8 @@ $idbuscado=$_POST['idusuario'];
 require("FuncionConexionBasedeDatos.php");
 //
 $consulta= "SELECT * FROM Usuario WHERE idUsuario='$idbuscado'"; 
-@$resultado= mysqli_query($consulta,$link) or die (mysqli_error());
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 $fila=mysqli_fetch_array($resultado);
 // @mysql_free_result($resultado);
 // mysql_close($link);
@@ -30,7 +31,8 @@ $fila=mysqli_fetch_array($resultado);
 		}else{
 			
 		$consulta= "SELECT * FROM Persona WHERE Usuario_idUsuario='$idbuscado'"; 
-		@$resultado= mysqli_query($consulta,$link) or die (mysqli_error());
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 		$fila=mysqli_fetch_array($resultado);
 		$idPersona=$fila['idPersona'];
 		//@mysql_free_result($resultado);
@@ -39,7 +41,7 @@ $fila=mysqli_fetch_array($resultado);
 		require("FuncionConexionBasedeDatos.php");
 		// $query="SELECT * FROM Persona WHERE Usuario_idUsuario='$idbuscado'";
 		$query="SELECT * FROM Persona,FechaNacimiento WHERE Persona.idPersona=FechaNacimiento.Persona_idPersona AND Persona.idPersona='$idPersona'";
-		$resultado=mysql_query($query) or die ("No se encuentra la Persona con ese IdUsuario");
+		$resultado=mysqli_query($query) or die ("No se encuentra la Persona con ese IdUsuario");
 		// echo"puede editar este perfil";
 				////////////////
 				$bandera=0;

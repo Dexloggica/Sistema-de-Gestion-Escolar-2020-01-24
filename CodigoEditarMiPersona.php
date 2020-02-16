@@ -19,15 +19,15 @@ $idusuario= $_SESSION['idusuario'];
 			//una vez conectada a la base de datos
 			
 			$query = "UPDATE Persona SET Nombre='$nombre', Apellido='$apellido',Sexo='$sexo',dni='$dni', cuil='$cuil'WHERE Usuario_idUsuario='$idusuario'";
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			// echo"nombre= $nombre";  
 			echo "Se han modificado los datos exitosamente";
 										//CONTROL
 										$NombreTablaEditada="Persona";
 										require("CodigoRegistrarControl.php");
 										//
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 			header("location:MENU/MenuDatosPersonales.php");
 	}
 	else{

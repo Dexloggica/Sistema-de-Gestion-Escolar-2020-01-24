@@ -2,33 +2,33 @@
 require("FuncionConexionBasedeDatos.php");
 $idLibro=$_SESSION['idLibro'.$i];
 $query="SELECT * FROM Libro WHERE idLibro='$idLibro'";
-$resultado= mysql_query($query,$link) or die (mysql_error());
-$fila=mysql_fetch_array($resultado);
+$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+$fila=mysqli_fetch_array($resultado);
 $Titulo=$fila['Titulo'];
 $LinkImagen=$fila['LinkImagen'];
-@mysql_free_result($resultado);
-@mysql_close($link);
+@mysqli_free_result($resultado);
+@mysqli_close($link);
 
 require("FuncionConexionBasedeDatos.php");
 $query2="SELECT * FROM Prestamo WHERE idLibro='$idLibro' AND FechaEntrega=0";
-$resultado2= mysql_query($query2,$link) or die (mysql_error());
-$fila2=mysql_fetch_array($resultado2);
+$resultado2= mysqli_query($link, $query2) or die (mysqli_error($link));
+$fila2=mysqli_fetch_array($resultado2);
 $idFichaSocioBiblioteca=$fila2['idFichaSocioBiblioteca'];
-@mysql_free_result($resultado2);
-@mysql_close($link);
+@mysqli_free_result($resultado2);
+@mysqli_close($link);
 
 require("FuncionConexionBasedeDatos.php");
 $query3="SELECT * FROM FichaSocioBiblioteca WHERE idFichaSocioBiblioteca='$idFichaSocioBiblioteca'";
-$resultado3= mysql_query($query3,$link) or die (mysql_error());
-$fila3=mysql_fetch_array($resultado3);
+$resultado3= mysqli_query($link, $query3) or die (mysqli_error($link));
+$fila3=mysqli_fetch_array($resultado3);
 $idPersona=$fila3['Persona_idPersona'];
-@mysql_free_result($resultado3);
-@mysql_close($link);
+@mysqli_free_result($resultado3);
+@mysqli_close($link);
 
 require("FuncionConexionBasedeDatos.php");
 $query4="SELECT * FROM Persona WHERE idPersona='$idPersona'";
-$resultado4= mysql_query($query4,$link) or die (mysql_error());
-$fila4=mysql_fetch_array($resultado4);
+$resultado4= mysqli_query($link, $query4) or die (mysqli_error($link));
+$fila4=mysqli_fetch_array($resultado4);
 $Nombre=$fila4['Nombre'];
 $Apellido=$fila4['Apellido'];
 $Dni=$fila4['dni'];
@@ -60,7 +60,7 @@ echo"
 
 	</form></center>";
 	$_SESSION['idLibro'] = $idLibro;
-	@mysql_free_result($resultado4);
-				@mysql_close($link);
+	@mysqli_free_result($resultado4);
+				@mysqli_close($link);
 
 ?>

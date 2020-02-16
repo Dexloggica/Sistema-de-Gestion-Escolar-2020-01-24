@@ -25,10 +25,10 @@ $fechafin=$anio2."-".$mes2."-".$dia2;
 										$NombreTablaEditada="TipoBeca";
 										require("CodigoRegistrarControl.php");
 										//
-			$resultado = mysql_query($query);
+			$resultado = mysqli_query($query);
 			echo "Se ha creado una Nueva Beca";
-			@mysql_free_result($resultado);
-			@mysql_close($link);
+			@mysqli_free_result($resultado);
+			@mysqli_close($link);
 	}
 	else{
 		echo "Por favor rellene todos los campos";
