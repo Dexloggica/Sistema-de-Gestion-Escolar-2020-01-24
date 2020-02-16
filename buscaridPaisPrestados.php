@@ -3,12 +3,13 @@ $idPais=$_POST['idPais'];
 require("FuncionConexionBasedeDatos.php");
 echo"<center>";
 $consulta= "SELECT * FROM Pais WHERE idPais='$idPais'"; 
-	@$resultado= mysql_query($consulta,$link) or die (mysql_error());
-	$fila=mysql_fetch_array($resultado);
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila=mysqli_fetch_array($resultado);
 	$idPais=$fila['idPais'];
 
 $query="SELECT * FROM Libro,Pais WHERE Libro.Pais_idPais=Pais.idPais and Pais.idPais='$idPais'";
-				$resultado=mysql_query($query);	
+				$resultado=mysqli_query($query);	
 ////////////////
 				$bandera=0;
 				$cantidad=0;
@@ -26,7 +27,7 @@ $query="SELECT * FROM Libro,Pais WHERE Libro.Pais_idPais=Pais.idPais and Pais.id
 				$CantidadVecesPedidas=array();
 				$Estado=array();
 
-				while ($row = mysql_fetch_array($resultado))
+				while ($row = mysqli_fetch_array($resultado))
 				{
 					
 						
@@ -180,8 +181,8 @@ $query="SELECT * FROM Libro,Pais WHERE Libro.Pais_idPais=Pais.idPais and Pais.id
 				echo"<br>Total de libros encontrados=".$cantidad;
 				$_SESSION['cantidad'] = $cantidad;
 				//////////////////
-				@mysql_free_result($resultado);
-				mysql_close($link);
+				@mysqli_free_result($resultado);
+				mysqli_close($link);
 				echo"</center>";
 			
 	

@@ -11,8 +11,8 @@ $idbuscado=$_POST['idusuario'];
 require("FuncionConexionBasedeDatos.php");
 //
 $consulta= "SELECT * FROM Usuario WHERE idUsuario='$idbuscado'"; 
-@$resultado= mysql_query($consulta,$link) or die (mysql_error());
-$fila=mysql_fetch_array($resultado);
+@$resultado= mysqli_query($consulta,$link) or die (mysqli_error());
+$fila=mysqli_fetch_array($resultado);
 // @mysql_free_result($resultado);
 // mysql_close($link);
 // echo"$tipodeperfilbuscado<br>";
@@ -30,8 +30,8 @@ $fila=mysql_fetch_array($resultado);
 		}else{
 			
 		$consulta= "SELECT * FROM Persona WHERE Usuario_idUsuario='$idbuscado'"; 
-		@$resultado= mysql_query($consulta,$link) or die (mysql_error());
-		$fila=mysql_fetch_array($resultado);
+		@$resultado= mysqli_query($consulta,$link) or die (mysqli_error());
+		$fila=mysqli_fetch_array($resultado);
 		$idPersona=$fila['idPersona'];
 		//@mysql_free_result($resultado);
 		//mysql_close($link);
@@ -39,7 +39,7 @@ $fila=mysql_fetch_array($resultado);
 		require("FuncionConexionBasedeDatos.php");
 		// $query="SELECT * FROM Persona WHERE Usuario_idUsuario='$idbuscado'";
 		$query="SELECT * FROM Persona,Estudios WHERE Persona.idPersona=Estudios.Persona_idPersona AND Persona.idPersona='$idPersona'";
-		$resultado=mysql_query($query) or die ("No se encuentra la Persona con ese IdUsuario");
+		$resultado=mysqli_query($query) or die ("No se encuentra la Persona con ese IdUsuario");
 		// echo"puede editar este perfil";
 				////////////////
 				$bandera=0;
@@ -62,7 +62,7 @@ $fila=mysql_fetch_array($resultado);
 									<td class=encabezado>Fecha</td>
 								<tr>";
 				// while($fila=mysql_fetch_array($resultados))
-				while ($row = mysql_fetch_row($resultado))
+				while ($row = mysqli_fetch_row($resultado))
 				{
 
 						echo"<tr>
@@ -94,8 +94,8 @@ $fila=mysql_fetch_array($resultado);
 				}	
 				echo"<br>Total de idPersonas encontradas=".$cantidad;
 				//////////////////
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			
 		}
 	}else{

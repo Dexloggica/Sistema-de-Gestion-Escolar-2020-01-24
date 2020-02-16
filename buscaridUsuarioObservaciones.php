@@ -16,10 +16,10 @@ $idbuscado=$_POST['idusuario'];
 	require("FuncionConexionBasedeDatos.php");
 	//
 	$consulta= "SELECT * FROM Usuario WHERE idUsuario='$idbuscado'"; 
-	@$resultado= mysql_query($consulta,$link) or die (mysql_error());
-	$fila=mysql_fetch_array($resultado);
-	@mysql_free_result($resultado);
-	mysql_close($link);
+	@$resultado= mysqli_query($consulta,$link) or die (mysqli_error());
+	$fila=mysqli_fetch_array($resultado);
+	@mysqli_free_result($resultado);
+	mysqli_close($link);
 		
 	$tipodeperfilbuscado=$fila['TipoPerfil_idTipoPerfil'];
 	// echo"$tipodeperfilbuscado<br>";
@@ -36,7 +36,7 @@ $idbuscado=$_POST['idusuario'];
 				require("FuncionConexionBasedeDatos.php");
 				// $query="SELECT * FROM Persona WHERE Usuario_idUsuario='$idbuscado'";
 				$query="SELECT * FROM Persona,Observaciones WHERE Persona.idPersona=Observaciones.Persona_idPersona AND Persona.idPersona=$idbuscado";
-				$resultado=mysql_query($query);
+				$resultado=mysqli_query($query);
 				// echo"puede editar este perfil";
 				////////////////
 				echo"<center>";
@@ -53,7 +53,7 @@ $idbuscado=$_POST['idusuario'];
 									<td class=encabezado>Observaciones Descripcion</td>
 								<tr>";
 				// while($fila=mysql_fetch_array($resultados))
-				while ($row = mysql_fetch_row($resultado))
+				while ($row = mysqli_fetch_row($resultado))
 				{
 					
 					$result=strpos(strtolower("$fila[idUsuario]"),strtolower($idbuscado));
@@ -86,8 +86,8 @@ $idbuscado=$_POST['idusuario'];
 				}	
 				echo"<br>Total de idPersonas encontradas=".$cantidad;
 				//////////////////
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			}
 			else{
 				echo"<center>Usted no puede editar este tipo perfil.</center>";

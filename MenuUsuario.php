@@ -12,24 +12,24 @@ if (!$_SESSION){
 $idusuario= $_SESSION['idusuario'];
 // echo "idusuario= $idusuario<br>";
 $consulta="SELECT * FROM Usuario WHERE idUsuario='$idusuario'";
-$resultado=mysql_query($consulta,$link) or die(mysql_error());
-$resultado_obtenido=mysql_fetch_array($resultado);
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+$resultado_obtenido=mysqli_fetch_array($resultado);
 //obtengo el tipo de perfil que tiene
 $TipoPerfil_idTipoPerfil= $resultado_obtenido['TipoPerfil_idTipoPerfil'];
 $_SESSION['TipoPerfil'] = $TipoPerfil_idTipoPerfil;
 // echo "tipodeperfil= $TipoPerfil_idTipoPerfil<br>";
 
 $consulta="SELECT * FROM TipoPerfil WHERE idTipoPerfil='$TipoPerfil_idTipoPerfil'";
-$resultado=mysql_query($consulta,$link) or die(mysql_error());
-$resultado_obtenido=mysql_fetch_array($resultado);
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+$resultado_obtenido=mysqli_fetch_array($resultado);
 //obtengo el tipo de perfil que tiene
 $Permisos_idPermisos= $resultado_obtenido['Permisos_idPermisos'];
 $PerfilDescripcion=$resultado_obtenido['PerfilDesc'];
 // echo "Permisos= $Permisos_idPermisos<br>";
 
 $consulta="SELECT * FROM Permisos WHERE idPermisos='$Permisos_idPermisos'";
-$resultado=mysql_query($consulta,$link) or die(mysql_error());
-$resultado_obtenido=mysql_fetch_array($resultado);
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+$resultado_obtenido=mysqli_fetch_array($resultado);
 
 
 //obtengo los permisos que tiene si es 1(permitido), si es 0(no permitido)
@@ -242,6 +242,6 @@ $_SESSION['PermisoGestionarBiblioteca'] = $PermisoGestionarBiblioteca;
       }
   }
 
-  @mysql_close($link);
+  @mysqli_close($link);
 	
 ?>

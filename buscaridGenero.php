@@ -10,8 +10,9 @@ $idGenero=$_POST['idGenero'];
 	
 		
 	$consulta= "SELECT * FROM Genero WHERE idGenero='$idGenero'"; 
-	@$resultado= mysql_query($consulta,$link) or die (mysql_error());
-	$fila=mysql_fetch_array($resultado);
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila=mysqli_fetch_array($resultado);
 	$idGenero=$fila['idGenero'];
 	// echo"$tipodeperfilbuscado<br>";
 	//OPCIÓN 1: Si el usuario NO existe o los datos son INCORRRECTOS
@@ -25,7 +26,7 @@ $idGenero=$_POST['idGenero'];
 				// mysql_select_db("0612_version5",$conex) or die("ERROR con la base de datos");
 				//require("FuncionConexionBasedeDatos.php");
 				$query="SELECT * FROM Libro,Libro_has_Genero,Genero WHERE Libro.idLibro=Libro_has_Genero.Libro_idLibro and Genero.idGenero=Libro_has_Genero.Genero_idGenero and Libro_has_Genero.Genero_idGenero='$idGenero'";
-				$resultado=mysql_query($query);	
+				$resultado=mysqli_query($query);	
 				//echo"puede editar este perfil";
 				////////////////
 				$bandera=0;
@@ -52,7 +53,7 @@ $idGenero=$_POST['idGenero'];
 									<td class=encabezado>GeneroDesc</td>
 								<tr>";
 				// while($fila=mysql_fetch_array($resultados))
-				while ($row = mysql_fetch_row($resultado))
+				while ($row = mysqli_fetch_row($resultado))
 				{
 					
 					
@@ -88,8 +89,8 @@ $idGenero=$_POST['idGenero'];
 				}	
 				echo"<br>Total de Libros con este genero encontrados=".$cantidad;
 				//////////////////
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				echo"</center>";
 			
 	}

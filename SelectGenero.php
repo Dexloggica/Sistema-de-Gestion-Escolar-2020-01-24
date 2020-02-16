@@ -3,7 +3,8 @@ require("FuncionConexionBasedeDatos.php");
 //obtengo el idPersona del Tutor
 //obtengo el idPersona a Cargo del Tutor
 $consulta= "SELECT * FROM Genero"; 
-$resultado= mysql_query($consulta,$link) or die (mysql_error());
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 // $fila=mysql_fetch_array($resultado);
 // $idPersonaaCargo=$fila['idPersonaaCargo'];
 	

@@ -15,8 +15,8 @@ if(isset($username))
 	
 	//Consultar si los datos son están guardados en la base de datos
 	$consulta= "SELECT * FROM Usuario WHERE username='$username' AND password='$password'"; 
-	$resultado= mysql_query($consulta,$link) or die (mysql_error());
-	$fila=mysql_fetch_array($resultado);
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila=mysqli_fetch_array($resultado);
 	
 	//OPCIÓN 1: Si el usuario NO existe o los datos son INCORRRECTOS
 	if (!$fila['idUsuario']){ 
@@ -35,7 +35,7 @@ if(isset($username))
 		$NombreTablaEditada="Acceso al Sistema";
 		require("CodigoRegistrarControl.php");
 	}
-	@mysql_close($link);
+	@mysqli_close($link);
 }
 else{
 	header("location:index.php");

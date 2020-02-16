@@ -3,12 +3,13 @@ $idGenero=$_POST['idGenero'];
 require("FuncionConexionBasedeDatos.php");
 echo"<center>";
 $consulta= "SELECT * FROM Genero WHERE idGenero='$idGenero'"; 
-	@$resultado= mysql_query($consulta,$link) or die (mysql_error());
-	$fila=mysql_fetch_array($resultado);
+	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
+	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$fila=mysqli_fetch_array($resultado);
 	$idGenero=$fila['idGenero'];
 
 $query="SELECT * FROM Libro,Libro_has_Genero,Genero WHERE Libro.idLibro=Libro_has_Genero.Libro_idLibro and Genero.idGenero=Libro_has_Genero.Genero_idGenero and Libro_has_Genero.Genero_idGenero='$idGenero'";
-				$resultado=mysql_query($query);	
+				$resultado=mysqli_query($query);	
 ////////////////
 				$bandera=0;
 				$cantidad=0;
@@ -26,7 +27,7 @@ $query="SELECT * FROM Libro,Libro_has_Genero,Genero WHERE Libro.idLibro=Libro_ha
 				$CantidadVecesPedidas=array();
 				$Estado=array();
 
-				while ($row = mysql_fetch_array($resultado))
+				while ($row = mysqli_fetch_array($resultado))
 				{
 					
 						
@@ -180,8 +181,8 @@ $query="SELECT * FROM Libro,Libro_has_Genero,Genero WHERE Libro.idLibro=Libro_ha
 				echo"<br>Total de libros encontrados=".$cantidad;
 				$_SESSION['cantidad'] = $cantidad;
 				//////////////////
-				@mysql_free_result($resultado);
-				mysql_close($link);
+				@mysqli_free_result($resultado);
+				mysqli_close($link);
 				echo"</center>";
 			
 	

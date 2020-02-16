@@ -7,8 +7,8 @@ $idusuario=$_SESSION['idusuario'];
 /////////////NO TOCAR IMPORTANTE NO TOCAR
 require("FuncionConexionBasedeDatos.php");
 $query = "INSERT INTO Control (NombreTablaEditada,Fecha,Hora,idUsuario)VALUES('$NombreTablaEditada','$fecha','$hora','$idusuario')";
-$resultado = mysql_query($query);
+$resultado = mysqli_query($query);
 /////////////NO TOCAR IMPORTANTE NO TOCAR
-@mysql_free_result($resultado);
-@mysql_close($link);
+@mysqli_free_result($resultado);
+@mysqli_close($link);
 ?>

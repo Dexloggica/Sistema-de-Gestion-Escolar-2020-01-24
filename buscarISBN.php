@@ -7,7 +7,7 @@ echo"<center>";
 		if($reqlen>0)
 		{
 			$query="SELECT * FROM Libro";
-			$resultados=mysql_query($query) or die (mysql_error());
+			$resultados=mysqli_query($query) or die (mysqli_error());
 			$bandera=0;
 			$cantidad=0;
 			echo"<table class='table table-striped' border>
@@ -28,7 +28,7 @@ echo"<center>";
 
 									<td class=encabezado>Cantidad de Veces</td>
 							<tr>";
-			while($row=mysql_fetch_array($resultados))
+			while($row=mysqli_fetch_array($resultados))
 			{
 				$result=strpos(strtolower("$row[5]"),strtolower($isbn));
 				if($result !==FALSE)
@@ -66,7 +66,7 @@ echo"<center>";
 		else{
 			echo"Por favor complete el campo antes de realizar una busqueda";
 		}	
-	@mysql_free_result($resultado);
-	@mysql_close($link);
+	@mysqli_free_result($resultado);
+	@mysqli_close($link);
 		echo"</center>";
 ?>
