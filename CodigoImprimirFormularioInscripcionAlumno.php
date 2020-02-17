@@ -56,7 +56,7 @@ echo"<center>";
 	require("FuncionConexionBasedeDatos.php");
 	$consulta= "SELECT * FROM TipoPerfil WHERE idTipoPerfil='$TipoPerfilTutor'"; 
 	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
-	$fila5=mysql_fetch_array($resultado);
+	$fila5=mysqli_fetch_array($resultado);
 	$PerfilDescTutor=$fila5['PerfilDesc'];
 	//echo"descripcion de perfil del tutor encontrado es:".$PerfilDescTutor."<br>";
 	@mysqli_free_result($resultado);

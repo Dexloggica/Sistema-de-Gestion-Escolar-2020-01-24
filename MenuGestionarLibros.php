@@ -145,8 +145,7 @@ ob_start();
 				require("FuncionImprimirLibrosPrestados.php");
 			}
 
-				$arr_length =empty($_SESSION['cantidad']);
-				for($i=0;$i<=$arr_length;$i++){
+				for($i=0;$i<=count(@$_SESSION['cantidad']);$i++){
 					// echo "cantidad de libros".$_SESSION['cantidad']."<br>";
 					// echo $_SESSION['idLibro'.$i]."<br>";
 						

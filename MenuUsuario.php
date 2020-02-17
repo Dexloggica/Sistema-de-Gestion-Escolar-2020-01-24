@@ -241,7 +241,7 @@ $_SESSION['PermisoGestionarBiblioteca'] = $PermisoGestionarBiblioteca;
         header("location:FormularioInscribirDocente.php"); 
       }
   }
-
-  @mysqli_close($link);
+@mysqli_free_result($resultado);
+@mysqli_close($link);
 	
 ?>

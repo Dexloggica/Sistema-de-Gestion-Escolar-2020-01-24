@@ -46,7 +46,7 @@ if($reqlen>0)
 				{
 					$query = "INSERT INTO Genero (GeneroDesc)VALUES('$element')";
 					$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
-					$idGenero=mysqli_insert_id();
+					$idGenero=@mysqli_insert_id();
 					echo "Se ha creado un nuevo Genero ".$element."...(INSERT INTO) con el idGenero ".$idGenero."<br>";
 										//CONTROL
 										$NombreTablaEditada="Genero";
@@ -92,7 +92,7 @@ if($reqlen>0)
 				{
 					$query = "INSERT INTO Autor (AutorDesc)VALUES('$element')";
 					$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
-					$idAutor=mysqli_insert_id();
+					$idAutor=@mysqli_insert_id();
 					echo "Se ha creado un nuevo Autor ".$element."...(INSERT INTO) con el idAutor ".$idAutor."<br>";
 										//CONTROL
 										$NombreTablaEditada="Autor";
@@ -187,7 +187,7 @@ if($reqlen>0)
 			$query = "INSERT INTO Libro (Titulo,Numero,Paginas,FechaPublicacion,ISBN,LinkImagen,LinkDescarga,Pais_idPais,Editorial_idEditorial,CantidadVecesPedidas,Estado)VALUES('$titulo','$numero','$paginas','$fechapublicacion','$isbn','$linkimagen','$linkdescarga','$idPais','$idEditorial',0,1)";
 			
 			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
-			$idLibro=mysqli_insert_id();
+			$idLibro=@mysqli_insert_id();
 			echo "Se ha creado un Nuevo Libro con el siguiente idLibro ".$idLibro."<br>";
 										//CONTROL
 										$NombreTablaEditada="Libro";
