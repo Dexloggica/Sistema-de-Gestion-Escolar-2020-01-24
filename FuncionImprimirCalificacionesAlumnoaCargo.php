@@ -19,7 +19,7 @@ require("FuncionConexionBasedeDatos.php");
 
 $consulta= "SELECT * FROM Persona,Calificaciones,Asignatura WHERE Persona.idPersona='$idbuscado' and Calificaciones.idAlumno='$idbuscado' and Asignatura.idAsignatura=Calificaciones.idAsignatura"; 
 
-$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 			$bandera=0;
 			$cantidad=0;
 			echo"<table class='table table-striped' border>

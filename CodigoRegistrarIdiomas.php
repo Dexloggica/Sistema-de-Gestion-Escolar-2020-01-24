@@ -25,24 +25,24 @@ $fila=mysqli_fetch_array($resultado);
 			if(!$fila)
 			{
 				$query = "INSERT INTO Idioma (Ingles,Aleman,Frances,Italiano,Portugues,Chino,Otros,Persona_idPersona)VALUES('$ingles','$aleman','$frances','$italiano','$portugues','$chino','$otros','$idPersona')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(INSERT INTO)";
 										//CONTROL
 										$NombreTablaEditada="Idioma";
 										require("CodigoRegistrarControl.php");
 										//					
-				@mysqli_free_result($resultado);
-				@mysqli_close($link);
+				mysqli_free_result($resultado);
+				mysqli_close($link);
 			}else{
 				$query = "UPDATE Idioma SET Ingles='$ingles',Aleman='$aleman',Frances='$frances',Italiano='$italiano',Portugues='$portugues',Chino='$chino',Otros='$otros' WHERE Persona_idPersona='$idPersona'";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(UPDATE)";
 										//CONTROL
 										$NombreTablaEditada="Idioma";
 										require("CodigoRegistrarControl.php");
 										//					
-				@mysqli_free_result($resultado);
-				@mysqli_close($link);
+				mysqli_free_result($resultado);
+				mysqli_close($link);
 			}
 }		
 

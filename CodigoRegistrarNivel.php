@@ -14,7 +14,7 @@ $division=$_POST['division'];
 			//$query = "INSERT INTO Usuario (idUsuario,username,password,TipoPerfil_idTipoPerfil)VALUES('$idUsuario','$username','$password','$TipoPerfil_idTipoPerfil')";
 			$query = "INSERT INTO Nivel (GradoCurso,Division)VALUES('$grado','$division')";
 			
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			echo "<center>Se ha creado un Nuevo Nivel</center>";
 										//CONTROL
 										$NombreTablaEditada="Nivel";

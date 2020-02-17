@@ -45,7 +45,7 @@ if($reqlen>0)
 				if(!$fila)
 				{
 					$query = "INSERT INTO Genero (GeneroDesc)VALUES('$element')";
-					$resultado = mysqli_query($query);
+					$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 					$idGenero=mysqli_insert_id();
 					echo "Se ha creado un nuevo Genero ".$element."...(INSERT INTO) con el idGenero ".$idGenero."<br>";
 										//CONTROL
@@ -91,7 +91,7 @@ if($reqlen>0)
 				if(!$fila)
 				{
 					$query = "INSERT INTO Autor (AutorDesc)VALUES('$element')";
-					$resultado = mysqli_query($query);
+					$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 					$idAutor=mysqli_insert_id();
 					echo "Se ha creado un nuevo Autor ".$element."...(INSERT INTO) con el idAutor ".$idAutor."<br>";
 										//CONTROL
@@ -129,7 +129,7 @@ if($reqlen>0)
 			if(!$fila)
 			{
 				$query = "INSERT INTO Pais (PaisDesc)VALUES('$pais')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se ha creado un nuevo Pais ".$pais."...(INSERT INTO)<br>";
 										//CONTROL
 										$NombreTablaEditada="Pais";
@@ -157,7 +157,7 @@ if($reqlen>0)
 			if(!$fila)
 			{
 				$query = "INSERT INTO Editorial (EditorialDesc)VALUES('$editorial')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se ha creado una nueva Editorial ".$editorial."...(INSERT INTO)<br>";
 										//CONTROL
 										$NombreTablaEditada="Editorial";
@@ -175,18 +175,18 @@ if($reqlen>0)
 			require("FuncionConexionBasedeDatos.php");
 			//obtengo el idPais ya creado
 			$consulta= "SELECT * FROM Pais WHERE PaisDesc='$pais'"; 
-			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+			$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 			$fila=mysqli_fetch_array($resultado);
 			$idPais=$fila['idPais'];
 			//obtengo el idEditorial ya creado
 			$consulta= "SELECT * FROM Editorial WHERE EditorialDesc='$editorial'"; 
-			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+			$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 			$fila=mysqli_fetch_array($resultado);
 			$idEditorial=$fila['idEditorial'];
 
 			$query = "INSERT INTO Libro (Titulo,Numero,Paginas,FechaPublicacion,ISBN,LinkImagen,LinkDescarga,Pais_idPais,Editorial_idEditorial,CantidadVecesPedidas,Estado)VALUES('$titulo','$numero','$paginas','$fechapublicacion','$isbn','$linkimagen','$linkdescarga','$idPais','$idEditorial',0,1)";
 			
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			$idLibro=mysqli_insert_id();
 			echo "Se ha creado un Nuevo Libro con el siguiente idLibro ".$idLibro."<br>";
 										//CONTROL
@@ -204,7 +204,7 @@ if($reqlen>0)
 				$idGeneroAux=$idesGeneros[$cont];
 				require("FuncionConexionBasedeDatos.php");
 				$query = "INSERT INTO Libro_has_Genero (Libro_idLibro,Genero_idGenero)VALUES('$idLibro','$idGeneroAux')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se ha registrado el genero del libro exitosamente ".$idGeneroAux."<br>";
 										//CONTROL
 										$NombreTablaEditada="Libro_has_Genero";
@@ -224,7 +224,7 @@ if($reqlen>0)
 				
 				require("FuncionConexionBasedeDatos.php");
 				$query = "INSERT INTO Libro_has_Autor(Libro_idLibro,Autor_idAutor)VALUES('$idLibro','$idAutorAux')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se ha registrado el autor del libro exitosamente ".$idAutorAux."<br>";
 										//CONTROL
 										$NombreTablaEditada="Libro_has_Autor";

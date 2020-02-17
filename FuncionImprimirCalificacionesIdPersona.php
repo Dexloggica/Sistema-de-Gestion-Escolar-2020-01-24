@@ -12,20 +12,20 @@ echo"<center>";
 //echo"<b>Lista de Alumnos</b><br>";
 //obtengo el idPersona del Docente
 $consulta= "SELECT * FROM Persona WHERE Usuario_idUsuario='$idusuario'"; 
-$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 $fila=mysqli_fetch_array($resultado);
 $idPersonaDocente=$fila['idPersona'];
 
 
 //obtengo el idCargo del Docente
 $consulta= "SELECT * FROM Cargo WHERE Persona_idPersona='$idPersonaDocente'"; 
-$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 $fila=mysqli_fetch_array($resultado);
 $idCargo=$fila['idCargo'];
 
 //obtengo el idAsignatura del Docente
 $consulta= "SELECT * FROM Asignatura WHERE Cargo_idCargo='$idCargo'"; 
-$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 $fila=mysqli_fetch_array($resultado);
 $idAsignaturaCargo=$fila['idAsignatura'];
 
@@ -39,7 +39,7 @@ $idAsignaturaCargo=$fila['idAsignatura'];
 //$consulta= "SELECT * FROM Calificaciones WHERE idAlumno='$idbuscado' and idDocenteResponsable='$idCargo'"; 
 $consulta= "SELECT * FROM Persona,Calificaciones,Asignatura WHERE Asignatura.idAsignatura=Calificaciones.idAsignatura and Persona.idPersona=Calificaciones.idAlumno and Calificaciones.idAlumno='$idbuscado' and Calificaciones.idDocenteResponsable='$idCargo'"; 
 
-$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 			$bandera=0;
 			$cantidad=0;
 			echo"<table class='table table-striped' border>

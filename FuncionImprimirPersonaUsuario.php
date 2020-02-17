@@ -5,7 +5,7 @@ if (!$_SESSION){
 }
 $idusuario= $_SESSION['idusuario'];
 $consulta="SELECT * FROM Persona WHERE Usuario_idUsuario='$idusuario'";
-$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
+$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 $resultado_obtenido=mysqli_fetch_array($resultado);
 $nombre= $resultado_obtenido['Nombre'];
 $apellido= $resultado_obtenido['Apellido'];

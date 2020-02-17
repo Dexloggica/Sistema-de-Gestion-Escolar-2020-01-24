@@ -15,7 +15,7 @@ $idTipoPerfil=$_POST['idTipoPerfil'];
 			if(!$fila)
 			{
 				$query = "INSERT INTO Usuario (username,password,TipoPerfil_idTipoPerfil)VALUES('$username','$password','$idTipoPerfil')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "<center>Se ha creado un Nuevo Usuario</center>";
 										//CONTROL
 										$NombreTablaEditada="Usuario";

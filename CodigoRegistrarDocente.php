@@ -155,7 +155,7 @@ if($reqlen>0)
 			//////////////////////////////////REGISTRO DE DATOS PERSONALES
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO DatosPersonales (EstadoCivil,CantidadHijos,SituacionPadre,SituacionMadre,Persona_idPersona)VALUES('$estadocivil','$cantidadhijos','$situacionpadre','$situacionmadre','$idPersona')";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			echo "Se han cargado los datos personales<br>";
 			echo "Estado Civil: ".$estadocivil."<br>Cantidad de Hijos: ".$cantidadhijos."<br>Situacion del Padre: ".$situacionpadre."<br>Situacion de la Madre: ".$situacionmadre."<br>";
 										//CONTROL
@@ -168,7 +168,7 @@ if($reqlen>0)
 			//////////////////////////////////REGISTRO DE DOMICILIO
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO Domicilio (Calle,Numero,Piso,Departamento,Unidad,Barrio,TipodeVivienda,Persona_idPersona)VALUES('$calle','$numero','$piso','$departamento','$unidad','$barrio','$tipovivienda','$idPersona')";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			echo "Se ha el domicilio exitosamente";
 			echo "<br>Calle: ".$calle."<br>Numero: ".$numero."<br>Piso: ".$piso."<br>Departamento: ".$departamento."<br>Unidad: ".$unidad."<br>Barrio: ".$barrio."<br>Tipo de Vivienda: ".$tipovivienda."<br>";
 										//CONTROL
@@ -181,7 +181,7 @@ if($reqlen>0)
 			//////////////////////////////////REGISTRO DE DATOS DE CONTACTO
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO DatosContacto (telefono1,telefono2,telefono3,telefono4,email,Persona_idPersona)VALUES('$telefono1','$telefono2','$telefono3','$telefono4','$email','$idPersona')";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			echo "Se han cargado los datos de contacto exitosamente";
 			echo "<br>Telefono1: ".$telefono1."<br>Telefono2: ".$telefono2."<br>Telefono3: ".$telefono3."<br>Telefono4: ".$telefono4."<br>Email: ".$email."<br>";
 										//CONTROL
@@ -194,7 +194,7 @@ if($reqlen>0)
 			//////////////////////////////////REGISTRO DE ESTUDIOS
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO Estudios (Nivel,Institucion,Titulo,Fecha,Persona_idPersona)VALUES('$nivel','$institucion','$titulo','$fechaestudios','$idPersona')";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			echo "Se han cargado los estudios exitosamente";
 			echo "<br>Titulo: ".$titulo."<br>Nivel: ".$nivel."<br>Institucion: ".$institucion."<br>";
 			echo "<br>Fecha: ".$fechaestudios."<br>";
@@ -208,7 +208,7 @@ if($reqlen>0)
 			//////////////////////////////////REGISTRO DE TECNOLOGIA
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO Tecnologia (DisponePc,AccesoInternet,Persona_idPersona)VALUES('$respuesta1','$respuesta2','$idPersona')";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			echo "Se han cargado los datos de tecnologia exitosamente";
 			echo "<br>Tiene usted Computadora?: ".$respuesta1."<br>Tiene acceso a Internet?: ".$respuesta2."<br>";
 										//CONTROL
@@ -221,7 +221,7 @@ if($reqlen>0)
 			//////////////////////////////////REGISTRO DE DEPORTES
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO Deportes (PracticaDeportesSiNo,DeporteDescripcion,Persona_idPersona)VALUES('$respuesta','$descripcion','$idPersona')";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			echo "Se han cargado los datos de deportes exitosamente";
 			echo "<br>Practica Deportes?: ".$respuesta."<br>Descripción: ".$descripcion."<br>";
 										//CONTROL
@@ -234,7 +234,7 @@ if($reqlen>0)
 			//////////////////////////////////REGISTRO DE DISCAPACIDAD
 			require("FuncionConexionBasedeDatos.php");
 			$query = "INSERT INTO Discapacidad (DiscapacidadDesc,Persona_idPersona)VALUES('$discapacidaddesc','$idPersona')";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			echo "Se han cargado los datos de discapacidad exitosamente";
 			echo "<br>Tiene alguna discapacidad?: ".$discapacidaddesc."<br>";
 										//CONTROL
@@ -251,7 +251,7 @@ if($reqlen>0)
 						require("FuncionConexionBasedeDatos.php");
 						//una vez conectada a la base de datos
 							$query = "INSERT INTO Cargo (TipoCargo,Escuela,Categoria,FechaInicio,FechaFin,DecretoDesignacion,SituaciondeRevistaDesc,Persona_idPersona)VALUES('$tipocargo','$escuela','$categoria','$fechainiciocargo','$fechafincargo','$decreto','$situacionrevista','$idPersona')";
-							$resultado = mysqli_query($query);
+							$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 							$idCargo=mysqli_insert_id();
 							echo "Se han cargado los datos del cargo exitosamente";
 										//CONTROL

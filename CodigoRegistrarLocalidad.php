@@ -16,7 +16,7 @@ $codigopostal=$_POST['codigopostal'];
 			//$query = "INSERT INTO Usuario (idUsuario,username,password,TipoPerfil_idTipoPerfil)VALUES('$idUsuario','$username','$password','$TipoPerfil_idTipoPerfil')";
 			$query = "INSERT INTO Localidad (Ciudad,Provincia,Pais,CodigoPostal)VALUES('$ciudad','$provincia','$pais','$codigopostal')";
 			
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			echo "<center>Se ha creado una Nueva Localidad</center>";
 		
 			@mysqli_free_result($resultado);

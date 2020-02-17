@@ -47,7 +47,7 @@ $fechafin=(date("Y")+1). date("m") . date("d");
 				// $query="SELECT * FROM Persona WHERE Usuario_idUsuario='$idbuscado'";
 				// $resultado=mysql_query($query);
 				$query = "INSERT INTO FichaSocioBiblioteca (FechaInicio,FechaFin,TipoSocio,Persona_idPersona)VALUES('$fechainicio','$fechafin','$PerfilDesc','$idPersona')";
-				$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "<center>Se ha creado el socio exitosamente</center>";
 										//CONTROL
 										// $NombreTablaEditada="Observaciones";

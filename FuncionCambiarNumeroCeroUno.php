@@ -20,7 +20,7 @@ $idpermisobuscado=$_SESSION["idpermisobuscado"];
 if($primerboton==1 and $posicion==1)
 {
 	$query = "UPDATE Permisos SET PermisoEditarSusDatosPersonales='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 
@@ -34,7 +34,7 @@ if($primerboton==1 and $posicion==1)
 
 }if($primerboton==0 and $posicion==1){
 	$query = "UPDATE Permisos SET PermisoEditarSusDatosPersonales='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
@@ -50,7 +50,7 @@ if($primerboton==1 and $posicion==1)
 if($segundoboton==1 and $posicion==2)
 {
 	$query = "UPDATE Permisos SET PermisoEditarDatosPersonalesOtros='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
@@ -64,7 +64,7 @@ if($segundoboton==1 and $posicion==2)
 
 }if($segundoboton==0 and $posicion==2){
 	$query = "UPDATE Permisos SET PermisoEditarDatosPersonalesOtros='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			
@@ -80,7 +80,7 @@ if($segundoboton==1 and $posicion==2)
 if($tercerboton==1 and $posicion==3)
 {
 	$query = "UPDATE Permisos SET PermisoEditarObservacionesOtros='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			
@@ -94,7 +94,7 @@ if($tercerboton==1 and $posicion==3)
 
 }if($tercerboton==0 and $posicion==3){
 	$query = "UPDATE Permisos SET PermisoEditarObservacionesOtros='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
@@ -110,7 +110,7 @@ if($tercerboton==1 and $posicion==3)
 if($cuartoboton==1 and $posicion==4)
 {
 	$query = "UPDATE Permisos SET PermisoVerObservacionesOtros='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			
@@ -124,7 +124,7 @@ if($cuartoboton==1 and $posicion==4)
 
 }if($cuartoboton==0 and $posicion==4){
 	$query = "UPDATE Permisos SET PermisoVerObservacionesOtros='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
@@ -140,7 +140,7 @@ if($cuartoboton==1 and $posicion==4)
 if($quintoboton==1 and $posicion==5)
 {
 	$query = "UPDATE Permisos SET PermisoEditarCalificacionesSusAlumnos='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			
@@ -154,7 +154,7 @@ if($quintoboton==1 and $posicion==5)
 
 }if($quintoboton==0 and $posicion==5){
 	$query = "UPDATE Permisos SET PermisoEditarCalificacionesSusAlumnos='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
@@ -170,7 +170,7 @@ if($quintoboton==1 and $posicion==5)
 if($sextoboton==1 and $posicion==6)
 {
 	$query = "UPDATE Permisos SET PermisoEditarDatosPersonalesAlumnoaCargo='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
@@ -184,7 +184,7 @@ if($sextoboton==1 and $posicion==6)
 
 }if($sextoboton==0 and $posicion==6){
 	$query = "UPDATE Permisos SET PermisoEditarDatosPersonalesAlumnoaCargo='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
@@ -200,7 +200,7 @@ if($sextoboton==1 and $posicion==6)
 if($septimoboton==1 and $posicion==7)
 {
 	$query = "UPDATE Permisos SET PermisoVerCalificacionesAlumnoaCargo='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			
@@ -214,7 +214,7 @@ if($septimoboton==1 and $posicion==7)
 
 }if($septimoboton==0 and $posicion==7){
 	$query = "UPDATE Permisos SET PermisoVerCalificacionesAlumnoaCargo='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 	
@@ -230,7 +230,7 @@ if($septimoboton==1 and $posicion==7)
 if($octavoboton==1 and $posicion==8)
 {
 	$query = "UPDATE Permisos SET PermisoVerSusCalificaciones='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
@@ -244,7 +244,7 @@ if($octavoboton==1 and $posicion==8)
 
 }if($octavoboton==0 and $posicion==8){
 	$query = "UPDATE Permisos SET PermisoVerSusCalificaciones='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
@@ -260,7 +260,7 @@ if($octavoboton==1 and $posicion==8)
 if($novenoboton==1 and $posicion==9)
 {
 	$query = "UPDATE Permisos SET PermisoGestionarEscuela='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 		
@@ -274,7 +274,7 @@ if($novenoboton==1 and $posicion==9)
 
 }if($novenoboton==0 and $posicion==9){
 	$query = "UPDATE Permisos SET PermisoGestionarEscuela='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 	
@@ -290,7 +290,7 @@ if($novenoboton==1 and $posicion==9)
 if($decimoboton==1 and $posicion==10)
 {
 	$query = "UPDATE Permisos SET PermisoInscribirAlumno='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 	
@@ -304,7 +304,7 @@ if($decimoboton==1 and $posicion==10)
 
 }if($decimoboton==0 and $posicion==10){
 	$query = "UPDATE Permisos SET PermisoInscribirAlumno='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			
@@ -320,7 +320,7 @@ if($decimoboton==1 and $posicion==10)
 if($decimoprimerboton==1 and $posicion==11)
 {
 	$query = "UPDATE Permisos SET PermisoInscribirDocente='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			@mysqli_free_result($resultado);
@@ -333,7 +333,7 @@ if($decimoprimerboton==1 and $posicion==11)
 
 }if($decimoprimerboton==0 and $posicion==11){
 	$query = "UPDATE Permisos SET PermisoInscribirDocente='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			@mysqli_free_result($resultado);
@@ -348,7 +348,7 @@ if($decimoprimerboton==1 and $posicion==11)
 if($decimosegundoboton==1 and $posicion==12)
 {
 	$query = "UPDATE Permisos SET PermisoGestionarBiblioteca='0' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			@mysqli_free_result($resultado);
@@ -361,7 +361,7 @@ if($decimosegundoboton==1 and $posicion==12)
 
 }if($decimosegundoboton==0 and $posicion==12){
 	$query = "UPDATE Permisos SET PermisoGestionarBiblioteca='1' WHERE idPermisos=$idpermisobuscado";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			// echo "Se han modificado los datos exitosamente<br>";
 			@mysqli_free_result($resultado);

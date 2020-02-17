@@ -30,28 +30,28 @@ if($reqlen>0 and $idNivel!="--" and $diasemana!="--")
 			{
 					
 				require("FuncionConexionBasedeDatos.php");
-				@$query = "INSERT INTO HorarioActividadNivel (DiaSemana,HorarioInicio,Nivel_idNivel)VALUES('$diasemana','$element','$idNivel')";
-				$resultado = mysqli_query($query);
+				$query = "INSERT INTO HorarioActividadNivel (DiaSemana,HorarioInicio,Nivel_idNivel)VALUES('$diasemana','$element','$idNivel')";
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				$idHorario=mysqli_insert_id();
 										//CONTROL
 										$NombreTablaEditada="HorarioActividadNivel";
 										require("CodigoRegistrarControl.php");
 										//				
-				@mysqli_free_result($resultado);
-				@mysqli_close($link);
+				mysqli_free_result($resultado);
+				mysqli_close($link);
 				$contadorhorario=0;
 				echo"El dia ".$diasemana." tiene el Horario Inicio: ".$element." ";
 				//////////////////////////////////
 			}else{
 				require("FuncionConexionBasedeDatos.php");
 				$query = "UPDATE HorarioActividadNivel SET HorarioFin='$element' WHERE  idHorarioActividadNivel='$idHorario'";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 										//CONTROL
 										$NombreTablaEditada="HorarioActividadNivel";
 										require("CodigoRegistrarControl.php");
 										//				
-				@mysqli_free_result($resultado);
-				@mysqli_close($link);
+				mysqli_free_result($resultado);
+				mysqli_close($link);
 				$contadorhorario=1;
 				echo"Horario Fin: ".$element."<br>";
 			}
@@ -87,28 +87,28 @@ if($reqlen>0 and $idNivel!="--" and $diasemana!="--")
 			{
 					
 				require("FuncionConexionBasedeDatos.php");
-				@$query = "INSERT INTO HorarioActividadNivel (DiaSemana,HorarioInicio,Nivel_idNivel)VALUES('$diasemana','$element','$idNivel')";
-				$resultado = mysqli_query($query);
+				$query = "INSERT INTO HorarioActividadNivel (DiaSemana,HorarioInicio,Nivel_idNivel)VALUES('$diasemana','$element','$idNivel')";
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				$idHorario=mysqli_insert_id();
 										//CONTROL
 										$NombreTablaEditada="HorarioActividadNivel";
 										require("CodigoRegistrarControl.php");
 										//					
-				@mysqli_free_result($resultado);
-				@mysqli_close($link);
+				mysqli_free_result($resultado);
+				mysqli_close($link);
 				$contadorhorario=0;
 				echo"El dia ".$diasemana." tiene el Horario Inicio: ".$element." ";
 				//////////////////////////////////
 			}else{
 				require("FuncionConexionBasedeDatos.php");
 				$query = "UPDATE HorarioActividadNivel SET HorarioFin='$element' WHERE  idHorarioActividadNivel='$idHorario'";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 										//CONTROL
 										$NombreTablaEditada="HorarioActividadNivel";
 										require("CodigoRegistrarControl.php");
 										//				
-				@mysqli_free_result($resultado);
-				@mysqli_close($link);
+				mysqli_free_result($resultado);
+				mysqli_close($link);
 				$contadorhorario=1;
 				echo"Horario Fin: ".$element."<br>";
 			}

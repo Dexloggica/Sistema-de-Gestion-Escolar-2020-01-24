@@ -20,7 +20,7 @@ if(!$fila)
 			if(!$fila)
 			{
 				$query = "INSERT INTO Tecnologia (DisponePc,AccesoInternet,Persona_idPersona)VALUES('$respuesta1','$respuesta2','$idPersona')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(INSERT INTO)";
 										//CONTROL
 										$NombreTablaEditada="Tecnologia";
@@ -30,7 +30,7 @@ if(!$fila)
 				@mysqli_close($link);
 			}else{
 				$query = "UPDATE Tecnologia SET DisponePc='$respuesta1',AccesoInternet='$respuesta2' WHERE Persona_idPersona='$idPersona'";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(UPDATE)";
 										//CONTROL
 										$NombreTablaEditada="Tecnologia";
