@@ -43,8 +43,8 @@ $fila=mysqli_fetch_array($resultado);
 										$NombreTablaEditada="HorarioActividadDocente";
 										require("CodigoRegistrarControl.php");
 										//					
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$contadorhorario=0;
 				echo"El dia ".$diasemana." tiene el Horario Inicio: ".$element." ";
 				
@@ -56,8 +56,8 @@ $fila=mysqli_fetch_array($resultado);
 										$NombreTablaEditada="Cargo_has_HorarioActividad";
 										require("CodigoRegistrarControl.php");
 										//						
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				
 				//////////////////////////////////
 			}else{
@@ -68,8 +68,8 @@ $fila=mysqli_fetch_array($resultado);
 										$NombreTablaEditada="HorarioActividadDocente";
 										require("CodigoRegistrarControl.php");
 										//				
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$contadorhorario=1;
 				echo"Horario Fin: ".$element."<br>";
 			}
@@ -122,8 +122,8 @@ $fila=mysqli_fetch_array($resultado);
 										$NombreTablaEditada="HorarioActividadDocente";
 										require("CodigoRegistrarControl.php");
 										//				
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$contadorhorario=0;
 				echo"El dia ".$diasemana." tiene el Horario Inicio: ".$element." ";
 				
@@ -135,8 +135,8 @@ $fila=mysqli_fetch_array($resultado);
 										$NombreTablaEditada="Cargo_has_HorarioActividad";
 										require("CodigoRegistrarControl.php");
 										//				
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				
 				//////////////////////////////////
 			}else{
@@ -147,8 +147,8 @@ $fila=mysqli_fetch_array($resultado);
 										$NombreTablaEditada="HorarioActividadDocente";
 										require("CodigoRegistrarControl.php");
 										//					
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$contadorhorario=1;
 				echo"Horario Fin: ".$element."<br>";
 			}

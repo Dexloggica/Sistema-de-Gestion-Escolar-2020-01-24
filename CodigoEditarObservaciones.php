@@ -29,8 +29,8 @@ $idbuscado=$_POST['idusuario'];
 	//obtendo el tipo de perfil del usuario
 	$tipoperfil=$_SESSION['tipoperfil'];
 	//echo"tipo perfil usuario=$tipoperfil<br>";
-	@mysqli_free_result($resultado);
-	@mysqli_close($link);
+	mysqli_free_result($resultado);
+	mysqli_close($link);
 	
 	//OPCIÓN 1: Si el usuario NO existe o los datos son INCORRRECTOS
 	if (!$fila['idUsuario'])
@@ -38,8 +38,6 @@ $idbuscado=$_POST['idusuario'];
 		echo"<center>Perfil no encontrado.</center>";
 	}else
 	{
-
-
 			if($tipoperfil<$tipodeperfilbuscado)
 			{
 				echo"<center>Usted puede editar este perfil...</center>";
@@ -58,8 +56,8 @@ $idbuscado=$_POST['idusuario'];
 										$NombreTablaEditada="Observaciones";
 										require("CodigoRegistrarControl.php");
 										//
-				@mysql_free_result($resultado);
-				@mysql_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			}else
 			{
 				echo"<center>Usted no puede editar este perfil.</center>";

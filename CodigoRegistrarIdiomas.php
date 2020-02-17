@@ -31,8 +31,8 @@ $fila=mysqli_fetch_array($resultado);
 										$NombreTablaEditada="Idioma";
 										require("CodigoRegistrarControl.php");
 										//					
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			}else{
 				$query = "UPDATE Idioma SET Ingles='$ingles',Aleman='$aleman',Frances='$frances',Italiano='$italiano',Portugues='$portugues',Chino='$chino',Otros='$otros' WHERE Persona_idPersona='$idPersona'";
 				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
@@ -41,8 +41,8 @@ $fila=mysqli_fetch_array($resultado);
 										$NombreTablaEditada="Idioma";
 										require("CodigoRegistrarControl.php");
 										//					
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			}
 }		
 

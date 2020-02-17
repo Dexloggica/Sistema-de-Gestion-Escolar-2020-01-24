@@ -83,6 +83,7 @@ $resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 			echo"<br>Total de registros encontrados=".$cantidad;
 
 echo"</center>";
-
+@mysqli_free_result($resultado);
+@mysqli_close($link);	
 
 ?>

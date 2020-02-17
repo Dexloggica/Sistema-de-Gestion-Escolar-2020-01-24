@@ -36,7 +36,8 @@ if(isset($username))
 		$NombreTablaEditada="Acceso al Sistema";
 		require("CodigoRegistrarControl.php");
 	}
-	@mysqli_close($link);
+	mysqli_free_result($resultado);
+	mysqli_close($link);
 }
 else{
 	header("location:index.php");

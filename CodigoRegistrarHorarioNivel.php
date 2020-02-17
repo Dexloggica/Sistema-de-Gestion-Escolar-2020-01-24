@@ -37,8 +37,8 @@ if($reqlen>0 and $idNivel!="--" and $diasemana!="--")
 										$NombreTablaEditada="HorarioActividadNivel";
 										require("CodigoRegistrarControl.php");
 										//				
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$contadorhorario=0;
 				echo"El dia ".$diasemana." tiene el Horario Inicio: ".$element." ";
 				//////////////////////////////////
@@ -50,8 +50,8 @@ if($reqlen>0 and $idNivel!="--" and $diasemana!="--")
 										$NombreTablaEditada="HorarioActividadNivel";
 										require("CodigoRegistrarControl.php");
 										//				
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$contadorhorario=1;
 				echo"Horario Fin: ".$element."<br>";
 			}
@@ -94,8 +94,8 @@ if($reqlen>0 and $idNivel!="--" and $diasemana!="--")
 										$NombreTablaEditada="HorarioActividadNivel";
 										require("CodigoRegistrarControl.php");
 										//					
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$contadorhorario=0;
 				echo"El dia ".$diasemana." tiene el Horario Inicio: ".$element." ";
 				//////////////////////////////////
@@ -107,8 +107,8 @@ if($reqlen>0 and $idNivel!="--" and $diasemana!="--")
 										$NombreTablaEditada="HorarioActividadNivel";
 										require("CodigoRegistrarControl.php");
 										//				
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 				$contadorhorario=1;
 				echo"Horario Fin: ".$element."<br>";
 			}

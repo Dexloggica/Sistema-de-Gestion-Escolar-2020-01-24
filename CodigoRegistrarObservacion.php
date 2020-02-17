@@ -27,8 +27,8 @@ echo"id buscado=$idbuscado<br>";
 	//obtendo el tipo de perfil del usuario
 	$tipoperfil=$_SESSION['tipoperfil'];
 	echo"tipo perfil usuario=$tipoperfil<br>";
-	mysqli_free_result($resultado);
-	mysqli_close($link);
+	@mysqli_free_result($resultado);
+	@mysqli_close($link);
 	
 				require("FuncionConexionBasedeDatos.php");
 				//una vez conectada a la base de datos

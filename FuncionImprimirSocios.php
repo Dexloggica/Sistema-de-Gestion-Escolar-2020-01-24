@@ -58,9 +58,9 @@
 				}	
 				//echo"<br>Total de idPersonas encontradas=".$cantidad;
 				//////////////////
-				@mysqli_free_result($resultado);
-				@mysqli_close($link);
+				
 			
 	echo"</center>";
-
+@mysqli_free_result($resultado);
+@mysqli_close($link);	
 ?>

@@ -25,7 +25,7 @@ if($primerboton==1 and $posicion==1)
 			// echo "Se han modificado los datos exitosamente<br>";
 
 			@mysqli_free_result($resultado);
-			mysqli_close($link);
+			@mysqli_close($link);
 			require("CodigoResultadosPermisosEditados.php");
 				//CONTROL
 				$NombreTablaEditada="Permisos";

@@ -182,7 +182,7 @@ $query="SELECT * FROM Libro,Editorial WHERE Libro.Editorial_idEditorial=Editoria
 				$_SESSION['cantidad'] = $cantidad;
 				//////////////////
 				@mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_close($link);
 				echo"</center>";
 			
 	

@@ -23,5 +23,6 @@ echo utf8_encode("<form name='imprimirdatospersonales' method='post'>
 		</table>	
 
 	</form>");
-@mysqli_close($link);
+@mysqli_free_result($resultado);
+@mysqli_close($link);	
 ?>

@@ -28,8 +28,8 @@ $fila=mysqli_fetch_array($resultado);
 										$NombreTablaEditada="Inscripcion";
 										require("CodigoRegistrarControl.php");
 										//				
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			}else{
 				$query = "UPDATE Inscripcion SET InscripcionFecha='$fecha',Nivel_idNivel='$idNivel' WHERE Persona_idPersona='$idPersona'";
 				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
@@ -38,8 +38,8 @@ $fila=mysqli_fetch_array($resultado);
 										$NombreTablaEditada="Inscripcion";
 										require("CodigoRegistrarControl.php");
 										//				
-				mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_free_result($resultado);
+				@mysqli_close($link);
 			}
 			
 			

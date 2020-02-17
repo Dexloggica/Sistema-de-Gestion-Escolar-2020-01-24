@@ -182,7 +182,7 @@ $query="SELECT * FROM Libro,Libro_has_Genero,Genero WHERE Libro.idLibro=Libro_ha
 				$_SESSION['cantidad'] = $cantidad;
 				//////////////////
 				@mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_close($link);
 				echo"</center>";
 			
 	
