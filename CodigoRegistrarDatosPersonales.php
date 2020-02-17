@@ -22,7 +22,7 @@ if(!$fila)
 			if(!$fila)
 			{
 				$query = "INSERT INTO DatosPersonales (EstadoCivil,CantidadHijos,SituacionPadre,SituacionMadre,Persona_idPersona)VALUES('$estadocivil','$cantidadhijos','$situacionpadre','$situacionmadre','$idPersona')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(INSERT INTO)";
 										//CONTROL
 										$NombreTablaEditada="DatosPersonales";
@@ -32,7 +32,7 @@ if(!$fila)
 				@mysqli_close($link);
 			}else{
 				$query = "UPDATE DatosPersonales SET EstadoCivil='$estadocivil',CantidadHijos='$cantidadhijos',SituacionPadre='$situacionpadre',SituacionMadre='$situacionmadre' WHERE Persona_idPersona='$idPersona'";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(UPDATE)";
 										//CONTROL
 										$NombreTablaEditada="DatosPersonales";

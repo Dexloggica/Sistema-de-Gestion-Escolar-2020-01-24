@@ -35,12 +35,12 @@ $idPersona=$fila['idPersona'];
 			//una vez conectada a la base de datos
 			$query ="SELECT * FROM Estudios WHERE Persona_idPersona='$idPersona'";
 	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
-	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 	$fila=mysqli_fetch_array($resultado);
 			if(!$fila)
 			{
 				$query = "INSERT INTO Estudios (Nivel,Institucion,Titulo,Fecha,Persona_idPersona)VALUES('$nivel','$institucion','$titulo','$fecha','$idPersona')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(INSERT INTO)";
 										//CONTROL
 										$NombreTablaEditada="Estudios";
@@ -50,7 +50,7 @@ $idPersona=$fila['idPersona'];
 				@mysqli_close($link);
 			}else{
 				$query = "UPDATE Estudios SET Nivel='$nivel',Institucion='$institucion',Titulo='$titulo',Fecha='$fecha' WHERE Persona_idPersona='$idPersona'";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(UPDATE)";
 										//CONTROL
 										$NombreTablaEditada="Estudios";

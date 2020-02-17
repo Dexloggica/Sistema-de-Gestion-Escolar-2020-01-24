@@ -19,7 +19,7 @@ $idusuario= $_SESSION['idusuario'];
 			//una vez conectada a la base de datos
 			
 			$query = "UPDATE Persona SET Nombre='$nombre', Apellido='$apellido',Sexo='$sexo',dni='$dni', cuil='$cuil'WHERE Usuario_idUsuario='$idusuario'";
-			$resultado = mysqli_query($query);
+			$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			// echo"nombre= $nombre";  
 			echo "Se han modificado los datos exitosamente";
 										//CONTROL

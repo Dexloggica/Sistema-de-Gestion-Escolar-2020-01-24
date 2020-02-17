@@ -61,6 +61,6 @@ echo"
 	</form></center>";
 	$_SESSION['idLibro'] = $idLibro;
 	@mysqli_free_result($resultado4);
-				@mysqli_close($link);
+	@mysqli_close($link);
 
 ?>

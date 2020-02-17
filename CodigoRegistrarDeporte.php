@@ -20,7 +20,7 @@ if(!$fila)
 			if(!$fila)
 			{
 				$query = "INSERT INTO Deportes (PracticaDeportesSiNo,DeporteDescripcion,Persona_idPersona)VALUES('$respuesta','$descripcion','$idPersona')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(INSERT INTO)";
 										//CONTROL
 										$NombreTablaEditada="Deportes";
@@ -30,7 +30,7 @@ if(!$fila)
 				@mysqli_close($link);
 			}else{
 				$query = "UPDATE Deportes SET PracticaDeportesSiNo='$respuesta',DeporteDescripcion='$descripcion' WHERE Persona_idPersona='$idPersona'";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(UPDATE)";
 										//CONTROL
 										$NombreTablaEditada="Deportes";

@@ -21,7 +21,7 @@ echo"<center>";
 			//if(!$fila)
 			//{
 				$query = "INSERT INTO Asignatura (Cargo_idCargo,AsignaturaDesc)VALUES('$idCargo','$asignaturadesc')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 										
 				$idAsignatura=mysqli_insert_id();
 				echo "Se ha creado la asignatura exitosamente...<br>";
@@ -36,7 +36,7 @@ echo"<center>";
 				//vinculo la asignatura al nivel
 				require("FuncionConexionBasedeDatos.php");
 				$query = "INSERT INTO Nivel_has_Asignatura (Nivel_idNivel,Asignatura_idAsignatura)VALUES('$idNivel','$idAsignatura')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se ha vinculado la asignatura con el nivel exitosamente<br>";
 										
 				@mysqli_free_result($resultado);

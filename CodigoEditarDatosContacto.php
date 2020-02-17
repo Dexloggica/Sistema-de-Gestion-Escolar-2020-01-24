@@ -23,12 +23,12 @@ $idPersona=$fila['idPersona'];
 	{
 			$query ="SELECT * FROM DatosContacto WHERE Persona_idPersona='$idPersona'";
 				//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
-	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 $fila=mysqli_fetch_array($resultado);
 			if(!$fila)
 			{
 				$query = "INSERT INTO DatosContacto (telefono1,telefono2,telefono3,telefono4,email,Persona_idPersona)VALUES('$telefono1','$telefono2','$telefono3','$telefono4','$email','$idPersona')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(INSERT INTO)";
 								//CONTROL
 								$NombreTablaEditada="DatosContacto";

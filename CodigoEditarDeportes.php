@@ -32,12 +32,12 @@ $idPersona=$fila['idPersona'];
 			//una vez conectada a la base de datos
 			$query ="SELECT * FROM Deportes WHERE Persona_idPersona='$idPersona'";
 	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
-	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 	$fila=mysqli_fetch_array($resultado);
 			if(!$fila)
 			{
 				$query = "INSERT INTO Deportes (PracticaDeportesSiNo,DeporteDescripcion,Persona_idPersona)VALUES('$respuesta','$descripcion','$idPersona')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(INSERT INTO)";
 								//CONTROL
 								$NombreTablaEditada="Deportes";
@@ -47,7 +47,7 @@ $idPersona=$fila['idPersona'];
 				@mysqli_close($link);
 			}else{
 				$query = "UPDATE Deportes SET PracticaDeportesSiNo='$respuesta',DeporteDescripcion='$descripcion' WHERE Persona_idPersona='$idPersona'";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(UPDATE)";
 								//CONTROL
 								$NombreTablaEditada="Deportes";
@@ -96,18 +96,18 @@ $idPersona=$fila['idPersona'];
 			//una vez conectada a la base de datos
 			$query ="SELECT * FROM Deportes WHERE Persona_idPersona='$idPersona'";
 	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
-	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 	$fila=mysqli_fetch_array($resultado);
 			if(!$fila)
 			{
 				$query = "INSERT INTO Deportes (PracticaDeportesSiNo,DeporteDescripcion,Persona_idPersona)VALUES('$respuesta','$descripcion','$idPersona')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(INSERT INTO)";
 				@mysqli_free_result($resultado);
 				@mysqli_close($link);
 			}else{
 				$query = "UPDATE Deportes SET PracticaDeportesSiNo='$respuesta',DeporteDescripcion='$descripcion' WHERE Persona_idPersona='$idPersona'";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(UPDATE)";
 				@mysqli_free_result($resultado);
 				@mysqli_close($link);

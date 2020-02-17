@@ -145,6 +145,7 @@ ob_start();
 				require("FuncionImprimirLibrosPrestados.php");
 			}
 
+
 				for($i=0;$i<=count(@$_SESSION['cantidad']);$i++){
 					// echo "cantidad de libros".$_SESSION['cantidad']."<br>";
 					// echo $_SESSION['idLibro'.$i]."<br>";
@@ -161,6 +162,7 @@ ob_start();
 							
 						}
 				}
+
 			if(isset($_POST['registrarprestamo']))
 			{
 				// echo"registrando prestamo";

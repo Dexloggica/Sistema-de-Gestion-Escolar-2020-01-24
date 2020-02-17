@@ -75,12 +75,12 @@ $idbuscado=$_POST['idusuario'];
 							//una vez conectada a la base de datos
 							$query ="SELECT * FROM  Tecnologia WHERE Persona_idPersona='$idPersona'";
 	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
-	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 	$fila=mysqli_fetch_array($resultado);
 							if(!$fila)
 							{
 								$query = "INSERT INTO Tecnologia (DisponePc,AccesoInternet,Persona_idPersona)VALUES('$respuesta1','$respuesta2','$idPersona')";
-								$resultado = mysqli_query($query);
+								$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 								echo "Se han modificado los datos exitosamente...(INSERT INTO)";
 
 										//CONTROL
@@ -91,7 +91,7 @@ $idbuscado=$_POST['idusuario'];
 								@mysqli_close($link);
 							}else{
 								$query = "UPDATE Tecnologia SET DisponePc='$respuesta1',AccesoInternet='$respuesta2' WHERE Persona_idPersona='$idPersona'";
-								$resultado = mysqli_query($query);
+								$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 								echo "Se han modificado los datos exitosamente...(UPDATE)";
 								
 										//CONTROL

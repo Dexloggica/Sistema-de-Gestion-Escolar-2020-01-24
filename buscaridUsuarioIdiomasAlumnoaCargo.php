@@ -47,7 +47,7 @@ $fila=mysqli_fetch_array($resultado);
 		require("FuncionConexionBasedeDatos.php");
 		// $query="SELECT * FROM Persona WHERE Usuario_idUsuario='$idbuscado'";
 		$query="SELECT * FROM Persona,Idioma WHERE Persona.idPersona=Idioma.Persona_idPersona AND Persona.idPersona='$idPersona'";
-		$resultado=mysqli_query($query) or die ("No se encuentra la Persona con ese IdUsuario");
+		$resultado=mysqli_query($link,$query) or die ("No se encuentra la Persona con ese IdUsuario");
 		// echo"puede editar este perfil";
 				////////////////
 				$bandera=0;

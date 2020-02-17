@@ -50,7 +50,7 @@ $consulta= "SELECT * FROM Calificaciones,Asignatura WHERE Calificaciones.idDocen
 			if(!$fila)
 			{
 				$query = "INSERT INTO Calificaciones (1erTrimestre,2doTrimestre,3erTrimestre,Anio,idDocenteResponsable,idAsignatura,idAlumno)VALUES('$primertrimestre','$segundotrimestre','$tercertrimestre','$anio','$idCargo','$materiabuscada','$idbuscado')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				//echo "<center>Se han modificado los datos exitosamente...(INSERT INTO)</center>";
 				echo "<center>Se han modificado los datos exitosamente.</center>";
 								//CONTROL
@@ -62,7 +62,7 @@ $consulta= "SELECT * FROM Calificaciones,Asignatura WHERE Calificaciones.idDocen
 				include("FuncionImprimirListaAlumnosCalificaciones.php");			
 			}else{
 				$query = "UPDATE Calificaciones SET 1erTrimestre='$primertrimestre', 2doTrimestre='$segundotrimestre',3erTrimestre='$tercertrimestre',Anio='$anio' WHERE idDocenteResponsable='$idCargo' and idAsignatura='$materiabuscada' and idAlumno='$idbuscado' and Anio='$anio'";
-				$resultado = mysqli_query($query)or die ("No se a podido cargar los datos");
+				$resultado = mysqli_query($link,$query)or die ("No se a podido cargar los datos");
 				//echo"resultado:: $resultado<br>";
 				echo "<center>Se han modificado los datos exitosamente.</center>";
 				//require("FuncionImprimirListaAlumnosCalificaciones.php");

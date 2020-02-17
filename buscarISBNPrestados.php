@@ -6,7 +6,7 @@ require("FuncionConexionBasedeDatos.php");
 echo"<center>";
 $query="SELECT * FROM Libro";
 	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
-	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 
 ////////////////
 				$bandera=0;

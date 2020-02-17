@@ -34,7 +34,7 @@ $situacionrevista=$_POST['situacionrevista'];
 			require("FuncionConexionBasedeDatos.php");
 			//una vez conectada a la base de datos
 				$query = "INSERT INTO Cargo (TipoCargo,Escuela,Categoria,FechaInicio,FechaFin,DecretoDesignacion,SituaciondeRevistaDesc,Persona_idPersona)VALUES('$tipocargo','$escuela','$categoria','$fechainicio','$fechafin','$decreto','$situacionrevista','$idPersona')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "<center>Se ha cargado el cargo docente con exito...(INSERT INTO)</center>";
 										//CONTROL
 										$NombreTablaEditada="Cargo";

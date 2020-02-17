@@ -80,12 +80,12 @@ $idbuscado=$_POST['idusuario'];
 							//una vez conectada a la base de datos
 							$query ="SELECT * FROM FechaNacimiento WHERE Persona_idPersona='$idPersona'";
 	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
-	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 	$fila=mysqli_fetch_array($resultado);
 							if(!$fila)
 							{
 								$query = "INSERT INTO FechaNacimiento (FechaNacimiento,Persona_idPersona)VALUES('$fechanacimiento','$idPersona')";
-								$resultado = mysqli_query($query);
+								$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 								echo "Se han modificado los datos exitosamente...(INSERT INTO)";
 										//CONTROL
 										$NombreTablaEditada="FechaNacimiento";
@@ -95,7 +95,7 @@ $idbuscado=$_POST['idusuario'];
 								@mysqli_close($link);
 							}else{
 								$query = "UPDATE FechaNacimiento SET FechaNacimiento='$fechanacimiento' WHERE Persona_idPersona='$idPersona'";
-								$resultado = mysqli_query($query);
+								$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 								echo "Se han modificado los datos exitosamente...(UPDATE)";
 										//CONTROL
 										$NombreTablaEditada="FechaNacimiento";

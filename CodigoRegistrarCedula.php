@@ -20,7 +20,7 @@ $calificacion=$_POST['calificacion'];
 			require("FuncionConexionBasedeDatos.php");
 			//una vez conectada a la base de datos
 				$query = "INSERT INTO CedulaDocente (Fecha,Calificacion,Persona_idPersona)VALUES('$fecha','$calificacion','$idDocente')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se ha cargado el cargo docente con exito...(INSERT INTO)";
 										//CONTROL
 										$NombreTablaEditada="CedulaDocente";

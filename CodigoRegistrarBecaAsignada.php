@@ -19,7 +19,7 @@ $idBeca=$_POST['idBeca'];
 			if(!$fila)
 			{
 				$query = "INSERT INTO Persona_has_TipoBeca (Persona_idPersona,TipoBeca_idTipoBeca)VALUES('$idPersona','$idBeca')";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(INSERT INTO)";
 										//CONTROL
 										$NombreTablaEditada="Persona_has_TipoBeca";
@@ -29,7 +29,7 @@ $idBeca=$_POST['idBeca'];
 				@mysqli_close($link);
 			}else{
 				$query = "UPDATE Persona_has_TipoBeca SET TipoBeca_idTipoBeca='$idBeca' WHERE Persona_idPersona='$idPersona'";
-				$resultado = mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "Se han modificado los datos exitosamente...(UPDATE)";
 										//CONTROL
 										$NombreTablaEditada="Persona_has_TipoBeca";

@@ -8,7 +8,7 @@
 		{
 			$query="SELECT * FROM Libro";
 	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
-	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 			$bandera=0;
 			$cantidad=0;
 			echo"<table class='table table-striped' border>
@@ -29,7 +29,7 @@
 
 									<td class=encabezado>Cantidad de Veces</td>
 							<tr>";
-			while($row=mysqli_fetch_array($resultados))
+			while($row=mysqli_fetch_array($resultado))
 			{
 				$result=strpos(strtolower("$row[1]"),strtolower($titulo));
 				if($result !==FALSE)

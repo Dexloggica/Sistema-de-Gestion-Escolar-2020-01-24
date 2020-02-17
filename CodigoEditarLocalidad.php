@@ -25,10 +25,10 @@ $idPersona=$fila['idPersona'];
 			//una vez conectada a la base de datos
 			$query ="SELECT * FROM Persona WHERE idPersona='$idPersona'";
 	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
-	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
+	$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 	$fila=mysqli_fetch_array($resultado);
 			$query = "UPDATE Persona SET Localidad_idLocalidad='$idlocalidad' WHERE idPersona='$idPersona'";
-				$resultado = mysql_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				// echo "Se han modificado los datos exitosamente...(UPDATE)";
 				
 				echo "Se han modificado los datos exitosamente";					

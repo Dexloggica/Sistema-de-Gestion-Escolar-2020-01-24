@@ -52,7 +52,7 @@ $idbuscado=$_POST['idusuario'];
 				// $query="SELECT * FROM Persona WHERE Usuario_idUsuario='$idbuscado'";
 				// $resultado=mysql_query($query);
 				$query = "INSERT INTO Observaciones (Fecha,Hora,ObservacionDesc,Persona_idPersona)VALUES('$fecha','$hora','$observaciones','$idbuscado')";
-				   $resultado = mysql_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				echo "<center>Se han modificado los datos exitosamente</center>";
 										//CONTROL
 										$NombreTablaEditada="Observaciones";

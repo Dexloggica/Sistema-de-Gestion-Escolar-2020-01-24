@@ -175,7 +175,7 @@ $resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				$_SESSION['cantidad'] = $cantidad;
 				//////////////////
 				@mysqli_free_result($resultado);
-				mysqli_close($link);
+				@mysqli_close($link);
 				echo"</center>";
 			
 	

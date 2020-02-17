@@ -19,7 +19,7 @@ $idbuscado=$_POST['idusuario'];
 	//$resultado=mysqli_query($consulta,$link) or die(mysqli_error());
 	$resultado= mysqli_query($link, $consulta) or die (mysqli_error($link));
 	$fila=mysqli_fetch_array($resultado);
-	@mysqli_free_result($resultado);
+	mysqli_free_result($resultado);
 	mysqli_close($link);
 		
 	$tipodeperfilbuscado=$fila['TipoPerfil_idTipoPerfil'];
@@ -37,7 +37,7 @@ $idbuscado=$_POST['idusuario'];
 				require("FuncionConexionBasedeDatos.php");
 				// $query="SELECT * FROM Persona WHERE Usuario_idUsuario='$idbuscado'";
 				$query="SELECT * FROM Persona,Observaciones WHERE Persona.idPersona=Observaciones.Persona_idPersona AND Persona.idPersona=$idbuscado";
-				$resultado=mysqli_query($query);
+				$resultado= mysqli_query($link, $query) or die (mysqli_error($link));
 				// echo"puede editar este perfil";
 				////////////////
 				echo"<center>";
